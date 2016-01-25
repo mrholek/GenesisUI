@@ -1,0 +1,83 @@
+@include media-breakpoint-down(md) {
+
+    $animation-speed: .25s;
+    $mobile-nav-width: 200px;
+
+    body {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    header.navbar {
+		position: fixed !important;
+		top: 0 !important;
+		left: 0 !important;
+		right: 0 !important;
+        padding: $navbar-padding-vertical 0;
+
+        .navbar-toggler {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: inherit;
+            width: 70px;
+        }
+
+        .navbar-brand {
+            //background-color: transparent !important;
+            width: 100% !important;
+            margin: 0 !important;
+        }
+	}
+
+    #navigation {
+        transition: $animation-speed !important;
+		width: $mobile-nav-width;
+        margin-left: -$mobile-nav-width;
+
+        #navigation-footer {
+            transition: $animation-speed;
+            margin-left: -$mobile-nav-width;
+        }
+	}
+
+    .breadcrumb-menu {
+        display: none;
+    }
+
+	#content {
+        transition: $animation-speed;
+        margin: 0 !important;
+		padding: 0 !important;
+        padding-top: $navbar-height !important;
+        width: 100% !important;
+        overflow:hidden;
+	}
+
+    #footer {
+        display: none;
+    }
+
+    html {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+    
+    body.mobile-open {
+        max-width: 100%;
+        overflow-x: hidden;
+        #navigation {
+            transition: $animation-speed;
+            margin-left: 0;
+
+            #navigation-footer {
+                margin-left: 0;
+            }
+    	}
+
+        #content {
+            transition: $animation-speed;
+            margin-left: $mobile-nav-width !important;
+        }
+    }
+}

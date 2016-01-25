@@ -1,0 +1,123 @@
+
+header.navbar {
+    height: $navbar-height;
+    line-height: $navbar-height;
+    position: relative;
+
+    .nav-item {
+        position: relative;
+        min-width: 50px;
+        margin: 0 !important;
+        text-align: center;
+
+        .nav-link {
+            i {
+                display:inline-block;
+                font-size: 1rem;
+                margin-top: 1.25rem;
+            }
+
+            .label {
+                position: absolute;
+                top: 9px;
+                right: 7px;
+            }
+        }
+    }
+
+    .img-flag {
+        height: 24px;
+        margin-top: -2px;
+    }
+
+    .img-avatar {
+        height: $navbar-height - 20px;
+        margin: 0 10px;
+    }
+
+    .dropdown-menu {
+        padding-bottom: 0;
+    }
+
+    .dropdown-item {
+        min-width: 200px;
+    }
+
+    a.navbar-brand {
+        display: inline-block;
+        height: $navbar-height;
+        width: $sidebar-width;
+        margin-left: - $navbar-padding-horizontal;
+        padding: $navbar-padding-vertical $navbar-padding-horizontal;
+    }
+
+    button.navbar-toggler.layout-toggler {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: $sidebar-width;
+        padding: 0 $navbar-padding-horizontal;
+        height: $navbar-height;
+        line-height: $navbar-height;
+        border: 0;
+    }
+
+    &.navbar-light {
+        background: $navbar-bg-light;
+        border-bottom: 1px solid $gray-lighter;
+
+        button.navbar-toggler.layout-toggler {
+            background: $gray-lightest;
+            border-bottom: 1px solid $border-color;
+            border-right: 1px solid $border-color;
+        }
+    }
+
+    &.brand-light {
+        a.navbar-brand {
+
+            border-bottom: 1px solid $border-color;
+            border-right: 1px solid $border-color;
+            background: $gray-lightest url('../img/logo-dark.png') center center no-repeat;
+            background-size: 70px auto;
+
+        }
+    }
+
+    &.navbar-dark {
+        background: $navbar-bg-dark;
+        color: #fff;
+
+        a.nav-link {
+            color: #fff;
+        }
+
+        button.navbar-toggler.layout-toggler {
+            background: darken($navbar-bg-dark,10%);
+            border-right: 1px solid darken($navbar-bg-dark,15%);
+        }
+    }
+
+    &.brand-dark {
+        a.navbar-brand {
+            border-right: 1px solid darken($navbar-bg-dark,15%);
+            background: darken($navbar-bg-dark,10%) url('../img/logo-light.png') center center no-repeat;
+            background-size: 70px auto;
+        }
+    }
+}
+
+header.navbar {
+    .navbar-brand {
+
+    }
+}
+
+header.navbar {
+    .navbar-nav {
+        .nav-link {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+    }
+}

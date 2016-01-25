@@ -1,0 +1,151 @@
+body.top-nav {
+
+    #navigation {
+        display: inline !important;
+        position: absolute;
+        top: $navbar-height;
+        left: 0;
+        height: $navigation-height;
+        width: 100%;
+        z-index: $zindex-navbar-fixed - 1;
+
+        #navigation-footer {
+            display: none;
+        }
+
+        ul.nav, ol.nav {
+
+            li.nav-title, li.divider {
+                display: none;
+            }
+
+            li.nav-item {
+                display: inline-block;
+                margin: 0;
+                position:relative;
+
+                ul, ol {
+                    margin: 0;
+                    padding: 0;
+                    display: none;
+
+                    li {
+                        padding: 0 0 0 0px;
+                        list-style: none;
+                    }
+                }
+
+                a.nav-link {
+                    line-height: $navigation-height;
+                    font-size: 12px;
+                    font-weight: 400;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    display: block;
+                    padding: 0 15px;
+
+                    i {
+                        width: 20px;
+                        text-align: center;
+                        margin: 0 10px 0 0;
+                        font-size: 14px;
+                        line-height: $navigation-height - 1px;
+                        display: block;
+                        float: left;
+                    }
+
+                    .label {
+                        float: right;
+                        margin-top: 13px;
+                        margin-left: 10px;
+                    }
+                }
+
+                ul, ol {
+                    position: absolute;
+                    top: $navigation-height - 1px;
+                    left: 0;
+
+                    li {
+                        padding: 0;
+                        position:relative;
+
+                        a.nav-link {
+                            min-width: 200px;
+                        }
+
+                        ul, ol {
+                            position: absolute;
+                            top: 0;
+                            left: 100%;
+                        }
+                    }
+                }
+
+                &:hover {
+                    > ul, > ol {
+                        display: inline;
+                    }
+                }
+            }
+        }
+        &.nav-dark {
+            background: $nav-color-dark;
+
+            li.nav-item {
+                a.nav-link {
+                    color: #fff;
+
+                    &:hover, &.active {
+                        background: $brand-primary;
+                    }
+                }
+                ul, ol {
+                    background: $nav-color-dark;
+                }
+            }
+        }
+
+        &.nav-light {
+            background: $nav-color-light;
+            border-bottom: 1px solid $border-color;
+
+            li.nav-item {
+                a.nav-link {
+                    color: $gray-dark;
+                    height: $navigation-height;
+                    border-left: 1px solid transparent;
+                    border-right: 1px solid transparent;
+
+                    &:hover, &.active {
+                        background: $brand-primary;
+                        color: #fff;
+                    }
+                }
+
+                ul, ol {
+                    background: $nav-color-light;
+                    border: 1px solid $border-color;
+                    z-index: -1;
+
+                    li {
+                        ul, ol {
+                            border: 1px solid $border-color;
+                        }
+                    }
+                }
+            }
+
+            ul.nav, ol.nav {
+                > li.nav-item.nav-dropdown:hover {
+                    > a.nav-link {
+                        background: $gray-lightest;
+                        border: 1px solid $border-color;
+                        border-top: 0;
+                        border-bottom: 1px solid white;
+                    }
+                }
+            }
+        }
+    }
+}

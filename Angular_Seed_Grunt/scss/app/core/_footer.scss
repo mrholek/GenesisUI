@@ -1,0 +1,11 @@
+footer#footer {
+    position:absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-top: 1px solid $border-color;
+    padding: 0 $spacer-x;
+    background: $gray-lightest;
+    height: $footer-height;
+    line-height: $footer-height;
+}

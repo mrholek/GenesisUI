@@ -1,0 +1,22 @@
+<!-- Navbar -->
+<div ng-include="'views/common/navbar.html'"></div>
+
+<!-- Navigation -->
+<div ng-include="'views/common/navigation.html'"></div>
+
+<!-- Main content -->
+<main id="content">
+    <!-- Page Header -->
+    <div class="page-header">
+        <h1 class="h2"><span ncy-breadcrumb-last></span></h1>
+        <div class="text-muted"> {{ subtitle }}</div>
+    </div>
+    <!-- Breadcrumb -->
+    <div ncy-breadcrumb></div>
+
+    <div class="container-fluid">
+        <ui-view></ui-view>
+    </div><!-- /.conainer-fluid -->
+</main>
+
+<div ng-include="'views/common/footer.html'"></div>

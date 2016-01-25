@@ -1,0 +1,18 @@
+.page-header {
+    padding: $spacer-y $breadcrumb-padding-horizontal;
+    background: $breadcrumb-bg;
+    border-bottom: 1px solid $border-color;
+
+    h1 {
+        margin: 0;
+    }
+
+    .chart-wrapper {
+        max-width: 140px;
+        margin: 0 auto;
+    }
+
+    .charts .title {
+        margin-top: 2px;
+    }
+}

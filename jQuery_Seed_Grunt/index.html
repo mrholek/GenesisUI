@@ -1,0 +1,170 @@
+<!--
+* ROOT Admin - UI Admin Kit Powered by Bootstrap 4.0.0 & AngularJS 1.4.8
+* Version 1.2.0
+* http://GenesisUI.com
+* Copyright 2016 creativeLabs Łukasz Holeczek
+* License : http://GenesisUI.com/license.html
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="ROOT Admin - UI Admin Kit Powered by Bootstrap 4.0.0 &amp; AngularJS 1.4.8">
+		<meta name="author" content="Łukasz Holeczek">
+		<meta name="keyword" content="ROOT Admin - UI Admin Kit Powered by Bootstrap 4.0.0 &amp; AngularJS 1.4.8">
+		<!-- <link rel="shortcut icon" href="assets/ico/favicon.png"> -->
+
+		<title>ROOT Admin - UI Admin Kit</title>
+
+		<!-- Main styles for this application -->
+		<link href="css/style.css" rel="stylesheet">
+
+	</head>
+
+	<!-- BODY options, add following classes to body to change options or change layout options in app.js
+
+		1. 'compact-nav'     	  - Switch sidebar to minified version (width 50px)
+		2. 'sidebar-nav'		  - Navigation on the left
+		3. 'fixed-nav'			  - Fixed navigation
+		4. 'navbar-fixed'		  - Fixed navbar
+
+	-->
+
+	<body class="navbar-fixed sidebar-nav fixed-nav">
+
+		<header class="navbar navbar-light brand-dark">
+		    <button class="navbar-toggler mobile-toggler hidden-lg-up" type="button">&#9776;</button>
+		    <a class="navbar-brand" href="#"></a>
+		    <button class="navbar-toggler layout-toggler hidden-md-down" type="button" data-before="sidebar-nav" data-after="sidebar-nav compact-nav">&#9776;</button>
+		    <ul class="nav navbar-nav pull-right hidden-md-down">
+		        <li class="nav-item dropdown">
+		            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><img src="img/flags/United-Kingdom.png" class="img-flag" alt="English" src="img/flags/United-Kingdom.png"></a>
+					<div class="dropdown-menu dropdown-menu-right">
+		                <div class="dropdown-header text-xs-center"><strong>Choose language</strong></div>
+		                	<a class="dropdown-item" href="#"><img src="img/flags/Poland.png" class="img-flag" alt="Polish" src="img/flags/Poland.png"> Polish</a>
+							<a class="dropdown-item" href="#"><img src="img/flags/United-Kingdom.png" class="img-flag" alt="English" src="img/flags/United-Kingdom.png"> English</a>
+							<a class="dropdown-item" href="#"><img src="img/flags/Spain.png" class="img-flag" alt="Español" src="img/flags/Spain.png"> Español</a>
+		            	</div>
+					</div>
+		        </li>
+		        <li class="nav-item">
+		            <a class="nav-link" href="#"><i class="icon-bell"></i><span class="label label-pill label-danger">5</span></a>
+		        </li>
+		        <li class="nav-item">
+		            <a class="nav-link" href="#"><i class="icon-list"></i></a>
+		        </li>
+		        <li class="nav-item">
+		            <a class="nav-link" href="#"><i class="icon-location-pin"></i></a>
+		        </li>
+		        <li class="nav-item dropdown">
+		            <a class="nav-link dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+		                <img src="img/avatars/6.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+		                <span class="hidden-md-down">admin</span>
+		            </a>
+		            <div class="dropdown-menu dropdown-menu-right">
+
+		                <div class="dropdown-header text-xs-center"><strong>Account</strong></div>
+
+		                <a class="dropdown-item" href="#"><i class="fa fa-bell-o"></i> Updates<span class="label label-info">42</span></a>
+		                <a class="dropdown-item" href="#"><i class="fa fa-envelope-o"></i> Messages<span class="label label-success">42</span></a>
+		                <a class="dropdown-item" href="#"><i class="fa fa-tasks"></i> Tasks<span class="label label-danger">42</span></a>
+		                <a class="dropdown-item" href="#"><i class="fa fa-comments"></i> Comments<span class="label label-warning">42</span></a>
+
+		                <div class="dropdown-header text-xs-center"><strong>Settings</strong></div>
+
+		                <a class="dropdown-item" href="#"><i class="fa fa-user"></i> Profile</a>
+		                <a class="dropdown-item" href="#"><i class="fa fa-wrench"></i> Settings</a>
+		                <a class="dropdown-item" href="#"><i class="fa fa-usd"></i> Payments<span class="label label-default">42</span></a>
+		                <a class="dropdown-item" href="#"><i class="fa fa-file"></i> Projects<span class="label label-primary">42</span></a>
+		                <div class="divider"></div>
+		                <a class="dropdown-item" href="#"><i class="fa fa-shield"></i> Lock Account</a>
+		                <a class="dropdown-item" href="#"><i class="fa fa-lock"></i> Logout</a>
+		            </div>
+		        </li>
+		    </ul>
+		</header>
+
+		<nav id="navigation" class="collapse navbar-toggleable-sm nav-dark">
+		    <div id="navigation-header">
+		        <img src="img/avatars/8.jpg" class="img-avatar" alt="Avatar">
+		        <div><strong>JOHN DOE</strong></div>
+		        <div class="text-muted"><small>Founder &amp; CEO</small></div>
+
+		        <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+		            <button type="button" class="btn btn-link">
+		                <i class="icon-settings"></i>
+		            </button>
+		            <button type="button" class="btn btn-link">
+		                <i class="icon-speech"></i>
+		                <span class="label label-warning label-pill">5</span>
+		            </button>
+
+		            <div class="btn-group" role="group">
+		                <button id="btnGroupDrop1" type="button" class="btn btn-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		                    <i class="icon-user"></i>
+		                </button>
+		                <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+		                    <div class="dropdown-header text-xs-center"><strong>Account</strong></div>
+
+		                    <a class="dropdown-item" href="#"><i class="fa fa-bell-o"></i> Updates<span class="label label-info">42</span></a>
+		                    <a class="dropdown-item" href="#"><i class="fa fa-envelope-o"></i> Messages<span class="label label-success">42</span></a>
+		                    <a class="dropdown-item" href="#"><i class="fa fa-tasks"></i> Tasks<span class="label label-danger">42</span></a>
+		                    <a class="dropdown-item" href="#"><i class="fa fa-comments"></i> Comments<span class="label label-warning">42</span></a>
+
+		                    <div class="dropdown-header text-xs-center"><strong>Settings</strong></div>
+
+		                    <a class="dropdown-item" href="#"><i class="fa fa-user"></i> Profile</a>
+		                    <a class="dropdown-item" href="#"><i class="fa fa-wrench"></i> Settings</a>
+		                    <a class="dropdown-item" href="#"><i class="fa fa-usd"></i> Payments<span class="label label-default">42</span></a>
+		                    <a class="dropdown-item" href="#"><i class="fa fa-file"></i> Projects<span class="label label-primary">42</span></a>
+		                    <div class="divider"></div>
+		                    <a class="dropdown-item" href="#"><i class="fa fa-shield"></i> Lock Account</a>
+		                    <a class="dropdown-item" href="#"><i class="fa fa-lock"></i> Logout</a>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+		    <div id="navigation-items">
+		        <ul class="nav">
+		            <li class="nav-title">
+		                Dashboard
+		            </li>
+		            <li class="nav-item">
+		                <a class="nav-link" href="main.html"><i class="icon-speedometer"></i> DASHBOARD <span class="label label-info">NEW</span></a>
+		            </li>
+		        </ul>
+		    </div>
+		</nav>
+
+		<!-- Main content -->
+		<main id="content">
+		    <div class="container-fluid">
+		        <div id="ui-view"></div>
+		    </div><!-- /.conainer-fluid -->
+		</main>
+
+		<footer id="footer">
+		    <span class="text-left">
+		        <a href="http://bootstrapmaster.com">Root</a> &copy; 2016 creativeLabs.
+		    </span>
+		    <span class="pull-right">
+		        Powered by <a href="http://genesisui.com">GenesisUI</a>
+		    </span>
+		</footer>
+
+		<!-- Bootstrap and necessary plugins -->
+		<script src="js/libs/jquery.min.js"></script>
+		<script src="js/libs/tether.min.js"></script>
+		<script src="js/libs/bootstrap.min.js"></script>
+		<script src="js/libs/pace.min.js"></script>
+
+		<!-- GenesisUI main scripts -->
+		<script src="js/app.js"></script>
+
+		<!-- Grunt watch plugin -->
+		<script src="//localhost:35729/livereload.js"></script>
+	</body>
+</html>

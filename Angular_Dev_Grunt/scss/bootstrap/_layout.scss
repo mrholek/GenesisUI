@@ -1,0 +1,10 @@
+body.with-sidebar {
+	#sidebar {
+		display: inline;
+		left: 0;
+	}
+
+	#content {
+		padding-left: $sidebar-width;
+	}
+}

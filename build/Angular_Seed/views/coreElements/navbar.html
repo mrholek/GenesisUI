@@ -1,0 +1,19 @@
+<header class="navbar">
+    <button class="navbar-toggler hidden-lg-up" type="button">&#9776;</button>
+    <a class="navbar-brand" ui-sref="app.main"></a>
+    <button class="navbar-toggler layout-toggler hidden-md-down" type="button" data-before="sidebar-nav" data-after="sidebar-nav compact-nav">&#9776;</button>
+    <ul class="nav navbar-nav pull-right hidden-md-down">
+        <li class="nav-item dropdown" ng-controller="languageCtrl">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><img ng-src="dist/img/flags/{{flag}}" class="img-flag" alt="{{lang}}"></a>
+            <div class="dropdown-menu dropdown-menu-right">
+                <div class="dropdown-header text-center"><strong>{{ 'CHOOSE_LANGUAGE' | translate }}</strong></div>
+                <a ng-repeat="language in languages" class="dropdown-item" href="#" ng-click="changeLanguage(language.langKey)">
+                    <img ng-src="dist/img/flags/{{language.flag}}" class="img-flag" alt="{{language.lang}}"> {{language.lang}}
+                </a>
+            </div>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#"><i class="icon-bell"></i></a>
+        </li>
+    </ul>
+</header>

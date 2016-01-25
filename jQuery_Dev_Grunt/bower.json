@@ -1,0 +1,23 @@
+{
+    "name" : "GenesisUI",
+    "version" : "1.2.0",
+    "dependencies" : {
+        "bootstrap"                 : "4.0.0-alpha.2",
+        "tether"                    : "latest",
+        "jquery"                    : "latest",
+        "fontawesome"               : "latest",
+        "simple-line-icons"         : "latest",
+        "Chart.js"                  : "latest",
+        "momentjs"                  : "latest",
+        "datatables"                : "latest",
+        "bootstrap-daterangepicker" : "latest",
+        "select2"                   : "latest",
+        "ionrangeslider"            : "latest",
+        "toastr"                    : "latest",
+        "gauge.js"                  : "latest",
+        "pace"                      : "latest",
+        "fullcalendar"              : "latest",
+        "jquery.maskedinput"        : "latest"
+    },
+    "private" : true
+}

@@ -1,0 +1,17 @@
+.breadcrumb {
+    position: relative;
+
+    > li {
+
+        + li:before {
+            font-family: FontAwesome;
+            font-style: normal;
+            font-weight: normal;
+
+            padding-left: .75rem;
+
+        }
+
+    }
+    border-bottom: 1px solid $border-color;
+}

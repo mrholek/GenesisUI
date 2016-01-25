@@ -1,0 +1,25 @@
+{
+  "name": "Genesis",
+  "version": "0.1.2",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "grunt": "*"
+  },
+  "devDependencies": {
+    "grunt": "*",
+    "grunt-contrib-clean": "^0.7.0",
+    "grunt-contrib-concat": "*",
+    "grunt-contrib-copy": "*",
+    "grunt-contrib-cssmin": "*",
+    "grunt-contrib-sass": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-text-replace": "^0.4.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Łukasz Holeczek",
+  "license": "ISC"
+}

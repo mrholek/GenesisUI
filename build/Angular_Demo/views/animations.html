@@ -1,0 +1,23 @@
+<div ng-controller="animationsCtrl">
+    <div ng-repeat="item in animations">
+        <h6>{{ item.category }}</h6>
+        <div class="row">
+            <div ng-repeat="item in item.elements">
+                <div class="col-md-4">
+                    <div class="card" ng-class="{'animated {{item.code}}': isActive==true}">
+                        <div class="card-header">
+                            {{ item.desc }}
+                            <div class="card-actions">
+                                <button ng-click="addAnimation(event)"><i class="icon-control-play"></i></button>
+                            </div>
+                        </div>
+                        <div class="card-block">
+                            Add this class to your element <code>.{{ item.code }}</code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+    </div>
+</div>
