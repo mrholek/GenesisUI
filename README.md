@@ -1,4 +1,4 @@
-# GenesisUI WebApp UI Kit based on Bootstrap 4
+# GenesisUI Admin Template based on Bootstrap 4
 
 Spend less time worrying about front-end and more focusing on your product
 
