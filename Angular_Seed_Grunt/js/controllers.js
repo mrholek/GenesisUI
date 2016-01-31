@@ -8,8 +8,6 @@ function languageCtrl($translate, $scope) {
     function checkLanguage(languages, langKey) {
         languages.map(function (language) {
             if (language.langKey == langKey) {
-
-                console.log(language);
                 $scope.flag = language.flag;
                 $scope.lang = language.lang;
                 return language
@@ -38,7 +36,6 @@ function languageCtrl($translate, $scope) {
         }
     ]
     $scope.languages = languages;
-    console.log($translate.use());
     checkLanguage(languages, $translate.use())
     $scope.changeLanguage = function (langKey) {
         $translate.use(langKey);

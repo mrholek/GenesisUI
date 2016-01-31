@@ -1,6 +1,6 @@
 {
     "name" : "GenesisUI",
-    "version" : "1.2.0",
+    "version" : "1.2.1 (jQuery)",
     "dependencies" : {
         "bootstrap"                 : "4.0.0-alpha.2",
         "tether"                    : "latest",

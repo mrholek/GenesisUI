@@ -11,11 +11,112 @@
 
 </script>
 
-<div id="current-title" hidden>Dashboard</div>
+<div id="current-title" hidden>Dashboard 2</div>
 <div id="current-desc" hidden>Welcome to ROOT powerfull Bootstrap UI Kit</div>
 
 <div class="animated fadeIn">
-    <div class="card card-full">
+    <div class="row row-equal">
+        <div class="col-sm-6 col-md-3">
+            <div class="card card-inverse card-primary">
+                <div class="card-block p-b-0">
+                    <div class="btn-group pull-right">
+                        <button type="button" class="btn btn-primary-outline active dropdown-toggle p-a-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="icon-settings"></i>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Separated link</a>
+                        </div>
+                    </div>
+                    <h4 class="m-b-0">9.823</h4>
+                    <p>Members online</p>
+                </div>
+                <div class="chart-wrapper p-x-1">
+                    <div>
+                        <canvas id="card-chart1" class="chart chart-line" height="70"></canvas>
+                    </div>
+
+                </div>
+            </div>
+        </div><!--/col-->
+
+        <div class="col-sm-6 col-md-3">
+            <div class="card card-inverse card-info">
+                <div class="card-block p-b-0">
+                    <button type="button" class="btn btn-info-outline active p-a-0 pull-right">
+                        <i class="icon-location-pin"></i>
+                    </button>
+                    <h4 class="m-b-0">9.823</h4>
+                    <p>Members online</p>
+                </div>
+                <div class="chart-wrapper p-x-1">
+                    <div>
+                        <canvas id="card-chart2" class="chart chart-line" width="auto" height="70"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div><!--/col-->
+
+        <div class="col-sm-6 col-md-3">
+            <div class="card card-inverse card-warning">
+                <div class="card-block p-b-0">
+                    <div class="btn-group pull-right">
+                        <button type="button" class="btn btn-warning-outline active dropdown-toggle p-a-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="icon-settings"></i>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Separated link</a>
+                        </div>
+                    </div>
+                    <h4 class="m-b-0">9.823</h4>
+                    <p>Members online</p>
+                </div>
+                <div class="chart-wrapper">
+                    <div class="chart-wrapper">
+                        <div>
+                            <canvas id="card-chart3" class="chart chart-line" width="auto" height="70"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!--/col-->
+
+        <div class="col-sm-6 col-md-3">
+            <div class="card card-inverse card-danger">
+                <div class="card-block p-b-0">
+                    <div class="btn-group pull-right">
+                        <button type="button" class="btn btn-danger-outline active dropdown-toggle p-a-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="icon-settings"></i>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Separated link</a>
+                        </div>
+                    </div>
+                    <h4 class="m-b-0">9.823</h4>
+                    <p>Members online</p>
+                </div>
+                <div class="chart-wrapper p-x-1">
+                    <div>
+                        <canvas id="card-chart4" class="chart chart-bar" height="70"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div><!--/col-->
+
+    </div><!--/row-->
+
+    <div class="card">
         <div class="card-block">
             <div class="row">
                 <div class="col-xs-5">
@@ -538,7 +639,8 @@
                                 <td>
                                     <div>Avram Tarasios</div>
                                     <div class="small text-muted">
-										<span>Recurring</span> | Registered: Jan 1, 2015
+
+                                        <span>Recurring</span> | Registered: Jan 1, 2015
                                     </div>
                                 </td>
                                 <td class="text-xs-center">
@@ -625,7 +727,9 @@
                                 <td>
                                     <div>Enéas Kwadwo</div>
                                     <div class="small text-muted">
-                                        <span>New</span> | Registered: Jan 1, 2015</div>
+                                        <span>New</span>
+
+                                         | Registered: Jan 1, 2015</div>
                                 </td>
                                 <td class="text-xs-center">
                                     <img src="img/flags/France.png" alt="France" style="height:24px;" src="img/flags/France.png">
@@ -657,8 +761,7 @@
                                 <td class="text-xs-center">
                                     <button type="button" class="btn btn-link text-muted"><i class="icon-settings"></i></button>
                                 </td>
-                            </tr>
-							<tr>
+                            </tr><!-- end ngRepeat: user in users --><tr>
                                 <td class="text-xs-center">
                                     <div class="avatar">
                                         <img src="img/avatars/5.jpg" class="img-avatar" alt="admin@bootstrapmaster.com" src="img/avatars/5.jpg">
@@ -668,7 +771,9 @@
                                 <td>
                                     <div>Agapetus Tadeáš</div>
                                     <div class="small text-muted">
-                                        <span>New</span> | Registered: Jan 1, 2015</div>
+                                        <span>New</span>
+
+                                         | Registered: Jan 1, 2015</div>
                                 </td>
                                 <td class="text-xs-center">
                                     <img src="img/flags/Spain.png" alt="Spain" style="height:24px;" src="img/flags/Spain.png">
@@ -700,8 +805,7 @@
                                 <td class="text-xs-center">
                                     <button type="button" class="btn btn-link text-muted"><i class="icon-settings"></i></button>
                                 </td>
-                            </tr>
-							<tr>
+                            </tr><!-- end ngRepeat: user in users --><tr>
                                 <td class="text-xs-center">
                                     <div class="avatar">
                                         <img src="img/avatars/6.jpg" class="img-avatar" alt="admin@bootstrapmaster.com" src="img/avatars/6.jpg">
@@ -744,7 +848,7 @@
                                 <td class="text-xs-center">
                                     <button type="button" class="btn btn-link text-muted"><i class="icon-settings"></i></button>
                                 </td>
-                            </tr>
+                            </tr><!-- end ngRepeat: user in users -->
                         </tbody>
                     </table>
                 </div>

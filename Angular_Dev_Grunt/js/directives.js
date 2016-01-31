@@ -86,9 +86,7 @@ function breadcrumbPrefixDirective() {
     return directive;
 
     function link(scope, element) {
-        console.log('be');
         if (breadcrumbPrefix) {
-            console.log('be');
             element.prepend('<li><span>' + breadcrumbPrefixName + '</span></li>');
         }
     }
@@ -266,7 +264,6 @@ function cardCollapseDirective() {
         if (attrs.toggle=="collapse" && element.parent().hasClass('card-actions')){
 
             if (element.parent().parent().parent().find('.card-block').hasClass('in')) {
-                console.log('in');
                 element.find('i').addClass('r180');
             }
 
@@ -314,7 +311,6 @@ function ionSliderDirective($timeout) {
 
     function link(scope, element, attrs, ngModel) {
         scope.$watch(function(){
-            //console.log(ngModel);
             return ngModel.$modelValue;
         }, function(modelValue){
             if (modelValue.options) {
@@ -430,7 +426,6 @@ function emailAppDirective($window) {
 
     function link(scope, element, attrs) {
         var height = angular.element(window).height() - angular.element('.navbar').outerHeight() - angular.element('.breadcrumb').outerHeight() - angular.element('#footer').outerHeight() - 158;
-        console.log(height);
         element.css('min-height', height);
     }
 }

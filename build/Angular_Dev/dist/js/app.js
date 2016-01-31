@@ -1,10 +1,5 @@
 // Genesis App configuration
 var appName = 'Root';
-var appVersion = '1.1.1';
-var genesisVersion = '0.2.6.5';
-var bootstrapVersion = '4.0.0-alpha.2';
-var angularVersion = '1.4.8';
-
 var breadcrumbPrefix = true;
 var breadcrumbPrefixName = 'Root';
 

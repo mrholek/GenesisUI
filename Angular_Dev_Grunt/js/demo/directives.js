@@ -18,7 +18,6 @@ function getDocsContentDirective($http, $compile) {
     return directive;
 
     function link(scope, element, attrs) {
-        console.log(scope);
         $http.get(scope.src).success(function (response) {
             var contents = angular.element("<div>").html(response).find(".bd-content >");
             element.empty().append($compile(contents)(scope));

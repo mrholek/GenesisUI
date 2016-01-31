@@ -119,7 +119,7 @@ function dateRangeCtrl($scope) {
 
     //Watch for date changes
     $scope.$watch('date', function(newDate) {
-        console.log('New date set: ', newDate);
+        //console.log('New date set: ', newDate);
     }, false);
 
     function gd(year, month, day) {
