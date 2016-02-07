@@ -1,0 +1,1540 @@
+<!--
+* GenesisUI Bootstrap 4 Admin Template built as framework!
+* Version 1.3.0
+* https://GenesisUI.com
+* Copyright 2016 creativeLabs Łukasz Holeczek
+* License : https://GenesisUI.com/license.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="ROOT Admin - UI Admin Kit Powered by Bootstrap 4.0.0">
+        <meta name="author" content="Lukasz Holeczek">
+        <meta name="keyword" content="ROOT Admin - UI Admin Kit Powered by Bootstrap 4.0.0">
+        <!-- <link rel="shortcut icon" href="assets/ico/favicon.png"> -->
+        <title>ROOT Admin - UI Admin Kit</title>
+        <!-- Main styles for this application -->
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <!-- BODY options, add following classes to body to change options.
+		1. 'compact-nav'     	  - Switch sidebar to minified version (width 50px)
+		2. 'sidebar-nav'		  - Navigation on the left
+		3. 'fixed-nav'			  - Fixed navigation
+		4. 'navbar-fixed'		  - Fixed navbar
+	-->
+    <body class="navbar-fixed sidebar-nav fixed-nav">
+        <header class="navbar navbar-light brand-dark">
+            <button class="navbar-toggler mobile-toggler hidden-lg-up" type="button">&#9776;</button>
+            <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler layout-toggler hidden-md-down" type="button" data-before="sidebar-nav" data-after="sidebar-nav compact-nav">&#9776;</button>
+            <ul class="nav navbar-nav pull-right hidden-md-down">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                        <img src="img/flags/United-Kingdom.png" class="img-flag" alt="English">
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <div class="dropdown-header text-xs-center">
+                            <strong>Choose language</strong>
+                        </div>
+                        <a class="dropdown-item" href="#">
+                            <img src="img/flags/Poland.png" class="img-flag" alt="Polish"> Polish</a>
+                        <a class="dropdown-item" href="#">
+                            <img src="img/flags/United-Kingdom.png" class="img-flag" alt="English"> English</a>
+                        <a class="dropdown-item" href="#">
+                            <img src="img/flags/Spain.png" class="img-flag" alt="Espa&#xF1;ol"> Español</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="icon-bell"></i><span class="label label-pill label-danger">5</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="icon-list"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="icon-location-pin"></i></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                        <img src="img/avatars/6.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                        <span class="hidden-md-down">admin</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <div class="dropdown-header text-xs-center">
+                            <strong>Account</strong>
+                        </div>
+                        <a class="dropdown-item" href="#"><i class="fa fa-bell-o"></i> Updates<span class="label label-info">42</span></a>
+                        <a class="dropdown-item" href="#"><i class="fa fa-envelope-o"></i> Messages<span class="label label-success">42</span></a>
+                        <a class="dropdown-item" href="#"><i class="fa fa-tasks"></i> Tasks<span class="label label-danger">42</span></a>
+                        <a class="dropdown-item" href="#"><i class="fa fa-comments"></i> Comments<span class="label label-warning">42</span></a>
+                        <div class="dropdown-header text-xs-center">
+                            <strong>Settings</strong>
+                        </div>
+                        <a class="dropdown-item" href="#"><i class="fa fa-user"></i> Profile</a>
+                        <a class="dropdown-item" href="#"><i class="fa fa-wrench"></i> Settings</a>
+                        <a class="dropdown-item" href="#"><i class="fa fa-usd"></i> Payments<span class="label label-default">42</span></a>
+                        <a class="dropdown-item" href="#"><i class="fa fa-file"></i> Projects<span class="label label-primary">42</span></a>
+                        <div class="divider"></div>
+                        <a class="dropdown-item" href="#"><i class="fa fa-shield"></i> Lock Account</a>
+                        <a class="dropdown-item" href="#"><i class="fa fa-lock"></i> Logout</a>
+                    </div>
+                </li>
+            </ul>
+        </header>
+        <nav id="navigation" class="collapse navbar-toggleable-sm nav-dark">
+            <div id="navigation-header">
+                <img src="img/avatars/8.jpg" class="img-avatar" alt="Avatar">
+                <div>
+                    <strong>JOHN DOE</strong>
+                </div>
+                <div class="text-muted">
+                    <small>Founder &amp; CEO</small>
+                </div>
+                <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                    <button type="button" class="btn btn-link">
+                        <i class="icon-settings"></i>
+                    </button>
+                    <button type="button" class="btn btn-link">
+                        <i class="icon-speech"></i>
+                        <span class="label label-warning label-pill">5</span>
+                    </button>
+                    <div class="btn-group" role="group">
+                        <button id="btnGroupDrop1" type="button" class="btn btn-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="icon-user"></i>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                            <div class="dropdown-header text-xs-center">
+                                <strong>Account</strong>
+                            </div>
+                            <a class="dropdown-item" href="#"><i class="fa fa-bell-o"></i> Updates<span class="label label-info">42</span></a>
+                            <a class="dropdown-item" href="#"><i class="fa fa-envelope-o"></i> Messages<span class="label label-success">42</span></a>
+                            <a class="dropdown-item" href="#"><i class="fa fa-tasks"></i> Tasks<span class="label label-danger">42</span></a>
+                            <a class="dropdown-item" href="#"><i class="fa fa-comments"></i> Comments<span class="label label-warning">42</span></a>
+                            <div class="dropdown-header text-xs-center">
+                                <strong>Settings</strong>
+                            </div>
+                            <a class="dropdown-item" href="#"><i class="fa fa-user"></i> Profile</a>
+                            <a class="dropdown-item" href="#"><i class="fa fa-wrench"></i> Settings</a>
+                            <a class="dropdown-item" href="#"><i class="fa fa-usd"></i> Payments<span class="label label-default">42</span></a>
+                            <a class="dropdown-item" href="#"><i class="fa fa-file"></i> Projects<span class="label label-primary">42</span></a>
+                            <div class="divider"></div>
+                            <a class="dropdown-item" href="#"><i class="fa fa-shield"></i> Lock Account</a>
+                            <a class="dropdown-item" href="#"><i class="fa fa-lock"></i> Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="navigation-items">
+                <ul class="nav">
+                    <li class="nav-title">
+                        Dashboard
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html"><i class="icon-speedometer"></i> DASHBOARD <span class="label label-info">NEW</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index2.html"><i class="icon-speedometer"></i> DASHBOARD 2 <span class="label label-warning">NEW</span></a>
+                    </li>
+                    <li class="divider"></li>
+                    <li class="nav-title">
+                        UI Elements
+                    </li>
+                    <li class="nav-item nav-dropdown">
+                        <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-puzzle"></i> Components</a>
+                        <ul class="nav-dropdown-items">
+                            <li class="nav-item">
+                                <a class="nav-link" href="components-buttons.html"><i class="icon-puzzle"></i> BUTTONS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="components-social-buttons.html"><i class="icon-puzzle"></i> Social Buttons</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="components-cards.html"><i class="icon-puzzle"></i> CARDS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="components-forms.html"><i class="icon-puzzle"></i> FORMS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="components-switches.html"><i class="icon-puzzle"></i> SWITCHES</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="components-tables.html"><i class="icon-puzzle"></i> TABLES</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item nav-dropdown">
+                        <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-star"></i> ICONS</a>
+                        <ul class="nav-dropdown-items">
+                            <li class="nav-item">
+                                <a class="nav-link" href="icons-font-awesome.html"><i class="icon-star"></i> Font Awesome</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="icons-simple-line-icons.html"><i class="icon-star"></i> Simple Line Icons</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item nav-dropdown">
+                        <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-energy"></i> Plugins</a>
+                        <ul class="nav-dropdown-items">
+                            <li class="nav-item">
+                                <a class="nav-link" href="plugins-calendar.html"><i class="icon-calendar"></i> CALENDAR</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="plugins-notifications.html"><i class="icon-info"></i> NOTIFICATIONS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="plugins-sliders.html"><i class="icon-equalizer"></i> SLIDERS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="plugins-tables.html"><i class="icon-list"></i> TABLES</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="forms.html"><i class="icon-note"></i> FORMS <span class="label label-danger">NEW</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="widgets.html"><i class="icon-calculator"></i> WIDGETS <span class="label label-info">NEW</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="charts.html"><i class="icon-pie-chart"></i> CHARTS</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li class="nav-title">
+                        Extras
+                    </li>
+                    <li class="nav-item nav-dropdown">
+                        <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-star"></i> PAGES</a>
+                        <ul class="nav-dropdown-items">
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages-login.html" target="_top"><i class="icon-star"></i> Login</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages-register.html" target="_top"><i class="icon-star"></i> Register</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages-404.html" target="_top"><i class="icon-star"></i> Error 404</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages-500.html" target="_top"><i class="icon-star"></i> Error 500</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item nav-dropdown">
+                        <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-layers"></i> UI Kits</a>
+                        <ul class="nav-dropdown-items">
+                            <li class="nav-item nav-dropdown">
+                                <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-speech"></i> INVOICING</a>
+                                <ul class="nav-dropdown-items">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="UIkits-invoicing-invoice.html"><i class="icon-speech"></i> INVOICE</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul class="nav-dropdown-items">
+                            <li class="nav-item nav-dropdown">
+                                <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-speech"></i> EMAIL</a>
+                                <ul class="nav-dropdown-items">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="UIkits-email-inbox.html"><i class="icon-speech"></i> INBOX</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="UIkits-email-message.html"><i class="icon-speech"></i> MESSAGE</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="UIkits-email-compose.html"><i class="icon-speech"></i> COMPOSE</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div id="navigation-footer">
+                <ul class="menu">
+                    <li>
+                        <div class="btn-group dropup">
+                            <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="icon-speedometer"></i>
+                                <span>Usage</span>
+                            </button>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-header">Usage <a href="#" class="btn pull-right"><i class="icon-settings"></i></a></div>
+                                <div class="dropdown-item">
+                                    <div class="title">Memory
+                                        <span>2GB of 8GB</span>
+                                    </div>
+                                    <progress class="progress progress-xs progress-success m-b-0" value="25" max="100">25%</progress>
+                                </div>
+                                <div class="dropdown-item">
+                                    <div class="title">HDD
+                                        <span>750GB of 1TB</span>
+                                    </div>
+                                    <progress class="progress progress-xs progress-warning m-b-0" value="75" max="100">75%</progress>
+                                </div>
+                                <div class="dropdown-item">
+                                    <div class="title">SSD
+                                        <span>300GB of 1TB</span>
+                                    </div>
+                                    <progress class="progress progress-xs progress-info m-b-0" value="30" max="100">30%</progress>
+                                </div>
+                                <div class="dropdown-item">
+                                    <div class="title">Bandwidth
+                                        <span>50TB of 50TB</span>
+                                    </div>
+                                    <progress class="progress progress-xs progress-danger m-b-0" value="100" max="100">100%</progress>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="btn-group dropup">
+                            <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="icon-list"></i>
+                                <span>Menu</span>
+                            </button>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-header text-xs-center">
+                                    <strong>Account</strong>
+                                </div>
+                                <a class="dropdown-item" href="#"><i class="fa fa-bell-o"></i> Updates<span class="label label-info">42</span></a>
+                                <a class="dropdown-item" href="#"><i class="fa fa-envelope-o"></i> Messages<span class="label label-success">42</span></a>
+                                <a class="dropdown-item" href="#"><i class="fa fa-tasks"></i> Tasks<span class="label label-danger">42</span></a>
+                                <a class="dropdown-item" href="#"><i class="fa fa-comments"></i> Comments<span class="label label-warning">42</span></a>
+                                <div class="dropdown-header text-xs-center">
+                                    <strong>Settings</strong>
+                                </div>
+                                <a class="dropdown-item" href="#"><i class="fa fa-user"></i> Profile</a>
+                                <a class="dropdown-item" href="#"><i class="fa fa-wrench"></i> Settings</a>
+                                <a class="dropdown-item" href="#"><i class="fa fa-usd"></i> Payments<span class="label label-default">42</span></a>
+                                <a class="dropdown-item" href="#"><i class="fa fa-file"></i> Projects<span class="label label-primary">42</span></a>
+                                <div class="divider"></div>
+                                <a class="dropdown-item" href="#"><i class="fa fa-shield"></i> Lock Account</a>
+                                <a class="dropdown-item" href="#"><i class="fa fa-lock"></i> Logout</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="action">
+                        <div class="btn-group dropup">
+                            <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="icon-people"></i>
+                                <span>Contacts</span>
+                                <span class="sr-only">Toggle Dropdown</span>
+                            </button>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-header">Contacts <a href="#" class="btn pull-right"><i class="icon-settings"></i></a></div>
+                                <a class="dropdown-item p-l-0" href="#">
+                                    <div class="avatar avatar-sm">
+                                        <img src="img/avatars/1.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                        <span class="avatar-status label-success"></span>
+                                    </div>
+                                    Anton Phunihel
+                                </a>
+                                <a class="dropdown-item p-l-0" href="#">
+                                    <div class="avatar avatar-sm">
+                                        <img src="img/avatars/2.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                        <span class="avatar-status label-success"></span>
+                                    </div>
+                                    Alphonse Ivo
+                                </a>
+                                <a class="dropdown-item p-l-0" href="#">
+                                    <div class="avatar avatar-sm">
+                                        <img src="img/avatars/3.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                        <span class="avatar-status label-success"></span>
+                                    </div>
+                                    Thancmar Theoph
+                                </a>
+                                <a class="dropdown-item p-l-0" href="#">
+                                    <div class="avatar avatar-sm">
+                                        <img src="img/avatars/4.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                        <span class="avatar-status label-warning"></span>
+                                    </div>
+                                    Walerian Khwaja
+                                </a>
+                                <a class="dropdown-item p-l-0" href="#">
+                                    <div class="avatar avatar-sm">
+                                        <img src="img/avatars/5.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                        <span class="avatar-status label-warning"></span>
+                                    </div>
+                                    Clemens Janko
+                                </a>
+                                <a class="dropdown-item p-l-0" href="#">
+                                    <div class="avatar avatar-sm">
+                                        <img src="img/avatars/6.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                        <span class="avatar-status label-warning"></span>
+                                    </div>
+                                    Chidubem Gottlob
+                                </a>
+                                <a class="dropdown-item p-l-0" href="#">
+                                    <div class="avatar avatar-sm">
+                                        <img src="img/avatars/7.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                        <span class="avatar-status label-danger"></span>
+                                    </div>
+                                    Hristofor Sergio
+                                </a>
+                                <a class="dropdown-item p-l-0" href="#">
+                                    <div class="avatar avatar-sm">
+                                        <img src="img/avatars/8.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                        <span class="avatar-status label-danger"></span>
+                                    </div>
+                                    Tadhg Griogair
+                                </a>
+                                <a class="dropdown-item p-l-0" href="#">
+                                    <div class="avatar avatar-sm">
+                                        <img src="img/avatars/1.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                        <span class="avatar-status label-danger"></span>
+                                    </div>
+                                    Pollux Beaumont
+                                </a>
+                                <a class="dropdown-item p-l-0" href="#">
+                                    <div class="avatar avatar-sm">
+                                        <img src="img/avatars/2.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                        <span class="avatar-status label-danger"></span>
+                                    </div>
+                                    Adam Alister
+                                </a>
+                                <a class="dropdown-item p-l-0" href="#">
+                                    <div class="avatar avatar-sm">
+                                        <img src="img/avatars/3.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                        <span class="avatar-status label-danger"></span>
+                                    </div>
+                                    Carlito Roffe
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="terms">
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Main content -->
+        <main id="content">
+            <!-- Page Header -->
+            <div class="page-header">
+                <div class="row">
+                    <div class="col-md-7">
+                        <h1 class="h2 page-title">Page Title</h1>
+                        <div class="text-muted page-desc">Page Description</div>
+                    </div>
+                    <div class="col-md-5 charts">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-4 col-md-4">
+                                <div class="chart-wrapper">
+                                    <canvas id="header-chart-1" height="68" class="chart chart-bar"></canvas>
+                                </div>
+                                <div class="text-xs-center title">
+                                    <span class="text-muted">Income: </span>
+                                    <strong>$189.128</strong>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-4 col-md-4">
+                                <div class="chart-wrapper">
+                                    <canvas id="header-chart-2" height="68" class="chart chart-bar"></canvas>
+                                </div>
+                                <div class="text-xs-center title">
+                                    <span class="text-muted">New clients: </span>
+                                    <strong class="text-danger">1.128</strong>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-4 col-md-4">
+                                <div class="chart-wrapper">
+                                    <canvas id="header-chart-3" height="68" class="chart chart-bar"></canvas>
+                                </div>
+                                <div class="text-xs-center title">
+                                    <span class="text-muted">Orders: </span>
+                                    <strong class="text-success">2.345</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Breadcrumb -->
+            <ol class="breadcrumb">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Library</a></li>
+                <li class="active">Data</li>
+                <!-- Breadcrumb Menu-->
+                <div class="breadcrumb-menu">
+                    <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                        <a class="btn btn-secondary" href="#"><i class="icon-speech"></i></a>
+                        <a class="btn btn-secondary" href="app.main"><i class="icon-graph"></i> &nbsp;Dashboard</a>
+                        <div class="btn-group" role="group">
+                            <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="icon-settings"></i> &nbsp;Settings
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="btnGroupDrop1">
+                                <div class="dropdown-header text-xs-center">
+                                    <strong>Account</strong>
+                                </div>
+                                <a class="dropdown-item" href="#"><i class="fa fa-tasks"></i> Tasks<span class="label label-danger">13</span></a>
+                                <a class="dropdown-item" href="#"><i class="fa fa-comments"></i> Comments<span class="label label-warning">234</span></a>
+                                <div class="dropdown-header text-xs-center">
+                                    <strong>Settings</strong>
+                                </div>
+                                <a class="dropdown-item" href="#"><i class="fa fa-wrench"></i> Settings</a>
+                                <a class="dropdown-item" href="#"><i class="fa fa-usd"></i> Payments<span class="label label-default">75</span></a>
+                                <a class="dropdown-item" href="#"><i class="fa fa-file"></i> Projects<span class="label label-primary">2</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ol>
+            <div class="container-fluid">
+                <div class="animated fadeIn">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <strong>Credit Card</strong>
+                                    <small>Form</small>
+                                </div>
+                                <div class="card-block">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="form-group">
+                                                <label for="name">Name</label>
+                                                <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--/row-->
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="form-group">
+                                                <label for="ccnumber">Credit Card Number</label>
+                                                <input type="text" class="form-control" id="ccnumber" placeholder="0000 0000 0000 0000">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--/row-->
+                                    <div class="row">
+                                        <div class="form-group col-sm-4">
+                                            <label for="ccmonth">Month</label>
+                                            <select class="form-control" id="ccmonth">
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                                <option>6</option>
+                                                <option>7</option>
+                                                <option>8</option>
+                                                <option>9</option>
+                                                <option>10</option>
+                                                <option>11</option>
+                                                <option>12</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-sm-4">
+                                            <label for="ccyear">Year</label>
+                                            <select class="form-control" id="ccyear">
+                                                <option>2014</option>
+                                                <option>2015</option>
+                                                <option>2016</option>
+                                                <option>2017</option>
+                                                <option>2018</option>
+                                                <option>2019</option>
+                                                <option>2020</option>
+                                                <option>2021</option>
+                                                <option>2022</option>
+                                                <option>2023</option>
+                                                <option>2024</option>
+                                                <option>2025</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="form-group">
+                                                <label for="cvv">CVV/CVC</label>
+                                                <input type="text" class="form-control" id="cvv" placeholder="123">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--/row-->
+                                </div>
+                            </div>
+                        </div>
+                        <!--/col-->
+                        <div class="col-sm-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <strong>Company</strong>
+                                    <small>Form</small>
+                                </div>
+                                <div class="card-block">
+                                    <div class="form-group">
+                                        <label for="company">Company</label>
+                                        <input type="text" class="form-control" id="company" placeholder="Enter your company name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="vat">VAT</label>
+                                        <input type="text" class="form-control" id="vat" placeholder="PL1234567890">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="street">Street</label>
+                                        <input type="text" class="form-control" id="street" placeholder="Enter street name">
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-sm-8">
+                                            <label for="city">City</label>
+                                            <input type="text" class="form-control" id="city" placeholder="Enter your city">
+                                        </div>
+                                        <div class="form-group col-sm-4">
+                                            <label for="postal-code">Postal Code</label>
+                                            <input type="text" class="form-control" id="postal-code" placeholder="Postal Code">
+                                        </div>
+                                    </div>
+                                    <!--/row-->
+                                    <div class="form-group">
+                                        <label for="country">Country</label>
+                                        <input type="text" class="form-control" id="country" placeholder="Country name">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/col-->
+                    </div>
+                    <!--/.row-->
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <strong>Basic Form</strong> Elements
+                                </div>
+                                <div class="card-block">
+                                    <form action="" method="post" enctype="multipart/form-data" class="form-horizontal ">
+                                        <div class="form-group row">
+                                            <label class="col-md-3 form-control-label">Static</label>
+                                            <div class="col-md-9">
+                                                <p class="form-control-static">Username</p>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-md-3 form-control-label" for="text-input">Text Input</label>
+                                            <div class="col-md-9">
+                                                <input type="text" id="text-input" name="text-input" class="form-control" placeholder="Text">
+                                                <span class="help-block">This is a help text</span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-md-3 form-control-label" for="email-input">Email Input</label>
+                                            <div class="col-md-9">
+                                                <input type="email" id="email-input" name="email-input" class="form-control" placeholder="Enter Email">
+                                                <span class="help-block">Please enter your email</span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-md-3 form-control-label" for="password-input">Password</label>
+                                            <div class="col-md-9">
+                                                <input type="password" id="password-input" name="password-input" class="form-control" placeholder="Password">
+                                                <span class="help-block">Please enter a complex password</span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-md-3 form-control-label" for="disabled-input">Disabled Input</label>
+                                            <div class="col-md-9">
+                                                <input type="text" id="disabled-input" name="disabled-input" class="form-control" placeholder="Disabled" disabled>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-md-3 form-control-label" for="textarea-input">Textarea</label>
+                                            <div class="col-md-9">
+                                                <textarea id="textarea-input" name="textarea-input" rows="9" class="form-control" placeholder="Content.."></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-md-3 form-control-label" for="select">Select</label>
+                                            <div class="col-md-9">
+                                                <select id="select" name="select" class="form-control" size="1">
+                                                    <option value="0">Please select</option>
+                                                    <option value="1">Option #1</option>
+                                                    <option value="2">Option #2</option>
+                                                    <option value="3">Option #3</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-md-3 form-control-label" for="select">Select Large</label>
+                                            <div class="col-md-9">
+                                                <select id="select" name="select" class="form-control input-lg" size="1">
+                                                    <option value="0">Please select</option>
+                                                    <option value="1">Option #1</option>
+                                                    <option value="2">Option #2</option>
+                                                    <option value="3">Option #3</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-md-3 form-control-label" for="select">Select Small</label>
+                                            <div class="col-md-9">
+                                                <select id="select" name="select" class="form-control input-sm" size="1">
+                                                    <option value="0">Please select</option>
+                                                    <option value="1">Option #1</option>
+                                                    <option value="2">Option #2</option>
+                                                    <option value="3">Option #3</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-md-3 form-control-label" for="select">Disabled Select</label>
+                                            <div class="col-md-9">
+                                                <select id="disabledSelect" class="form-control" disabled>
+                                                    <option value="0">Please select</option>
+                                                    <option value="1">Option #1</option>
+                                                    <option value="2">Option #2</option>
+                                                    <option value="3">Option #3</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-md-3 form-control-label" for="multiple-select">Multiple select</label>
+                                            <div class="col-md-9">
+                                                <select id="multiple-select" name="multiple-select" class="form-control" size="5" multiple>
+                                                    <option value="1">Option #1</option>
+                                                    <option value="2">Option #2</option>
+                                                    <option value="3">Option #3</option>
+                                                    <option value="4">Option #4</option>
+                                                    <option value="5">Option #5</option>
+                                                    <option value="6">Option #6</option>
+                                                    <option value="7">Option #7</option>
+                                                    <option value="8">Option #8</option>
+                                                    <option value="9">Option #9</option>
+                                                    <option value="10">Option #10</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-md-3 form-control-label">Radios</label>
+                                            <div class="col-md-9">
+                                                <div class="radio">
+                                                    <label for="radio1">
+                                                        <input type="radio" id="radio1" name="radios" value="option1"> Option 1
+                                                    </label>
+                                                </div>
+                                                <div class="radio">
+                                                    <label for="radio2">
+                                                        <input type="radio" id="radio2" name="radios" value="option2"> Option 2
+                                                    </label>
+                                                </div>
+                                                <div class="radio">
+                                                    <label for="radio3">
+                                                        <input type="radio" id="radio3" name="radios" value="option3"> Option 3
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-md-3 form-control-label">Inline Radios</label>
+                                            <div class="col-md-9">
+                                                <label class="radio-inline" for="inline-radio1">
+                                                    <input type="radio" id="inline-radio1" name="inline-radios" value="option1"> One
+                                                </label>
+                                                <label class="radio-inline" for="inline-radio2">
+                                                    <input type="radio" id="inline-radio2" name="inline-radios" value="option2"> Two
+                                                </label>
+                                                <label class="radio-inline" for="inline-radio3">
+                                                    <input type="radio" id="inline-radio3" name="inline-radios" value="option3"> Three
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-md-3 form-control-label">Checkboxes</label>
+                                            <div class="col-md-9">
+                                                <div class="checkbox">
+                                                    <label for="checkbox1">
+                                                        <input type="checkbox" id="checkbox1" name="checkbox1" value="option1"> Option 1
+                                                    </label>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <label for="checkbox2">
+                                                        <input type="checkbox" id="checkbox2" name="checkbox2" value="option2"> Option 2
+                                                    </label>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <label for="checkbox3">
+                                                        <input type="checkbox" id="checkbox3" name="checkbox3" value="option3"> Option 3
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-md-3 form-control-label">Inline Checkboxes</label>
+                                            <div class="col-md-9">
+                                                <label class="checkbox-inline" for="inline-checkbox1">
+                                                    <input type="checkbox" id="inline-checkbox1" name="inline-checkbox1" value="option1">One
+                                                </label>
+                                                <label class="checkbox-inline" for="inline-checkbox2">
+                                                    <input type="checkbox" id="inline-checkbox2" name="inline-checkbox2" value="option2">Two
+                                                </label>
+                                                <label class="checkbox-inline" for="inline-checkbox3">
+                                                    <input type="checkbox" id="inline-checkbox3" name="inline-checkbox3" value="option3">Three
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-md-3 form-control-label" for="file-input">File input</label>
+                                            <div class="col-md-9">
+                                                <input type="file" id="file-input" name="file-input">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-md-3 form-control-label" for="file-multiple-input">Multiple File input</label>
+                                            <div class="col-md-9">
+                                                <input type="file" id="file-multiple-input" name="file-multiple-input" multiple>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="card-footer">
+                                    <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Submit</button>
+                                    <button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Reset</button>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header">
+                                    <strong>Inline</strong> Form
+                                </div>
+                                <div class="card-block">
+                                    <form action="" method="post" class="form-inline">
+                                        <div class="form-group">
+                                            <label class="sr-only" for="if-email">Email</label>
+                                            <input type="email" id="if-email" name="if-email" class="form-control" placeholder="Enter Email..">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="sr-only" for="if-password">Password</label>
+                                            <input type="password" id="if-password" name="if-password" class="form-control" placeholder="Enter Password..">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="card-footer">
+                                    <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Submit</button>
+                                    <button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Reset</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <strong>Horizontal</strong> Form
+                                </div>
+                                <div class="card-block">
+                                    <form action="" method="post" class="form-horizontal ">
+                                        <div class="form-group row">
+                                            <label class="col-md-3 form-control-label" for="hf-email">Email</label>
+                                            <div class="col-md-9">
+                                                <input type="email" id="hf-email" name="hf-email" class="form-control" placeholder="Enter Email..">
+                                                <span class="help-block">Please enter your email</span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-md-3 form-control-label" for="hf-password">Password</label>
+                                            <div class="col-md-9">
+                                                <input type="password" id="hf-password" name="hf-password" class="form-control" placeholder="Enter Password..">
+                                                <span class="help-block">Please enter your password</span>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="card-footer">
+                                    <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Submit</button>
+                                    <button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Reset</button>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header">
+                                    <strong>Normal</strong> Form
+                                </div>
+                                <div class="card-block">
+                                    <form action="" method="post">
+                                        <div class="form-group">
+                                            <label for="nf-email">Email</label>
+                                            <input type="email" id="nf-email" name="nf-email" class="form-control" placeholder="Enter Email..">
+                                            <span class="help-block">Please enter your email</span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="nf-password">Password</label>
+                                            <input type="password" id="nf-password" name="nf-password" class="form-control" placeholder="Enter Password..">
+                                            <span class="help-block">Please enter your password</span>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="card-footer">
+                                    <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Submit</button>
+                                    <button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Reset</button>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header">
+                                    Input
+                                    <strong>Grid</strong>
+                                </div>
+                                <div class="card-block">
+                                    <form action="" method="post" class="form-horizontal ">
+                                        <div class="form-group row">
+                                            <div class="col-sm-3">
+                                                <input type="text" class="form-control" placeholder=".col-sm-3">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-sm-4">
+                                                <input type="text" class="form-control" placeholder=".col-sm-4">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-sm-5">
+                                                <input type="text" class="form-control" placeholder=".col-sm-5">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-sm-6">
+                                                <input type="text" class="form-control" placeholder=".col-sm-6">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-sm-7">
+                                                <input type="text" class="form-control" placeholder=".col-sm-7">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-sm-8">
+                                                <input type="text" class="form-control" placeholder=".col-sm-8">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" placeholder=".col-sm-9">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-sm-10">
+                                                <input type="text" class="form-control" placeholder=".col-sm-10">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-sm-11">
+                                                <input type="text" class="form-control" placeholder=".col-sm-11">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-sm-12">
+                                                <input type="text" class="form-control" placeholder=".col-sm-12">
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="card-footer">
+                                    <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-user"></i> Login</button>
+                                    <button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Reset</button>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header">
+                                    Input
+                                    <strong>Sizes</strong>
+                                </div>
+                                <div class="card-block">
+                                    <form action="" method="post" class="form-horizontal ">
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 form-control-label" for="input-small">Small Input</label>
+                                            <div class="col-sm-6">
+                                                <input type="text" id="input-small" name="input-small" class="form-control input-sm" placeholder=".input-sm">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 form-control-label" for="input-normal">Normal Input</label>
+                                            <div class="col-sm-6">
+                                                <input type="text" id="input-normal" name="input-normal" class="form-control" placeholder="Normal">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 form-control-label" for="input-large">Large Input</label>
+                                            <div class="col-sm-6">
+                                                <input type="text" id="input-large" name="input-large" class="form-control input-lg" placeholder=".input-lg">
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="card-footer">
+                                    <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Submit</button>
+                                    <button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Reset</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/col-->
+                    </div>
+                    <!--/.row-->
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <strong>Validation states</strong> Form
+                                </div>
+                                <div class="card-block">
+                                    <div class="form-group has-success">
+                                        <label class="form-form-control-label" for="inputSuccess1">Input with success</label>
+                                        <input type="text" class="form-control" id="inputSuccess1">
+                                    </div>
+                                    <div class="form-group has-warning">
+                                        <label class="form-form-control-label" for="inputWarning1">Input with warning</label>
+                                        <input type="text" class="form-control" id="inputWarning1">
+                                    </div>
+                                    <div class="form-group has-danger">
+                                        <label class="form-form-control-label" for="inputError1">Input with error</label>
+                                        <input type="text" class="form-control" id="inputError1">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/col-->
+                        <div class="col-sm-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <strong>Validation states</strong> with optional icons
+                                </div>
+                                <div class="card-block">
+                                    <div class="form-group has-success">
+                                        <label class="form-form-control-label" for="inputSuccess2">Input with success</label>
+                                        <input type="text" class="form-control form-control-success" id="inputSuccess2">
+                                    </div>
+                                    <div class="form-group has-warning">
+                                        <label class="form-form-control-label" for="inputWarning2">Input with warning</label>
+                                        <input type="text" class="form-control form-control-warning" id="inputWarning2">
+                                    </div>
+                                    <div class="form-group has-danger has-feedback">
+                                        <label class="form-form-control-label" for="inputError2">Input with error</label>
+                                        <input type="text" class="form-control form-control-danger" id="inputError2">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/col-->
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="card">
+                                <div class="card-header">
+                                    <strong>Icon/Text</strong> Groups
+                                </div>
+                                <div class="card-block">
+                                    <form action="" method="post" class="form-horizontal ">
+                                        <div class="form-group row">
+                                            <div class="col-md-12">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                                    <input type="text" id="input1-group1" name="input1-group1" class="form-control" placeholder="Username">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-md-12">
+                                                <div class="input-group">
+                                                    <input type="email" id="input2-group1" name="input2-group1" class="form-control" placeholder="Email">
+                                                    <span class="input-group-addon"><i class="fa fa-envelope-o"></i></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-md-12">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon"><i class="fa fa-euro"></i></span>
+                                                    <input type="text" id="input3-group1" name="input3-group1" class="form-control" placeholder="..">
+                                                    <span class="input-group-addon">.00</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="card-footer">
+                                    <button type="submit" class="btn btn-sm btn-success"><i class="fa fa-dot-circle-o"></i> Submit</button>
+                                    <button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Reset</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="card">
+                                <div class="card-header">
+                                    <strong>Buttons</strong> Groups
+                                </div>
+                                <div class="card-block">
+                                    <form action="" method="post" class="form-horizontal ">
+                                        <div class="form-group row">
+                                            <div class="col-md-12">
+                                                <div class="input-group">
+                                                    <span class="input-group-btn">
+                                                        <button type="button" class="btn btn-primary"><i class="fa fa-search"></i> Search</button>
+                                                    </span>
+                                                    <input type="text" id="input1-group2" name="input1-group2" class="form-control" placeholder="Username">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-md-12">
+                                                <div class="input-group">
+                                                    <input type="email" id="input2-group2" name="input2-group2" class="form-control" placeholder="Email">
+                                                    <span class="input-group-btn">
+                                                        <button type="button" class="btn btn-primary">Submit</button>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-md-12">
+                                                <div class="input-group">
+                                                    <span class="input-group-btn">
+                                                        <button type="button" class="btn btn-primary"><i class="fa fa-facebook"></i></button>
+                                                    </span>
+                                                    <input type="text" id="input3-group2" name="input3-group2" class="form-control" placeholder="Search">
+                                                    <span class="input-group-btn">
+                                                        <button type="button" class="btn btn-primary"><i class="fa fa-twitter"></i></button>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="card-footer">
+                                    <button type="submit" class="btn btn-sm btn-success"><i class="fa fa-dot-circle-o"></i> Submit</button>
+                                    <button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Reset</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="card">
+                                <div class="card-header">
+                                    <strong>Dropdowns</strong> Groups
+                                </div>
+                                <div class="card-block">
+                                    <form action="" method="post" class="form-horizontal ">
+                                        <div class="form-group row">
+                                            <div class="col-md-12">
+                                                <div class="input-group">
+                                                    <div class="input-group-btn">
+                                                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Action
+                                                            <span class="caret"></span>
+                                                        </button>
+                                                        <ul class="dropdown-menu">
+                                                            <li><a href="javascript:void(0)">Action</a>
+                                                            </li>
+                                                            <li><a href="javascript:void(0)">Another action</a>
+                                                            </li>
+                                                            <li><a href="javascript:void(0)">Something else here</a>
+                                                            </li>
+                                                            <li class="divider"></li>
+                                                            <li><a href="javascript:void(0)">Separated link</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <input type="text" id="input1-group3" name="input1-group3" class="form-control" placeholder="Username">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-md-12">
+                                                <div class="input-group">
+                                                    <input type="email" id="input2-group3" name="input2-group3" class="form-control" placeholder="Email">
+                                                    <div class="input-group-btn">
+                                                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Action
+                                                            <span class="caret"></span>
+                                                        </button>
+                                                        <ul class="dropdown-menu dropdown-menu-right">
+                                                            <li><a href="javascript:void(0)">Action</a>
+                                                            </li>
+                                                            <li><a href="javascript:void(0)">Another action</a>
+                                                            </li>
+                                                            <li><a href="javascript:void(0)">Something else here</a>
+                                                            </li>
+                                                            <li class="divider"></li>
+                                                            <li><a href="javascript:void(0)">Separated link</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-md-12">
+                                                <div class="input-group">
+                                                    <div class="input-group-btn">
+                                                        <button type="button" class="btn btn-primary">Action</button>
+                                                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                                            <span class="caret"></span>
+                                                        </button>
+                                                        <ul class="dropdown-menu">
+                                                            <li><a href="javascript:void(0)">Action</a>
+                                                            </li>
+                                                            <li><a href="javascript:void(0)">Another action</a>
+                                                            </li>
+                                                            <li><a href="javascript:void(0)">Something else here</a>
+                                                            </li>
+                                                            <li class="divider"></li>
+                                                            <li><a href="javascript:void(0)">Separated link</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <input type="text" id="input3-group3" name="input3-group3" class="form-control" placeholder="..">
+                                                    <div class="input-group-btn">
+                                                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                                            <span class="caret"></span>
+                                                        </button>
+                                                        <ul class="dropdown-menu dropdown-menu-right">
+                                                            <li><a href="javascript:void(0)">Action</a>
+                                                            </li>
+                                                            <li><a href="javascript:void(0)">Another action</a>
+                                                            </li>
+                                                            <li><a href="javascript:void(0)">Something else here</a>
+                                                            </li>
+                                                            <li class="divider"></li>
+                                                            <li><a href="javascript:void(0)">Separated link</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="card-footer">
+                                    <button type="submit" class="btn btn-sm btn-success"><i class="fa fa-dot-circle-o"></i> Submit</button>
+                                    <button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Reset</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    Use the grid for big devices!
+                                    <small>
+                                        <code>.col-lg-*</code>
+                                        <code>.col-md-*</code>
+                                        <code>.col-sm-*</code>
+                                    </small>
+                                </div>
+                                <div class="card-block">
+                                    <form action="" method="post" class="form-horizontal ">
+                                        <div class="form-group row">
+                                            <div class="col-md-8">
+                                                <input type="text" class="form-control" placeholder=".col-md-8">
+                                            </div>
+                                            <div class="col-md-4">
+                                                <input type="text" class="form-control" placeholder=".col-md-4">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-md-7">
+                                                <input type="text" class="form-control" placeholder=".col-md-7">
+                                            </div>
+                                            <div class="col-md-5">
+                                                <input type="text" class="form-control" placeholder=".col-md-5">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control" placeholder=".col-md-6">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control" placeholder=".col-md-6">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-md-5">
+                                                <input type="text" class="form-control" placeholder=".col-md-5">
+                                            </div>
+                                            <div class="col-md-7">
+                                                <input type="text" class="form-control" placeholder=".col-md-7">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-md-4">
+                                                <input type="text" class="form-control" placeholder=".col-md-4">
+                                            </div>
+                                            <div class="col-md-8">
+                                                <input type="text" class="form-control" placeholder=".col-md-8">
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="card-footer">
+                                    <button type="submit" class="btn btn-sm btn-primary">Action</button>
+                                    <button type="button" class="btn btn-sm btn-danger">Action</button>
+                                    <button type="button" class="btn btn-sm btn-warning">Action</button>
+                                    <button type="button" class="btn btn-sm btn-info">Action</button>
+                                    <button type="button" class="btn btn-sm btn-success">Action</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    Input Grid for small devices!
+                                    <small>
+                                        <code>.col-xs-*</code>
+                                    </small>
+                                </div>
+                                <div class="card-block">
+                                    <form action="" method="post" class="form-horizontal ">
+                                        <div class="form-group row">
+                                            <div class="col-xs-4">
+                                                <input type="text" class="form-control" placeholder=".col-xs-4">
+                                            </div>
+                                            <div class="col-xs-8">
+                                                <input type="text" class="form-control" placeholder=".col-xs-8">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-xs-5">
+                                                <input type="text" class="form-control" placeholder=".col-xs-5">
+                                            </div>
+                                            <div class="col-xs-7">
+                                                <input type="text" class="form-control" placeholder=".col-xs-7">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-xs-6">
+                                                <input type="text" class="form-control" placeholder=".col-xs-6">
+                                            </div>
+                                            <div class="col-xs-6">
+                                                <input type="text" class="form-control" placeholder=".col-xs-6">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-xs-7">
+                                                <input type="text" class="form-control" placeholder=".col-xs-5">
+                                            </div>
+                                            <div class="col-xs-5">
+                                                <input type="text" class="form-control" placeholder=".col-xs-5">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-xs-8">
+                                                <input type="text" class="form-control" placeholder=".col-xs-8">
+                                            </div>
+                                            <div class="col-xs-4">
+                                                <input type="text" class="form-control" placeholder=".col-xs-4">
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="card-footer">
+                                    <button type="submit" class="btn btn-sm btn-primary">Action</button>
+                                    <button type="button" class="btn btn-sm btn-danger">Action</button>
+                                    <button type="button" class="btn btn-sm btn-warning">Action</button>
+                                    <button type="button" class="btn btn-sm btn-info">Action</button>
+                                    <button type="button" class="btn btn-sm btn-success">Action</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="card">
+                                <div class="card-header">
+                                    Example Form
+                                </div>
+                                <div class="card-block">
+                                    <form action="" method="post">
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">Username</span>
+                                                <input type="text" id="username3" name="username3" class="form-control">
+                                                <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">Email</span>
+                                                <input type="email" id="email3" name="email3" class="form-control">
+                                                <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">Password</span>
+                                                <input type="password" id="password3" name="password3" class="form-control">
+                                                <span class="input-group-addon"><i class="fa fa-asterisk"></i></span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group form-actions">
+                                            <button type="submit" class="btn btn-sm btn-primary">Submit</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="card">
+                                <div class="card-header">
+                                    Example Form
+                                </div>
+                                <div class="card-block">
+                                    <form action="" method="post">
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <input type="text" id="username2" name="username2" class="form-control" placeholder="Username">
+                                                <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <input type="email" id="email2" name="email2" class="form-control" placeholder="Email">
+                                                <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <input type="password" id="password2" name="password2" class="form-control" placeholder="Password">
+                                                <span class="input-group-addon"><i class="fa fa-asterisk"></i></span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group form-actions">
+                                            <button type="submit" class="btn btn-sm btn-default">Submit</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="card">
+                                <div class="card-header">
+                                    Example Form
+                                </div>
+                                <div class="card-block">
+                                    <form action="" method="post">
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                                <input type="text" id="username" name="username" class="form-control" placeholder="Username">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                                                <input type="email" id="email" name="email" class="form-control" placeholder="Email">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="fa fa-asterisk"></i></span>
+                                                <input type="password" id="password" name="password" class="form-control" placeholder="Password">
+                                            </div>
+                                        </div>
+                                        <div class="form-group form-actions">
+                                            <button type="submit" class="btn btn-sm btn-success">Submit</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/row-->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <i class="fa fa-edit"></i>Form Elements
+                                    <div class="card-actions">
+                                        <a href="#" class="btn-setting"><i class="icon-settings"></i></a>
+                                        <a href="#" class="btn-minimize"><i class="icon-arrow-up"></i></a>
+                                        <a href="#" class="btn-close"><i class="icon-close"></i></a>
+                                    </div>
+                                </div>
+                                <div class="card-block">
+                                    <form class="form-horizontal">
+                                        <div class="form-group">
+                                            <label class="form-control-label" for="prependedInput">Prepended text</label>
+                                            <div class="controls">
+                                                <div class="input-prepend input-group">
+                                                    <span class="input-group-addon">@</span>
+                                                    <input id="prependedInput" class="form-control" size="16" type="text">
+                                                </div>
+                                                <p class="help-block">Here's some help text</p>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-control-label" for="appendedInput">Appended text</label>
+                                            <div class="controls">
+                                                <div class="input-group">
+                                                    <input id="appendedInput" class="form-control" size="16" type="text">
+                                                    <span class="input-group-addon">.00</span>
+                                                </div>
+                                                <span class="help-block">Here's more help text</span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-control-label" for="appendedPrependedInput">Append and prepend</label>
+                                            <div class="controls">
+                                                <div class="input-prepend input-group">
+                                                    <span class="input-group-addon">$</span>
+                                                    <input id="appendedPrependedInput" class="form-control" size="16" type="text">
+                                                    <span class="input-group-addon">.00</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-control-label" for="appendedInputButton">Append with button</label>
+                                            <div class="controls">
+                                                <div class="input-group">
+                                                    <input id="appendedInputButton" class="form-control" size="16" type="text">
+                                                    <span class="input-group-btn">
+                                                        <button class="btn btn-default" type="button">Go!</button>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-control-label" for="appendedInputButtons">Two-button append</label>
+                                            <div class="controls">
+                                                <div class="input-group">
+                                                    <input id="appendedInputButtons" size="16" class="form-control" type="text">
+                                                    <span class="input-group-btn">
+                                                        <button class="btn btn-default" type="button">Search</button>
+                                                        <button class="btn btn-default" type="button">Options</button>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-actions">
+                                            <button type="submit" class="btn btn-primary">Save changes</button>
+                                            <button class="btn btn-default">Cancel</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/col-->
+                    </div>
+                    <!--/row-->
+                </div>
+            </div>
+            <!-- /.conainer-fluid -->
+        </main>
+        <footer id="footer">
+            <span class="text-left">
+                <a href="http://bootstrapmaster.com">Root</a> &copy; 2016 creativeLabs.
+            </span>
+            <span class="pull-right">
+                Powered by <a href="http://genesisui.com">GenesisUI</a>
+            </span>
+        </footer>
+        <!-- Bootstrap and necessary plugins -->
+        <script src="js/libs/jquery.min.js"></script>
+        <script src="js/libs/tether.min.js"></script>
+        <script src="js/libs/bootstrap.min.js"></script>
+        <script src="js/libs/pace.min.js"></script>
+        <!-- Plugins and scripts required by all views -->
+        <script src="js/libs/Chart.min.js"></script>
+        <script src="js/views/shared.js"></script>
+        <!-- GenesisUI main scripts -->
+        <script src="js/app.js"></script>
+        <!-- Grunt watch plugin -->
+        <script src="//localhost:35729/livereload.js"></script>
+    </body>
+</html>

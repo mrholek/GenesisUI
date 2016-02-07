@@ -1,0 +1,612 @@
+<!--
+* GenesisUI Bootstrap 4 Admin Template built as framework!
+* Version 1.3.0
+* https://GenesisUI.com
+* Copyright 2016 creativeLabs Łukasz Holeczek
+* License : https://GenesisUI.com/license.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="ROOT Admin - UI Admin Kit Powered by Bootstrap 4.0.0">
+        <meta name="author" content="Lukasz Holeczek">
+        <meta name="keyword" content="ROOT Admin - UI Admin Kit Powered by Bootstrap 4.0.0">
+        <!-- <link rel="shortcut icon" href="assets/ico/favicon.png"> -->
+        <title>ROOT Admin - UI Admin Kit</title>
+        <!-- Main styles for this application -->
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <!-- BODY options, add following classes to body to change options.
+		1. 'compact-nav'     	  - Switch sidebar to minified version (width 50px)
+		2. 'sidebar-nav'		  - Navigation on the left
+		3. 'fixed-nav'			  - Fixed navigation
+		4. 'navbar-fixed'		  - Fixed navbar
+	-->
+    <body class="navbar-fixed sidebar-nav fixed-nav">
+        <header class="navbar navbar-light brand-dark">
+            <button class="navbar-toggler mobile-toggler hidden-lg-up" type="button">&#9776;</button>
+            <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler layout-toggler hidden-md-down" type="button" data-before="sidebar-nav" data-after="sidebar-nav compact-nav">&#9776;</button>
+            <ul class="nav navbar-nav pull-right hidden-md-down">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                        <img src="img/flags/United-Kingdom.png" class="img-flag" alt="English">
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <div class="dropdown-header text-xs-center">
+                            <strong>Choose language</strong>
+                        </div>
+                        <a class="dropdown-item" href="#">
+                            <img src="img/flags/Poland.png" class="img-flag" alt="Polish"> Polish</a>
+                        <a class="dropdown-item" href="#">
+                            <img src="img/flags/United-Kingdom.png" class="img-flag" alt="English"> English</a>
+                        <a class="dropdown-item" href="#">
+                            <img src="img/flags/Spain.png" class="img-flag" alt="Espa&#xF1;ol"> Español</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="icon-bell"></i><span class="label label-pill label-danger">5</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="icon-list"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="icon-location-pin"></i></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                        <img src="img/avatars/6.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                        <span class="hidden-md-down">admin</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <div class="dropdown-header text-xs-center">
+                            <strong>Account</strong>
+                        </div>
+                        <a class="dropdown-item" href="#"><i class="fa fa-bell-o"></i> Updates<span class="label label-info">42</span></a>
+                        <a class="dropdown-item" href="#"><i class="fa fa-envelope-o"></i> Messages<span class="label label-success">42</span></a>
+                        <a class="dropdown-item" href="#"><i class="fa fa-tasks"></i> Tasks<span class="label label-danger">42</span></a>
+                        <a class="dropdown-item" href="#"><i class="fa fa-comments"></i> Comments<span class="label label-warning">42</span></a>
+                        <div class="dropdown-header text-xs-center">
+                            <strong>Settings</strong>
+                        </div>
+                        <a class="dropdown-item" href="#"><i class="fa fa-user"></i> Profile</a>
+                        <a class="dropdown-item" href="#"><i class="fa fa-wrench"></i> Settings</a>
+                        <a class="dropdown-item" href="#"><i class="fa fa-usd"></i> Payments<span class="label label-default">42</span></a>
+                        <a class="dropdown-item" href="#"><i class="fa fa-file"></i> Projects<span class="label label-primary">42</span></a>
+                        <div class="divider"></div>
+                        <a class="dropdown-item" href="#"><i class="fa fa-shield"></i> Lock Account</a>
+                        <a class="dropdown-item" href="#"><i class="fa fa-lock"></i> Logout</a>
+                    </div>
+                </li>
+            </ul>
+        </header>
+        <nav id="navigation" class="collapse navbar-toggleable-sm nav-dark">
+            <div id="navigation-header">
+                <img src="img/avatars/8.jpg" class="img-avatar" alt="Avatar">
+                <div>
+                    <strong>JOHN DOE</strong>
+                </div>
+                <div class="text-muted">
+                    <small>Founder &amp; CEO</small>
+                </div>
+                <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                    <button type="button" class="btn btn-link">
+                        <i class="icon-settings"></i>
+                    </button>
+                    <button type="button" class="btn btn-link">
+                        <i class="icon-speech"></i>
+                        <span class="label label-warning label-pill">5</span>
+                    </button>
+                    <div class="btn-group" role="group">
+                        <button id="btnGroupDrop1" type="button" class="btn btn-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="icon-user"></i>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                            <div class="dropdown-header text-xs-center">
+                                <strong>Account</strong>
+                            </div>
+                            <a class="dropdown-item" href="#"><i class="fa fa-bell-o"></i> Updates<span class="label label-info">42</span></a>
+                            <a class="dropdown-item" href="#"><i class="fa fa-envelope-o"></i> Messages<span class="label label-success">42</span></a>
+                            <a class="dropdown-item" href="#"><i class="fa fa-tasks"></i> Tasks<span class="label label-danger">42</span></a>
+                            <a class="dropdown-item" href="#"><i class="fa fa-comments"></i> Comments<span class="label label-warning">42</span></a>
+                            <div class="dropdown-header text-xs-center">
+                                <strong>Settings</strong>
+                            </div>
+                            <a class="dropdown-item" href="#"><i class="fa fa-user"></i> Profile</a>
+                            <a class="dropdown-item" href="#"><i class="fa fa-wrench"></i> Settings</a>
+                            <a class="dropdown-item" href="#"><i class="fa fa-usd"></i> Payments<span class="label label-default">42</span></a>
+                            <a class="dropdown-item" href="#"><i class="fa fa-file"></i> Projects<span class="label label-primary">42</span></a>
+                            <div class="divider"></div>
+                            <a class="dropdown-item" href="#"><i class="fa fa-shield"></i> Lock Account</a>
+                            <a class="dropdown-item" href="#"><i class="fa fa-lock"></i> Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="navigation-items">
+                <ul class="nav">
+                    <li class="nav-title">
+                        Dashboard
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html"><i class="icon-speedometer"></i> DASHBOARD <span class="label label-info">NEW</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index2.html"><i class="icon-speedometer"></i> DASHBOARD 2 <span class="label label-warning">NEW</span></a>
+                    </li>
+                    <li class="divider"></li>
+                    <li class="nav-title">
+                        UI Elements
+                    </li>
+                    <li class="nav-item nav-dropdown">
+                        <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-puzzle"></i> Components</a>
+                        <ul class="nav-dropdown-items">
+                            <li class="nav-item">
+                                <a class="nav-link" href="components-buttons.html"><i class="icon-puzzle"></i> BUTTONS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="components-social-buttons.html"><i class="icon-puzzle"></i> Social Buttons</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="components-cards.html"><i class="icon-puzzle"></i> CARDS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="components-forms.html"><i class="icon-puzzle"></i> FORMS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="components-switches.html"><i class="icon-puzzle"></i> SWITCHES</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="components-tables.html"><i class="icon-puzzle"></i> TABLES</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item nav-dropdown">
+                        <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-star"></i> ICONS</a>
+                        <ul class="nav-dropdown-items">
+                            <li class="nav-item">
+                                <a class="nav-link" href="icons-font-awesome.html"><i class="icon-star"></i> Font Awesome</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="icons-simple-line-icons.html"><i class="icon-star"></i> Simple Line Icons</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item nav-dropdown">
+                        <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-energy"></i> Plugins</a>
+                        <ul class="nav-dropdown-items">
+                            <li class="nav-item">
+                                <a class="nav-link" href="plugins-calendar.html"><i class="icon-calendar"></i> CALENDAR</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="plugins-notifications.html"><i class="icon-info"></i> NOTIFICATIONS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="plugins-sliders.html"><i class="icon-equalizer"></i> SLIDERS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="plugins-tables.html"><i class="icon-list"></i> TABLES</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="forms.html"><i class="icon-note"></i> FORMS <span class="label label-danger">NEW</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="widgets.html"><i class="icon-calculator"></i> WIDGETS <span class="label label-info">NEW</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="charts.html"><i class="icon-pie-chart"></i> CHARTS</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li class="nav-title">
+                        Extras
+                    </li>
+                    <li class="nav-item nav-dropdown">
+                        <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-star"></i> PAGES</a>
+                        <ul class="nav-dropdown-items">
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages-login.html" target="_top"><i class="icon-star"></i> Login</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages-register.html" target="_top"><i class="icon-star"></i> Register</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages-404.html" target="_top"><i class="icon-star"></i> Error 404</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages-500.html" target="_top"><i class="icon-star"></i> Error 500</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item nav-dropdown">
+                        <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-layers"></i> UI Kits</a>
+                        <ul class="nav-dropdown-items">
+                            <li class="nav-item nav-dropdown">
+                                <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-speech"></i> INVOICING</a>
+                                <ul class="nav-dropdown-items">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="UIkits-invoicing-invoice.html"><i class="icon-speech"></i> INVOICE</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul class="nav-dropdown-items">
+                            <li class="nav-item nav-dropdown">
+                                <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-speech"></i> EMAIL</a>
+                                <ul class="nav-dropdown-items">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="UIkits-email-inbox.html"><i class="icon-speech"></i> INBOX</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="UIkits-email-message.html"><i class="icon-speech"></i> MESSAGE</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="UIkits-email-compose.html"><i class="icon-speech"></i> COMPOSE</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div id="navigation-footer">
+                <ul class="menu">
+                    <li>
+                        <div class="btn-group dropup">
+                            <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="icon-speedometer"></i>
+                                <span>Usage</span>
+                            </button>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-header">Usage <a href="#" class="btn pull-right"><i class="icon-settings"></i></a></div>
+                                <div class="dropdown-item">
+                                    <div class="title">Memory
+                                        <span>2GB of 8GB</span>
+                                    </div>
+                                    <progress class="progress progress-xs progress-success m-b-0" value="25" max="100">25%</progress>
+                                </div>
+                                <div class="dropdown-item">
+                                    <div class="title">HDD
+                                        <span>750GB of 1TB</span>
+                                    </div>
+                                    <progress class="progress progress-xs progress-warning m-b-0" value="75" max="100">75%</progress>
+                                </div>
+                                <div class="dropdown-item">
+                                    <div class="title">SSD
+                                        <span>300GB of 1TB</span>
+                                    </div>
+                                    <progress class="progress progress-xs progress-info m-b-0" value="30" max="100">30%</progress>
+                                </div>
+                                <div class="dropdown-item">
+                                    <div class="title">Bandwidth
+                                        <span>50TB of 50TB</span>
+                                    </div>
+                                    <progress class="progress progress-xs progress-danger m-b-0" value="100" max="100">100%</progress>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="btn-group dropup">
+                            <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="icon-list"></i>
+                                <span>Menu</span>
+                            </button>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-header text-xs-center">
+                                    <strong>Account</strong>
+                                </div>
+                                <a class="dropdown-item" href="#"><i class="fa fa-bell-o"></i> Updates<span class="label label-info">42</span></a>
+                                <a class="dropdown-item" href="#"><i class="fa fa-envelope-o"></i> Messages<span class="label label-success">42</span></a>
+                                <a class="dropdown-item" href="#"><i class="fa fa-tasks"></i> Tasks<span class="label label-danger">42</span></a>
+                                <a class="dropdown-item" href="#"><i class="fa fa-comments"></i> Comments<span class="label label-warning">42</span></a>
+                                <div class="dropdown-header text-xs-center">
+                                    <strong>Settings</strong>
+                                </div>
+                                <a class="dropdown-item" href="#"><i class="fa fa-user"></i> Profile</a>
+                                <a class="dropdown-item" href="#"><i class="fa fa-wrench"></i> Settings</a>
+                                <a class="dropdown-item" href="#"><i class="fa fa-usd"></i> Payments<span class="label label-default">42</span></a>
+                                <a class="dropdown-item" href="#"><i class="fa fa-file"></i> Projects<span class="label label-primary">42</span></a>
+                                <div class="divider"></div>
+                                <a class="dropdown-item" href="#"><i class="fa fa-shield"></i> Lock Account</a>
+                                <a class="dropdown-item" href="#"><i class="fa fa-lock"></i> Logout</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="action">
+                        <div class="btn-group dropup">
+                            <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="icon-people"></i>
+                                <span>Contacts</span>
+                                <span class="sr-only">Toggle Dropdown</span>
+                            </button>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-header">Contacts <a href="#" class="btn pull-right"><i class="icon-settings"></i></a></div>
+                                <a class="dropdown-item p-l-0" href="#">
+                                    <div class="avatar avatar-sm">
+                                        <img src="img/avatars/1.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                        <span class="avatar-status label-success"></span>
+                                    </div>
+                                    Anton Phunihel
+                                </a>
+                                <a class="dropdown-item p-l-0" href="#">
+                                    <div class="avatar avatar-sm">
+                                        <img src="img/avatars/2.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                        <span class="avatar-status label-success"></span>
+                                    </div>
+                                    Alphonse Ivo
+                                </a>
+                                <a class="dropdown-item p-l-0" href="#">
+                                    <div class="avatar avatar-sm">
+                                        <img src="img/avatars/3.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                        <span class="avatar-status label-success"></span>
+                                    </div>
+                                    Thancmar Theoph
+                                </a>
+                                <a class="dropdown-item p-l-0" href="#">
+                                    <div class="avatar avatar-sm">
+                                        <img src="img/avatars/4.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                        <span class="avatar-status label-warning"></span>
+                                    </div>
+                                    Walerian Khwaja
+                                </a>
+                                <a class="dropdown-item p-l-0" href="#">
+                                    <div class="avatar avatar-sm">
+                                        <img src="img/avatars/5.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                        <span class="avatar-status label-warning"></span>
+                                    </div>
+                                    Clemens Janko
+                                </a>
+                                <a class="dropdown-item p-l-0" href="#">
+                                    <div class="avatar avatar-sm">
+                                        <img src="img/avatars/6.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                        <span class="avatar-status label-warning"></span>
+                                    </div>
+                                    Chidubem Gottlob
+                                </a>
+                                <a class="dropdown-item p-l-0" href="#">
+                                    <div class="avatar avatar-sm">
+                                        <img src="img/avatars/7.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                        <span class="avatar-status label-danger"></span>
+                                    </div>
+                                    Hristofor Sergio
+                                </a>
+                                <a class="dropdown-item p-l-0" href="#">
+                                    <div class="avatar avatar-sm">
+                                        <img src="img/avatars/8.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                        <span class="avatar-status label-danger"></span>
+                                    </div>
+                                    Tadhg Griogair
+                                </a>
+                                <a class="dropdown-item p-l-0" href="#">
+                                    <div class="avatar avatar-sm">
+                                        <img src="img/avatars/1.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                        <span class="avatar-status label-danger"></span>
+                                    </div>
+                                    Pollux Beaumont
+                                </a>
+                                <a class="dropdown-item p-l-0" href="#">
+                                    <div class="avatar avatar-sm">
+                                        <img src="img/avatars/2.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                        <span class="avatar-status label-danger"></span>
+                                    </div>
+                                    Adam Alister
+                                </a>
+                                <a class="dropdown-item p-l-0" href="#">
+                                    <div class="avatar avatar-sm">
+                                        <img src="img/avatars/3.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                        <span class="avatar-status label-danger"></span>
+                                    </div>
+                                    Carlito Roffe
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="terms">
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Main content -->
+        <main id="content">
+            <!-- Page Header -->
+            <div class="page-header">
+                <div class="row">
+                    <div class="col-md-7">
+                        <h1 class="h2 page-title">Page Title</h1>
+                        <div class="text-muted page-desc">Page Description</div>
+                    </div>
+                    <div class="col-md-5 charts">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-4 col-md-4">
+                                <div class="chart-wrapper">
+                                    <canvas id="header-chart-1" height="68" class="chart chart-bar"></canvas>
+                                </div>
+                                <div class="text-xs-center title">
+                                    <span class="text-muted">Income: </span>
+                                    <strong>$189.128</strong>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-4 col-md-4">
+                                <div class="chart-wrapper">
+                                    <canvas id="header-chart-2" height="68" class="chart chart-bar"></canvas>
+                                </div>
+                                <div class="text-xs-center title">
+                                    <span class="text-muted">New clients: </span>
+                                    <strong class="text-danger">1.128</strong>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-4 col-md-4">
+                                <div class="chart-wrapper">
+                                    <canvas id="header-chart-3" height="68" class="chart chart-bar"></canvas>
+                                </div>
+                                <div class="text-xs-center title">
+                                    <span class="text-muted">Orders: </span>
+                                    <strong class="text-success">2.345</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Breadcrumb -->
+            <ol class="breadcrumb">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Library</a></li>
+                <li class="active">Data</li>
+                <!-- Breadcrumb Menu-->
+                <div class="breadcrumb-menu">
+                    <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                        <a class="btn btn-secondary" href="#"><i class="icon-speech"></i></a>
+                        <a class="btn btn-secondary" href="app.main"><i class="icon-graph"></i> &nbsp;Dashboard</a>
+                        <div class="btn-group" role="group">
+                            <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="icon-settings"></i> &nbsp;Settings
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="btnGroupDrop1">
+                                <div class="dropdown-header text-xs-center">
+                                    <strong>Account</strong>
+                                </div>
+                                <a class="dropdown-item" href="#"><i class="fa fa-tasks"></i> Tasks<span class="label label-danger">13</span></a>
+                                <a class="dropdown-item" href="#"><i class="fa fa-comments"></i> Comments<span class="label label-warning">234</span></a>
+                                <div class="dropdown-header text-xs-center">
+                                    <strong>Settings</strong>
+                                </div>
+                                <a class="dropdown-item" href="#"><i class="fa fa-wrench"></i> Settings</a>
+                                <a class="dropdown-item" href="#"><i class="fa fa-usd"></i> Payments<span class="label label-default">75</span></a>
+                                <a class="dropdown-item" href="#"><i class="fa fa-file"></i> Projects<span class="label label-primary">2</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ol>
+            <div class="container-fluid">
+                <div class="animated fadeIn">
+                    <div class="card-columns col-2">
+                        <div class="card">
+                            <div class="card-header">
+                                Line Chart
+                                <div class="card-actions">
+                                    <a href="http://www.chartjs.org">
+                                        <small class="text-muted">docs</small>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="card-block">
+                                <div class="chart-wrapper">
+                                    <canvas id="canvas-1"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                Bar Chart
+                                <div class="card-actions">
+                                    <a href="http://www.chartjs.org">
+                                        <small class="text-muted">docs</small>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="card-block">
+                                <div class="chart-wrapper">
+                                    <canvas id="canvas-2"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                Doughnut Chart
+                                <div class="card-actions">
+                                    <a href="http://www.chartjs.org">
+                                        <small class="text-muted">docs</small>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="card-block">
+                                <div class="chart-wrapper">
+                                    <canvas id="canvas-3"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                Radar Chart
+                                <div class="card-actions">
+                                    <a href="http://www.chartjs.org">
+                                        <small class="text-muted">docs</small>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="card-block">
+                                <div class="chart-wrapper">
+                                    <canvas id="canvas-4"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                Pie Chart
+                                <div class="card-actions">
+                                    <a href="http://www.chartjs.org">
+                                        <small class="text-muted">docs</small>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="card-block">
+                                <div class="chart-wrapper">
+                                    <canvas id="canvas-5"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                Polar Area Chart
+                                <div class="card-actions">
+                                    <a href="http://www.chartjs.org">
+                                        <small class="text-muted">docs</small>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="card-block">
+                                <div class="chart-wrapper">
+                                    <canvas id="canvas-6"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.conainer-fluid -->
+        </main>
+        <footer id="footer">
+            <span class="text-left">
+                <a href="http://bootstrapmaster.com">Root</a> &copy; 2016 creativeLabs.
+            </span>
+            <span class="pull-right">
+                Powered by <a href="http://genesisui.com">GenesisUI</a>
+            </span>
+        </footer>
+        <!-- Bootstrap and necessary plugins -->
+        <script src="js/libs/jquery.min.js"></script>
+        <script src="js/libs/tether.min.js"></script>
+        <script src="js/libs/bootstrap.min.js"></script>
+        <script src="js/libs/pace.min.js"></script>
+        <!-- Plugins and scripts required by all views -->
+        <script src="js/libs/Chart.min.js"></script>
+        <script src="js/views/shared.js"></script>
+        <!-- GenesisUI main scripts -->
+        <script src="js/app.js"></script>
+        <!-- Plugins and scripts required by this views -->
+        <!-- Custom scripts required by this view -->
+        <script src="js/views/charts.js"></script>
+        <!-- Grunt watch plugin -->
+        <script src="//localhost:35729/livereload.js"></script>
+    </body>
+</html>

@@ -1,0 +1,1303 @@
+<!--
+* GenesisUI Bootstrap 4 Admin Template built as framework!
+* Version 1.3.0
+* https://GenesisUI.com
+* Copyright 2016 creativeLabs Łukasz Holeczek
+* License : https://GenesisUI.com/license.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="ROOT Admin - UI Admin Kit Powered by Bootstrap 4.0.0">
+        <meta name="author" content="Lukasz Holeczek">
+        <meta name="keyword" content="ROOT Admin - UI Admin Kit Powered by Bootstrap 4.0.0">
+        <!-- <link rel="shortcut icon" href="assets/ico/favicon.png"> -->
+        <title>ROOT Admin - UI Admin Kit</title>
+        <!-- Main styles for this application -->
+        <link href="assets/css/style.css" rel="stylesheet">
+    </head>
+    <!-- BODY options, add following classes to body to change options.
+		1. 'compact-nav'     	  - Switch sidebar to minified version (width 50px)
+		2. 'sidebar-nav'		  - Navigation on the left
+		3. 'fixed-nav'			  - Fixed navigation
+		4. 'navbar-fixed'		  - Fixed navbar
+	-->
+    <body class="navbar-fixed sidebar-nav fixed-nav">
+        <header class="navbar navbar-light brand-dark">
+            <button class="navbar-toggler mobile-toggler hidden-lg-up" type="button">&#9776;</button>
+            <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler layout-toggler hidden-md-down" type="button" data-before="sidebar-nav" data-after="sidebar-nav compact-nav">&#9776;</button>
+            <ul class="nav navbar-nav pull-right hidden-md-down">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                        <img src="assets/img/flags/United-Kingdom.png" class="img-flag" alt="English">
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <div class="dropdown-header text-xs-center">
+                            <strong>Choose language</strong>
+                        </div>
+                        <a class="dropdown-item" href="#">
+                            <img src="assets/img/flags/Poland.png" class="img-flag" alt="Polish"> Polish</a>
+                        <a class="dropdown-item" href="#">
+                            <img src="assets/img/flags/United-Kingdom.png" class="img-flag" alt="English"> English</a>
+                        <a class="dropdown-item" href="#">
+                            <img src="assets/img/flags/Spain.png" class="img-flag" alt="Espa&#xF1;ol"> Español</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="icon-bell"></i><span class="label label-pill label-danger">5</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="icon-list"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="icon-location-pin"></i></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                        <img src="assets/img/avatars/6.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                        <span class="hidden-md-down">admin</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <div class="dropdown-header text-xs-center">
+                            <strong>Account</strong>
+                        </div>
+                        <a class="dropdown-item" href="#"><i class="fa fa-bell-o"></i> Updates<span class="label label-info">42</span></a>
+                        <a class="dropdown-item" href="#"><i class="fa fa-envelope-o"></i> Messages<span class="label label-success">42</span></a>
+                        <a class="dropdown-item" href="#"><i class="fa fa-tasks"></i> Tasks<span class="label label-danger">42</span></a>
+                        <a class="dropdown-item" href="#"><i class="fa fa-comments"></i> Comments<span class="label label-warning">42</span></a>
+                        <div class="dropdown-header text-xs-center">
+                            <strong>Settings</strong>
+                        </div>
+                        <a class="dropdown-item" href="#"><i class="fa fa-user"></i> Profile</a>
+                        <a class="dropdown-item" href="#"><i class="fa fa-wrench"></i> Settings</a>
+                        <a class="dropdown-item" href="#"><i class="fa fa-usd"></i> Payments<span class="label label-default">42</span></a>
+                        <a class="dropdown-item" href="#"><i class="fa fa-file"></i> Projects<span class="label label-primary">42</span></a>
+                        <div class="divider"></div>
+                        <a class="dropdown-item" href="#"><i class="fa fa-shield"></i> Lock Account</a>
+                        <a class="dropdown-item" href="#"><i class="fa fa-lock"></i> Logout</a>
+                    </div>
+                </li>
+            </ul>
+        </header>
+        <nav id="navigation" class="collapse navbar-toggleable-sm nav-dark">
+            <div id="navigation-header">
+                <img src="assets/img/avatars/8.jpg" class="img-avatar" alt="Avatar">
+                <div>
+                    <strong>JOHN DOE</strong>
+                </div>
+                <div class="text-muted">
+                    <small>Founder &amp; CEO</small>
+                </div>
+                <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                    <button type="button" class="btn btn-link">
+                        <i class="icon-settings"></i>
+                    </button>
+                    <button type="button" class="btn btn-link">
+                        <i class="icon-speech"></i>
+                        <span class="label label-warning label-pill">5</span>
+                    </button>
+                    <div class="btn-group" role="group">
+                        <button id="btnGroupDrop1" type="button" class="btn btn-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="icon-user"></i>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                            <div class="dropdown-header text-xs-center">
+                                <strong>Account</strong>
+                            </div>
+                            <a class="dropdown-item" href="#"><i class="fa fa-bell-o"></i> Updates<span class="label label-info">42</span></a>
+                            <a class="dropdown-item" href="#"><i class="fa fa-envelope-o"></i> Messages<span class="label label-success">42</span></a>
+                            <a class="dropdown-item" href="#"><i class="fa fa-tasks"></i> Tasks<span class="label label-danger">42</span></a>
+                            <a class="dropdown-item" href="#"><i class="fa fa-comments"></i> Comments<span class="label label-warning">42</span></a>
+                            <div class="dropdown-header text-xs-center">
+                                <strong>Settings</strong>
+                            </div>
+                            <a class="dropdown-item" href="#"><i class="fa fa-user"></i> Profile</a>
+                            <a class="dropdown-item" href="#"><i class="fa fa-wrench"></i> Settings</a>
+                            <a class="dropdown-item" href="#"><i class="fa fa-usd"></i> Payments<span class="label label-default">42</span></a>
+                            <a class="dropdown-item" href="#"><i class="fa fa-file"></i> Projects<span class="label label-primary">42</span></a>
+                            <div class="divider"></div>
+                            <a class="dropdown-item" href="#"><i class="fa fa-shield"></i> Lock Account</a>
+                            <a class="dropdown-item" href="#"><i class="fa fa-lock"></i> Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="navigation-items">
+                <ul class="nav">
+                    <li class="nav-title">
+                        Dashboard
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html"><i class="icon-speedometer"></i> DASHBOARD <span class="label label-info">NEW</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index2.html"><i class="icon-speedometer"></i> DASHBOARD 2 <span class="label label-warning">NEW</span></a>
+                    </li>
+                    <li class="divider"></li>
+                    <li class="nav-title">
+                        UI Elements
+                    </li>
+                    <li class="nav-item nav-dropdown">
+                        <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-puzzle"></i> Components</a>
+                        <ul class="nav-dropdown-items">
+                            <li class="nav-item">
+                                <a class="nav-link" href="components-buttons.html"><i class="icon-puzzle"></i> BUTTONS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="components-social-buttons.html"><i class="icon-puzzle"></i> Social Buttons</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="components-cards.html"><i class="icon-puzzle"></i> CARDS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="components-forms.html"><i class="icon-puzzle"></i> FORMS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="components-switches.html"><i class="icon-puzzle"></i> SWITCHES</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="components-tables.html"><i class="icon-puzzle"></i> TABLES</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item nav-dropdown">
+                        <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-star"></i> ICONS</a>
+                        <ul class="nav-dropdown-items">
+                            <li class="nav-item">
+                                <a class="nav-link" href="icons-font-awesome.html"><i class="icon-star"></i> Font Awesome</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="icons-simple-line-icons.html"><i class="icon-star"></i> Simple Line Icons</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item nav-dropdown">
+                        <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-energy"></i> Plugins</a>
+                        <ul class="nav-dropdown-items">
+                            <li class="nav-item">
+                                <a class="nav-link" href="plugins-calendar.html"><i class="icon-calendar"></i> CALENDAR</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="plugins-notifications.html"><i class="icon-info"></i> NOTIFICATIONS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="plugins-sliders.html"><i class="icon-equalizer"></i> SLIDERS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="plugins-tables.html"><i class="icon-list"></i> TABLES</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="forms.html"><i class="icon-note"></i> FORMS <span class="label label-danger">NEW</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="widgets.html"><i class="icon-calculator"></i> WIDGETS <span class="label label-info">NEW</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="charts.html"><i class="icon-pie-chart"></i> CHARTS</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li class="nav-title">
+                        Extras
+                    </li>
+                    <li class="nav-item nav-dropdown">
+                        <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-star"></i> PAGES</a>
+                        <ul class="nav-dropdown-items">
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages-login.html" target="_top"><i class="icon-star"></i> Login</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages-register.html" target="_top"><i class="icon-star"></i> Register</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages-404.html" target="_top"><i class="icon-star"></i> Error 404</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages-500.html" target="_top"><i class="icon-star"></i> Error 500</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item nav-dropdown">
+                        <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-layers"></i> UI Kits</a>
+                        <ul class="nav-dropdown-items">
+                            <li class="nav-item nav-dropdown">
+                                <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-speech"></i> INVOICING</a>
+                                <ul class="nav-dropdown-items">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="UIkits-invoicing-invoice.html"><i class="icon-speech"></i> INVOICE</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul class="nav-dropdown-items">
+                            <li class="nav-item nav-dropdown">
+                                <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-speech"></i> EMAIL</a>
+                                <ul class="nav-dropdown-items">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="UIkits-email-inbox.html"><i class="icon-speech"></i> INBOX</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="UIkits-email-message.html"><i class="icon-speech"></i> MESSAGE</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="UIkits-email-compose.html"><i class="icon-speech"></i> COMPOSE</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div id="navigation-footer">
+                <ul class="menu">
+                    <li>
+                        <div class="btn-group dropup">
+                            <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="icon-speedometer"></i>
+                                <span>Usage</span>
+                            </button>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-header">Usage <a href="#" class="btn pull-right"><i class="icon-settings"></i></a></div>
+                                <div class="dropdown-item">
+                                    <div class="title">Memory
+                                        <span>2GB of 8GB</span>
+                                    </div>
+                                    <progress class="progress progress-xs progress-success m-b-0" value="25" max="100">25%</progress>
+                                </div>
+                                <div class="dropdown-item">
+                                    <div class="title">HDD
+                                        <span>750GB of 1TB</span>
+                                    </div>
+                                    <progress class="progress progress-xs progress-warning m-b-0" value="75" max="100">75%</progress>
+                                </div>
+                                <div class="dropdown-item">
+                                    <div class="title">SSD
+                                        <span>300GB of 1TB</span>
+                                    </div>
+                                    <progress class="progress progress-xs progress-info m-b-0" value="30" max="100">30%</progress>
+                                </div>
+                                <div class="dropdown-item">
+                                    <div class="title">Bandwidth
+                                        <span>50TB of 50TB</span>
+                                    </div>
+                                    <progress class="progress progress-xs progress-danger m-b-0" value="100" max="100">100%</progress>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="btn-group dropup">
+                            <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="icon-list"></i>
+                                <span>Menu</span>
+                            </button>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-header text-xs-center">
+                                    <strong>Account</strong>
+                                </div>
+                                <a class="dropdown-item" href="#"><i class="fa fa-bell-o"></i> Updates<span class="label label-info">42</span></a>
+                                <a class="dropdown-item" href="#"><i class="fa fa-envelope-o"></i> Messages<span class="label label-success">42</span></a>
+                                <a class="dropdown-item" href="#"><i class="fa fa-tasks"></i> Tasks<span class="label label-danger">42</span></a>
+                                <a class="dropdown-item" href="#"><i class="fa fa-comments"></i> Comments<span class="label label-warning">42</span></a>
+                                <div class="dropdown-header text-xs-center">
+                                    <strong>Settings</strong>
+                                </div>
+                                <a class="dropdown-item" href="#"><i class="fa fa-user"></i> Profile</a>
+                                <a class="dropdown-item" href="#"><i class="fa fa-wrench"></i> Settings</a>
+                                <a class="dropdown-item" href="#"><i class="fa fa-usd"></i> Payments<span class="label label-default">42</span></a>
+                                <a class="dropdown-item" href="#"><i class="fa fa-file"></i> Projects<span class="label label-primary">42</span></a>
+                                <div class="divider"></div>
+                                <a class="dropdown-item" href="#"><i class="fa fa-shield"></i> Lock Account</a>
+                                <a class="dropdown-item" href="#"><i class="fa fa-lock"></i> Logout</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="action">
+                        <div class="btn-group dropup">
+                            <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="icon-people"></i>
+                                <span>Contacts</span>
+                                <span class="sr-only">Toggle Dropdown</span>
+                            </button>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-header">Contacts <a href="#" class="btn pull-right"><i class="icon-settings"></i></a></div>
+                                <a class="dropdown-item p-l-0" href="#">
+                                    <div class="avatar avatar-sm">
+                                        <img src="assets/img/avatars/1.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                        <span class="avatar-status label-success"></span>
+                                    </div>
+                                    Anton Phunihel
+                                </a>
+                                <a class="dropdown-item p-l-0" href="#">
+                                    <div class="avatar avatar-sm">
+                                        <img src="assets/img/avatars/2.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                        <span class="avatar-status label-success"></span>
+                                    </div>
+                                    Alphonse Ivo
+                                </a>
+                                <a class="dropdown-item p-l-0" href="#">
+                                    <div class="avatar avatar-sm">
+                                        <img src="assets/img/avatars/3.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                        <span class="avatar-status label-success"></span>
+                                    </div>
+                                    Thancmar Theoph
+                                </a>
+                                <a class="dropdown-item p-l-0" href="#">
+                                    <div class="avatar avatar-sm">
+                                        <img src="assets/img/avatars/4.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                        <span class="avatar-status label-warning"></span>
+                                    </div>
+                                    Walerian Khwaja
+                                </a>
+                                <a class="dropdown-item p-l-0" href="#">
+                                    <div class="avatar avatar-sm">
+                                        <img src="assets/img/avatars/5.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                        <span class="avatar-status label-warning"></span>
+                                    </div>
+                                    Clemens Janko
+                                </a>
+                                <a class="dropdown-item p-l-0" href="#">
+                                    <div class="avatar avatar-sm">
+                                        <img src="assets/img/avatars/6.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                        <span class="avatar-status label-warning"></span>
+                                    </div>
+                                    Chidubem Gottlob
+                                </a>
+                                <a class="dropdown-item p-l-0" href="#">
+                                    <div class="avatar avatar-sm">
+                                        <img src="assets/img/avatars/7.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                        <span class="avatar-status label-danger"></span>
+                                    </div>
+                                    Hristofor Sergio
+                                </a>
+                                <a class="dropdown-item p-l-0" href="#">
+                                    <div class="avatar avatar-sm">
+                                        <img src="assets/img/avatars/8.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                        <span class="avatar-status label-danger"></span>
+                                    </div>
+                                    Tadhg Griogair
+                                </a>
+                                <a class="dropdown-item p-l-0" href="#">
+                                    <div class="avatar avatar-sm">
+                                        <img src="assets/img/avatars/1.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                        <span class="avatar-status label-danger"></span>
+                                    </div>
+                                    Pollux Beaumont
+                                </a>
+                                <a class="dropdown-item p-l-0" href="#">
+                                    <div class="avatar avatar-sm">
+                                        <img src="assets/img/avatars/2.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                        <span class="avatar-status label-danger"></span>
+                                    </div>
+                                    Adam Alister
+                                </a>
+                                <a class="dropdown-item p-l-0" href="#">
+                                    <div class="avatar avatar-sm">
+                                        <img src="assets/img/avatars/3.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                        <span class="avatar-status label-danger"></span>
+                                    </div>
+                                    Carlito Roffe
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="terms">
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Main content -->
+        <main id="content">
+            <!-- Page Header -->
+            <div class="page-header">
+                <div class="row">
+                    <div class="col-md-7">
+                        <h1 class="h2 page-title">Page Title</h1>
+                        <div class="text-muted page-desc">Page Description</div>
+                    </div>
+                    <div class="col-md-5 charts">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-4 col-md-4">
+                                <div class="chart-wrapper">
+                                    <canvas id="header-chart-1" height="68" class="chart chart-bar"></canvas>
+                                </div>
+                                <div class="text-xs-center title">
+                                    <span class="text-muted">Income: </span>
+                                    <strong>$189.128</strong>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-4 col-md-4">
+                                <div class="chart-wrapper">
+                                    <canvas id="header-chart-2" height="68" class="chart chart-bar"></canvas>
+                                </div>
+                                <div class="text-xs-center title">
+                                    <span class="text-muted">New clients: </span>
+                                    <strong class="text-danger">1.128</strong>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-4 col-md-4">
+                                <div class="chart-wrapper">
+                                    <canvas id="header-chart-3" height="68" class="chart chart-bar"></canvas>
+                                </div>
+                                <div class="text-xs-center title">
+                                    <span class="text-muted">Orders: </span>
+                                    <strong class="text-success">2.345</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Breadcrumb -->
+            <ol class="breadcrumb">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Library</a></li>
+                <li class="active">Data</li>
+                <!-- Breadcrumb Menu-->
+                <div class="breadcrumb-menu">
+                    <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                        <a class="btn btn-secondary" href="#"><i class="icon-speech"></i></a>
+                        <a class="btn btn-secondary" href="app.main"><i class="icon-graph"></i> &nbsp;Dashboard</a>
+                        <div class="btn-group" role="group">
+                            <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="icon-settings"></i> &nbsp;Settings
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="btnGroupDrop1">
+                                <div class="dropdown-header text-xs-center">
+                                    <strong>Account</strong>
+                                </div>
+                                <a class="dropdown-item" href="#"><i class="fa fa-tasks"></i> Tasks<span class="label label-danger">13</span></a>
+                                <a class="dropdown-item" href="#"><i class="fa fa-comments"></i> Comments<span class="label label-warning">234</span></a>
+                                <div class="dropdown-header text-xs-center">
+                                    <strong>Settings</strong>
+                                </div>
+                                <a class="dropdown-item" href="#"><i class="fa fa-wrench"></i> Settings</a>
+                                <a class="dropdown-item" href="#"><i class="fa fa-usd"></i> Payments<span class="label label-default">75</span></a>
+                                <a class="dropdown-item" href="#"><i class="fa fa-file"></i> Projects<span class="label label-primary">2</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ol>
+            <div class="container-fluid">
+                <div class="animated fadeIn">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <strong>Social Media Button</strong>
+                                    <small>Usage ex.</small>
+                                    <code style="text-transform:lowercase">&lt;button class="btn btn-facebook"&gt;&lt;span&gt;Facebook&lt;/span&gt;&lt;/button&gt;</code>
+                                    <div class="card-actions">
+                                        <a href="#" class="btn-setting"><i class="icon-settings"></i></a>
+                                        <button class="btn-minimize" type="button" data-toggle="collapse" data-target="" aria-expanded="false" aria-controls="collapseExample">
+                                            <i class="icon-arrow-up"></i>
+                                        </button>
+                                        <a href="#" class="btn-close"><i class="icon-close"></i></a>
+                                    </div>
+                                </div>
+                                <div class="card-block">
+                                    <h6>Size Small
+                                        <small>Add this class
+                                            <code>.btn-sm</code>
+                                        </small>
+                                    </h6>
+                                    <p>
+                                        <button style="margin-bottom: 4px" class="btn btn-sm btn-facebook">
+                                            <span>Facebook</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-sm btn-twitter">
+                                            <span>Twitter</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-sm btn-linkedin">
+                                            <span>LinkedIn</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-sm btn-flickr">
+                                            <span>Flickr</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-sm btn-tumblr">
+                                            <span>Tumblr</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-sm btn-xing">
+                                            <span>Xing</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-sm btn-github">
+                                            <span>Github</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-sm btn-html5">
+                                            <span>HTML5</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-sm btn-openid">
+                                            <span>OpenID</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-sm btn-stack-overflow">
+                                            <span>StackOverflow</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-sm btn-css3">
+                                            <span>CSS3</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-sm btn-youtube">
+                                            <span>YouTube</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-sm btn-dribbble">
+                                            <span>Dribbble</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-sm btn-google-plus">
+                                            <span>Google+</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-sm btn-instagram">
+                                            <span>Instagram</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-sm btn-pinterest">
+                                            <span>Pinterest</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-sm btn-vk">
+                                            <span>VK</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-sm btn-yahoo">
+                                            <span>Yahoo</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-sm btn-behance">
+                                            <span>Behance</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-sm btn-dropbox">
+                                            <span>Dropbox</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-sm btn-reddit">
+                                            <span>Reddit</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-sm btn-spotify">
+                                            <span>Spotify</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-sm btn-vine">
+                                            <span>Vine</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-sm btn-foursquare">
+                                            <span>Forsquare</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-sm btn-vimeo">
+                                            <span>Vimeo</span>
+                                        </button>
+                                    </p>
+                                    <h6>Size Normal</h6>
+                                    <p>
+                                        <button style="margin-bottom: 4px" class="btn btn-facebook">
+                                            <span>Facebook</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-twitter">
+                                            <span>Twitter</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-linkedin">
+                                            <span>LinkedIn</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-flickr">
+                                            <span>Flickr</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-tumblr">
+                                            <span>Tumblr</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-xing">
+                                            <span>Xing</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-github">
+                                            <span>Github</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-html5">
+                                            <span>HTML5</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-openid">
+                                            <span>OpenID</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-stack-overflow">
+                                            <span>StackOverflow</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-css3">
+                                            <span>CSS3</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-youtube">
+                                            <span>YouTube</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-dribbble">
+                                            <span>Dribbble</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-google-plus">
+                                            <span>Google+</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-instagram">
+                                            <span>Instagram</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-pinterest">
+                                            <span>Pinterest</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-vk">
+                                            <span>VK</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-yahoo">
+                                            <span>Yahoo</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-behance">
+                                            <span>Behance</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-dropbox">
+                                            <span>Dropbox</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-reddit">
+                                            <span>Reddit</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-spotify">
+                                            <span>Spotify</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-vine">
+                                            <span>Vine</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-foursquare">
+                                            <span>Forsquare</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-vimeo">
+                                            <span>Vimeo</span>
+                                        </button>
+                                    </p>
+                                    <h6>Size Large
+                                        <small>Add this class
+                                            <code>.btn-lg</code>
+                                        </small>
+                                    </h6>
+                                    <p>
+                                        <button style="margin-bottom: 4px" class="btn btn-lg btn-facebook">
+                                            <span>Facebook</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-lg btn-twitter">
+                                            <span>Twitter</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-lg btn-linkedin">
+                                            <span>LinkedIn</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-lg btn-flickr">
+                                            <span>Flickr</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-lg btn-tumblr">
+                                            <span>Tumblr</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-lg btn-xing">
+                                            <span>Xing</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-lg btn-github">
+                                            <span>Github</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-lg btn-html5">
+                                            <span>HTML5</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-lg btn-openid">
+                                            <span>OpenID</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-lg btn-stack-overflow">
+                                            <span>StackOverflow</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-lg btn-css3">
+                                            <span>CSS3</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-lg btn-youtube">
+                                            <span>YouTube</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-lg btn-dribbble">
+                                            <span>Dribbble</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-lg btn-google-plus">
+                                            <span>Google+</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-lg btn-instagram">
+                                            <span>Instagram</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-lg btn-pinterest">
+                                            <span>Pinterest</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-lg btn-vk">
+                                            <span>VK</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-lg btn-yahoo">
+                                            <span>Yahoo</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-lg btn-behance">
+                                            <span>Behance</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-lg btn-dropbox">
+                                            <span>Dropbox</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-lg btn-reddit">
+                                            <span>Reddit</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-lg btn-spotify">
+                                            <span>Spotify</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-lg btn-vine">
+                                            <span>Vine</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-lg btn-foursquare">
+                                            <span>Forsquare</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-lg btn-vimeo">
+                                            <span>Vimeo</span>
+                                        </button>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/col-->
+                        <div class="col-xs-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <strong>Social Media Button</strong>
+                                    <small>Only icons. Usage ex.</small>
+                                    <code style="text-transform:lowercase">&lt;button class="btn btn-facebook icon"&gt;&lt;span&gt;Facebook&lt;/span&gt;&lt;/button&gt;</code>
+                                    <div class="card-actions">
+                                        <a href="#" class="btn-setting"><i class="icon-settings"></i></a>
+                                        <button class="btn-minimize" type="button" data-toggle="collapse" data-target="" aria-expanded="false" aria-controls="collapseExample">
+                                            <i class="icon-arrow-up"></i>
+                                        </button>
+                                        <a href="#" class="btn-close"><i class="icon-close"></i></a>
+                                    </div>
+                                </div>
+                                <div class="card-block collapse in">
+                                    <h6>Size Small
+                                        <small>Add this class
+                                            <code>.btn-sm</code>
+                                        </small>
+                                    </h6>
+                                    <p>
+                                        <button style="margin-bottom: 4px" class="btn btn-sm btn-facebook icon">
+                                            <span>Facebook</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-sm btn-twitter icon">
+                                            <span>Twitter</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-sm btn-linkedin icon">
+                                            <span>LinkedIn</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-sm btn-flickr icon">
+                                            <span>Flickr</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-sm btn-tumblr icon">
+                                            <span>Tumblr</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-sm btn-xing icon">
+                                            <span>Xing</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-sm btn-github icon">
+                                            <span>Github</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-sm btn-html5 icon">
+                                            <span>HTML5</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-sm btn-openid icon">
+                                            <span>OpenID</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-sm btn-stack-overflow icon">
+                                            <span>StackOverflow</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-sm btn-css3 icon">
+                                            <span>CSS3</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-sm btn-youtube icon">
+                                            <span>YouTube</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-sm btn-dribbble icon">
+                                            <span>Dribbble</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-sm btn-google-plus icon">
+                                            <span>Google+</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-sm btn-instagram icon">
+                                            <span>Instagram</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-sm btn-pinterest icon">
+                                            <span>Pinterest</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-sm btn-vk icon">
+                                            <span>VK</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-sm btn-yahoo icon">
+                                            <span>Yahoo</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-sm btn-behance icon">
+                                            <span>Behance</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-sm btn-dropbox icon">
+                                            <span>Dropbox</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-sm btn-reddit icon">
+                                            <span>Reddit</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-sm btn-spotify icon">
+                                            <span>Spotify</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-sm btn-vine icon">
+                                            <span>Vine</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-sm btn-foursquare icon">
+                                            <span>Forsquare</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-sm btn-vimeo icon">
+                                            <span>Vimeo</span>
+                                        </button>
+                                    </p>
+                                    <h6>Size Normal</h6>
+                                    <p>
+                                        <button style="margin-bottom: 4px" class="btn btn-facebook icon">
+                                            <span>Facebook</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-twitter icon">
+                                            <span>Twitter</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-linkedin icon">
+                                            <span>LinkedIn</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-flickr icon">
+                                            <span>Flickr</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-tumblr icon">
+                                            <span>Tumblr</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-xing icon">
+                                            <span>Xing</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-github icon">
+                                            <span>Github</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-html5 icon">
+                                            <span>HTML5</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-openid icon">
+                                            <span>OpenID</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-stack-overflow icon">
+                                            <span>StackOverflow</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-css3 icon">
+                                            <span>CSS3</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-youtube icon">
+                                            <span>YouTube</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-dribbble icon">
+                                            <span>Dribbble</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-google-plus icon">
+                                            <span>Google+</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-instagram icon">
+                                            <span>Instagram</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-pinterest icon">
+                                            <span>Pinterest</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-vk icon">
+                                            <span>VK</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-yahoo icon">
+                                            <span>Yahoo</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-behance icon">
+                                            <span>Behance</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-dropbox icon">
+                                            <span>Dropbox</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-reddit icon">
+                                            <span>Reddit</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-spotify icon">
+                                            <span>Spotify</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-vine icon">
+                                            <span>Vine</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-foursquare icon">
+                                            <span>Forsquare</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-vimeo icon">
+                                            <span>Vimeo</span>
+                                        </button>
+                                    </p>
+                                    <h6>Size Large
+                                        <small>Add this class
+                                            <code>.btn-lg</code>
+                                        </small>
+                                    </h6>
+                                    <p>
+                                        <button style="margin-bottom: 4px" class="btn btn-lg btn-facebook icon">
+                                            <span>Facebook</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-lg btn-twitter icon">
+                                            <span>Twitter</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-lg btn-linkedin icon">
+                                            <span>LinkedIn</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-lg btn-flickr icon">
+                                            <span>Flickr</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-lg btn-tumblr icon">
+                                            <span>Tumblr</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-lg btn-xing icon">
+                                            <span>Xing</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-lg btn-github icon">
+                                            <span>Github</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-lg btn-html5 icon">
+                                            <span>HTML5</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-lg btn-openid icon">
+                                            <span>OpenID</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-lg btn-stack-overflow icon">
+                                            <span>StackOverflow</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-lg btn-css3 icon">
+                                            <span>CSS3</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-lg btn-youtube icon">
+                                            <span>YouTube</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-lg btn-dribbble icon">
+                                            <span>Dribbble</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-lg btn-google-plus icon">
+                                            <span>Google+</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-lg btn-instagram icon">
+                                            <span>Instagram</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-lg btn-pinterest icon">
+                                            <span>Pinterest</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-lg btn-vk icon">
+                                            <span>VK</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-lg btn-yahoo icon">
+                                            <span>Yahoo</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-lg btn-behance icon">
+                                            <span>Behance</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-lg btn-dropbox icon">
+                                            <span>Dropbox</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-lg btn-reddit icon">
+                                            <span>Reddit</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-lg btn-spotify icon">
+                                            <span>Spotify</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-lg btn-vine icon">
+                                            <span>Vine</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-lg btn-foursquare icon">
+                                            <span>Forsquare</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-lg btn-vimeo icon">
+                                            <span>Vimeo</span>
+                                        </button>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/col-->
+                        <div class="col-xs-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <strong>Social Media Button</strong>
+                                    <small>Only text. Usage ex.</small>
+                                    <code style="text-transform:lowercase">&lt;button class="btn btn-facebook text"&gt;&lt;span&gt;Facebook&lt;/span&gt;&lt;/button&gt;</code>
+                                    <div class="card-actions">
+                                        <a href="#" class="btn-setting"><i class="icon-settings"></i></a>
+                                        <button class="btn-minimize" type="button" data-toggle="collapse" data-target="" aria-expanded="false" aria-controls="collapseExample">
+                                            <i class="icon-arrow-up"></i>
+                                        </button>
+                                        <a href="#" class="btn-close"><i class="icon-close"></i></a>
+                                    </div>
+                                </div>
+                                <div class="card-block collapse in">
+                                    <h6>Size Small
+                                        <small>Add this class
+                                            <code>.btn-sm</code>
+                                        </small>
+                                    </h6>
+                                    <p>
+                                        <button style="margin-bottom: 4px" class="btn btn-sm btn-facebook text">
+                                            <span>Facebook</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-sm btn-twitter text">
+                                            <span>Twitter</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-sm btn-linkedin text">
+                                            <span>LinkedIn</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-sm btn-flickr text">
+                                            <span>Flickr</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-sm btn-tumblr text">
+                                            <span>Tumblr</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-sm btn-xing text">
+                                            <span>Xing</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-sm btn-github text">
+                                            <span>Github</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-sm btn-html5 text">
+                                            <span>HTML5</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-sm btn-openid text">
+                                            <span>OpenID</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-sm btn-stack-overflow text">
+                                            <span>StackOverflow</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-sm btn-css3 text">
+                                            <span>CSS3</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-sm btn-youtube text">
+                                            <span>YouTube</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-sm btn-dribbble text">
+                                            <span>Dribbble</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-sm btn-google-plus text">
+                                            <span>Google+</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-sm btn-instagram text">
+                                            <span>Instagram</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-sm btn-pinterest text">
+                                            <span>Pinterest</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-sm btn-vk text">
+                                            <span>VK</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-sm btn-yahoo text">
+                                            <span>Yahoo</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-sm btn-behance text">
+                                            <span>Behance</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-sm btn-dropbox text">
+                                            <span>Dropbox</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-sm btn-reddit text">
+                                            <span>Reddit</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-sm btn-spotify text">
+                                            <span>Spotify</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-sm btn-vine text">
+                                            <span>Vine</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-sm btn-foursquare text">
+                                            <span>Forsquare</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-sm btn-vimeo text">
+                                            <span>Vimeo</span>
+                                        </button>
+                                    </p>
+                                    <h6>Size Normal</h6>
+                                    <p>
+                                        <button style="margin-bottom: 4px" class="btn btn-facebook text">
+                                            <span>Facebook</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-twitter text">
+                                            <span>Twitter</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-linkedin text">
+                                            <span>LinkedIn</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-flickr text">
+                                            <span>Flickr</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-tumblr text">
+                                            <span>Tumblr</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-xing text">
+                                            <span>Xing</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-github text">
+                                            <span>Github</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-html5 text">
+                                            <span>HTML5</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-openid text">
+                                            <span>OpenID</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-stack-overflow text">
+                                            <span>StackOverflow</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-css3 text">
+                                            <span>CSS3</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-youtube text">
+                                            <span>YouTube</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-dribbble text">
+                                            <span>Dribbble</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-google-plus text">
+                                            <span>Google+</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-instagram text">
+                                            <span>Instagram</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-pinterest text">
+                                            <span>Pinterest</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-vk text">
+                                            <span>VK</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-yahoo text">
+                                            <span>Yahoo</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-behance text">
+                                            <span>Behance</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-dropbox text">
+                                            <span>Dropbox</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-reddit text">
+                                            <span>Reddit</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-spotify text">
+                                            <span>Spotify</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-vine text">
+                                            <span>Vine</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-foursquare text">
+                                            <span>Forsquare</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-vimeo text">
+                                            <span>Vimeo</span>
+                                        </button>
+                                    </p>
+                                    <h6>Size Large
+                                        <small>Add this class
+                                            <code>.btn-lg</code>
+                                        </small>
+                                    </h6>
+                                    <p>
+                                        <button style="margin-bottom: 4px" class="btn btn-lg btn-facebook text">
+                                            <span>Facebook</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-lg btn-twitter text">
+                                            <span>Twitter</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-lg btn-linkedin text">
+                                            <span>LinkedIn</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-lg btn-flickr text">
+                                            <span>Flickr</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-lg btn-tumblr text">
+                                            <span>Tumblr</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-lg btn-xing text">
+                                            <span>Xing</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-lg btn-github text">
+                                            <span>Github</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-lg btn-html5 text">
+                                            <span>HTML5</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-lg btn-openid text">
+                                            <span>OpenID</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-lg btn-stack-overflow text">
+                                            <span>StackOverflow</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-lg btn-css3 text">
+                                            <span>CSS3</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-lg btn-youtube text">
+                                            <span>YouTube</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-lg btn-dribbble text">
+                                            <span>Dribbble</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-lg btn-google-plus text">
+                                            <span>Google+</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-lg btn-instagram text">
+                                            <span>Instagram</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-lg btn-pinterest text">
+                                            <span>Pinterest</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-lg btn-vk text">
+                                            <span>VK</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-lg btn-yahoo text">
+                                            <span>Yahoo</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-lg btn-behance text">
+                                            <span>Behance</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-lg btn-dropbox text">
+                                            <span>Dropbox</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-lg btn-reddit text">
+                                            <span>Reddit</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-lg btn-spotify text">
+                                            <span>Spotify</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-lg btn-vine text">
+                                            <span>Vine</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-lg btn-foursquare text">
+                                            <span>Forsquare</span>
+                                        </button>
+                                        <button style="margin-bottom: 4px" class="btn btn-lg btn-vimeo text">
+                                            <span>Vimeo</span>
+                                        </button>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/col-->
+                    </div>
+                    <!--/row-->
+                </div>
+            </div>
+            <!-- /.conainer-fluid -->
+        </main>
+        <footer id="footer">
+            <span class="text-left">
+                <a href="http://bootstrapmaster.com">Root</a> &copy; 2016 creativeLabs.
+            </span>
+            <span class="pull-right">
+                Powered by <a href="http://genesisui.com">GenesisUI</a>
+            </span>
+        </footer>
+        <!-- Bootstrap and necessary plugins -->
+        <script src="assets/js/libs/jquery.min.js"></script>
+        <script src="assets/js/libs/tether.min.js"></script>
+        <script src="assets/js/libs/bootstrap.min.js"></script>
+        <script src="assets/js/libs/pace.min.js"></script>
+        <!-- Plugins and scripts required by all views -->
+        <script src="assets/js/libs/Chart.min.js"></script>
+        <script src="assets/js/views/shared.js"></script>
+        <!-- GenesisUI main scripts -->
+        <script src="assets/js/app.js"></script>
+        
+        
+    </body>
+</html>

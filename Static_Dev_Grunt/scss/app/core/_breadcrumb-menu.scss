@@ -1,0 +1,24 @@
+.breadcrumb-menu {
+    position: absolute;
+    top: 0;
+    right: $breadcrumb-padding-horizontal;
+    line-height: 43px;
+
+    .btn.btn-secondary {
+        border: 0;
+        color: $text-muted;
+
+        &:hover, &.active {
+            background: transparent;
+            color: $body-color;
+        }
+    }
+
+    .open {
+        .btn.btn-secondary {
+            background: transparent;
+            color: $body-color;
+        }
+    }
+    //margin-top: - ($spacer-y + (2 * $breadcrumb-padding-vertical) + $font-size-base);
+}

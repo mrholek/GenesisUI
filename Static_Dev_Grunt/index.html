@@ -1,0 +1,1398 @@
+<!--
+* GenesisUI Bootstrap 4 Admin Template built as framework!
+* Version 1.3.0
+* https://GenesisUI.com
+* Copyright 2016 creativeLabs Łukasz Holeczek
+* License : https://GenesisUI.com/license.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="ROOT Admin - UI Admin Kit Powered by Bootstrap 4.0.0">
+        <meta name="author" content="Lukasz Holeczek">
+        <meta name="keyword" content="ROOT Admin - UI Admin Kit Powered by Bootstrap 4.0.0">
+        <!-- <link rel="shortcut icon" href="assets/ico/favicon.png"> -->
+        <title>ROOT Admin - UI Admin Kit</title>
+        <!-- Main styles for this application -->
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <!-- BODY options, add following classes to body to change options.
+		1. 'compact-nav'     	  - Switch sidebar to minified version (width 50px)
+		2. 'sidebar-nav'		  - Navigation on the left
+		3. 'fixed-nav'			  - Fixed navigation
+		4. 'navbar-fixed'		  - Fixed navbar
+	-->
+    <body class="navbar-fixed sidebar-nav fixed-nav">
+        <header class="navbar navbar-light brand-dark">
+            <button class="navbar-toggler mobile-toggler hidden-lg-up" type="button">&#9776;</button>
+            <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler layout-toggler hidden-md-down" type="button" data-before="sidebar-nav" data-after="sidebar-nav compact-nav">&#9776;</button>
+            <ul class="nav navbar-nav pull-right hidden-md-down">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                        <img src="img/flags/United-Kingdom.png" class="img-flag" alt="English">
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <div class="dropdown-header text-xs-center">
+                            <strong>Choose language</strong>
+                        </div>
+                        <a class="dropdown-item" href="#">
+                            <img src="img/flags/Poland.png" class="img-flag" alt="Polish"> Polish</a>
+                        <a class="dropdown-item" href="#">
+                            <img src="img/flags/United-Kingdom.png" class="img-flag" alt="English"> English</a>
+                        <a class="dropdown-item" href="#">
+                            <img src="img/flags/Spain.png" class="img-flag" alt="Espa&#xF1;ol"> Español</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="icon-bell"></i><span class="label label-pill label-danger">5</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="icon-list"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="icon-location-pin"></i></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                        <img src="img/avatars/6.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                        <span class="hidden-md-down">admin</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <div class="dropdown-header text-xs-center">
+                            <strong>Account</strong>
+                        </div>
+                        <a class="dropdown-item" href="#"><i class="fa fa-bell-o"></i> Updates<span class="label label-info">42</span></a>
+                        <a class="dropdown-item" href="#"><i class="fa fa-envelope-o"></i> Messages<span class="label label-success">42</span></a>
+                        <a class="dropdown-item" href="#"><i class="fa fa-tasks"></i> Tasks<span class="label label-danger">42</span></a>
+                        <a class="dropdown-item" href="#"><i class="fa fa-comments"></i> Comments<span class="label label-warning">42</span></a>
+                        <div class="dropdown-header text-xs-center">
+                            <strong>Settings</strong>
+                        </div>
+                        <a class="dropdown-item" href="#"><i class="fa fa-user"></i> Profile</a>
+                        <a class="dropdown-item" href="#"><i class="fa fa-wrench"></i> Settings</a>
+                        <a class="dropdown-item" href="#"><i class="fa fa-usd"></i> Payments<span class="label label-default">42</span></a>
+                        <a class="dropdown-item" href="#"><i class="fa fa-file"></i> Projects<span class="label label-primary">42</span></a>
+                        <div class="divider"></div>
+                        <a class="dropdown-item" href="#"><i class="fa fa-shield"></i> Lock Account</a>
+                        <a class="dropdown-item" href="#"><i class="fa fa-lock"></i> Logout</a>
+                    </div>
+                </li>
+            </ul>
+        </header>
+        <nav id="navigation" class="collapse navbar-toggleable-sm nav-dark">
+            <div id="navigation-header">
+                <img src="img/avatars/8.jpg" class="img-avatar" alt="Avatar">
+                <div>
+                    <strong>JOHN DOE</strong>
+                </div>
+                <div class="text-muted">
+                    <small>Founder &amp; CEO</small>
+                </div>
+                <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                    <button type="button" class="btn btn-link">
+                        <i class="icon-settings"></i>
+                    </button>
+                    <button type="button" class="btn btn-link">
+                        <i class="icon-speech"></i>
+                        <span class="label label-warning label-pill">5</span>
+                    </button>
+                    <div class="btn-group" role="group">
+                        <button id="btnGroupDrop1" type="button" class="btn btn-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="icon-user"></i>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                            <div class="dropdown-header text-xs-center">
+                                <strong>Account</strong>
+                            </div>
+                            <a class="dropdown-item" href="#"><i class="fa fa-bell-o"></i> Updates<span class="label label-info">42</span></a>
+                            <a class="dropdown-item" href="#"><i class="fa fa-envelope-o"></i> Messages<span class="label label-success">42</span></a>
+                            <a class="dropdown-item" href="#"><i class="fa fa-tasks"></i> Tasks<span class="label label-danger">42</span></a>
+                            <a class="dropdown-item" href="#"><i class="fa fa-comments"></i> Comments<span class="label label-warning">42</span></a>
+                            <div class="dropdown-header text-xs-center">
+                                <strong>Settings</strong>
+                            </div>
+                            <a class="dropdown-item" href="#"><i class="fa fa-user"></i> Profile</a>
+                            <a class="dropdown-item" href="#"><i class="fa fa-wrench"></i> Settings</a>
+                            <a class="dropdown-item" href="#"><i class="fa fa-usd"></i> Payments<span class="label label-default">42</span></a>
+                            <a class="dropdown-item" href="#"><i class="fa fa-file"></i> Projects<span class="label label-primary">42</span></a>
+                            <div class="divider"></div>
+                            <a class="dropdown-item" href="#"><i class="fa fa-shield"></i> Lock Account</a>
+                            <a class="dropdown-item" href="#"><i class="fa fa-lock"></i> Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="navigation-items">
+                <ul class="nav">
+                    <li class="nav-title">
+                        Dashboard
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html"><i class="icon-speedometer"></i> DASHBOARD <span class="label label-info">NEW</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index2.html"><i class="icon-speedometer"></i> DASHBOARD 2 <span class="label label-warning">NEW</span></a>
+                    </li>
+                    <li class="divider"></li>
+                    <li class="nav-title">
+                        UI Elements
+                    </li>
+                    <li class="nav-item nav-dropdown">
+                        <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-puzzle"></i> Components</a>
+                        <ul class="nav-dropdown-items">
+                            <li class="nav-item">
+                                <a class="nav-link" href="components-buttons.html"><i class="icon-puzzle"></i> BUTTONS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="components-social-buttons.html"><i class="icon-puzzle"></i> Social Buttons</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="components-cards.html"><i class="icon-puzzle"></i> CARDS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="components-forms.html"><i class="icon-puzzle"></i> FORMS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="components-switches.html"><i class="icon-puzzle"></i> SWITCHES</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="components-tables.html"><i class="icon-puzzle"></i> TABLES</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item nav-dropdown">
+                        <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-star"></i> ICONS</a>
+                        <ul class="nav-dropdown-items">
+                            <li class="nav-item">
+                                <a class="nav-link" href="icons-font-awesome.html"><i class="icon-star"></i> Font Awesome</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="icons-simple-line-icons.html"><i class="icon-star"></i> Simple Line Icons</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item nav-dropdown">
+                        <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-energy"></i> Plugins</a>
+                        <ul class="nav-dropdown-items">
+                            <li class="nav-item">
+                                <a class="nav-link" href="plugins-calendar.html"><i class="icon-calendar"></i> CALENDAR</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="plugins-notifications.html"><i class="icon-info"></i> NOTIFICATIONS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="plugins-sliders.html"><i class="icon-equalizer"></i> SLIDERS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="plugins-tables.html"><i class="icon-list"></i> TABLES</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="forms.html"><i class="icon-note"></i> FORMS <span class="label label-danger">NEW</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="widgets.html"><i class="icon-calculator"></i> WIDGETS <span class="label label-info">NEW</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="charts.html"><i class="icon-pie-chart"></i> CHARTS</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li class="nav-title">
+                        Extras
+                    </li>
+                    <li class="nav-item nav-dropdown">
+                        <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-star"></i> PAGES</a>
+                        <ul class="nav-dropdown-items">
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages-login.html" target="_top"><i class="icon-star"></i> Login</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages-register.html" target="_top"><i class="icon-star"></i> Register</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages-404.html" target="_top"><i class="icon-star"></i> Error 404</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages-500.html" target="_top"><i class="icon-star"></i> Error 500</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item nav-dropdown">
+                        <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-layers"></i> UI Kits</a>
+                        <ul class="nav-dropdown-items">
+                            <li class="nav-item nav-dropdown">
+                                <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-speech"></i> INVOICING</a>
+                                <ul class="nav-dropdown-items">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="UIkits-invoicing-invoice.html"><i class="icon-speech"></i> INVOICE</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul class="nav-dropdown-items">
+                            <li class="nav-item nav-dropdown">
+                                <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-speech"></i> EMAIL</a>
+                                <ul class="nav-dropdown-items">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="UIkits-email-inbox.html"><i class="icon-speech"></i> INBOX</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="UIkits-email-message.html"><i class="icon-speech"></i> MESSAGE</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="UIkits-email-compose.html"><i class="icon-speech"></i> COMPOSE</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div id="navigation-footer">
+                <ul class="menu">
+                    <li>
+                        <div class="btn-group dropup">
+                            <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="icon-speedometer"></i>
+                                <span>Usage</span>
+                            </button>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-header">Usage <a href="#" class="btn pull-right"><i class="icon-settings"></i></a></div>
+                                <div class="dropdown-item">
+                                    <div class="title">Memory
+                                        <span>2GB of 8GB</span>
+                                    </div>
+                                    <progress class="progress progress-xs progress-success m-b-0" value="25" max="100">25%</progress>
+                                </div>
+                                <div class="dropdown-item">
+                                    <div class="title">HDD
+                                        <span>750GB of 1TB</span>
+                                    </div>
+                                    <progress class="progress progress-xs progress-warning m-b-0" value="75" max="100">75%</progress>
+                                </div>
+                                <div class="dropdown-item">
+                                    <div class="title">SSD
+                                        <span>300GB of 1TB</span>
+                                    </div>
+                                    <progress class="progress progress-xs progress-info m-b-0" value="30" max="100">30%</progress>
+                                </div>
+                                <div class="dropdown-item">
+                                    <div class="title">Bandwidth
+                                        <span>50TB of 50TB</span>
+                                    </div>
+                                    <progress class="progress progress-xs progress-danger m-b-0" value="100" max="100">100%</progress>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="btn-group dropup">
+                            <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="icon-list"></i>
+                                <span>Menu</span>
+                            </button>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-header text-xs-center">
+                                    <strong>Account</strong>
+                                </div>
+                                <a class="dropdown-item" href="#"><i class="fa fa-bell-o"></i> Updates<span class="label label-info">42</span></a>
+                                <a class="dropdown-item" href="#"><i class="fa fa-envelope-o"></i> Messages<span class="label label-success">42</span></a>
+                                <a class="dropdown-item" href="#"><i class="fa fa-tasks"></i> Tasks<span class="label label-danger">42</span></a>
+                                <a class="dropdown-item" href="#"><i class="fa fa-comments"></i> Comments<span class="label label-warning">42</span></a>
+                                <div class="dropdown-header text-xs-center">
+                                    <strong>Settings</strong>
+                                </div>
+                                <a class="dropdown-item" href="#"><i class="fa fa-user"></i> Profile</a>
+                                <a class="dropdown-item" href="#"><i class="fa fa-wrench"></i> Settings</a>
+                                <a class="dropdown-item" href="#"><i class="fa fa-usd"></i> Payments<span class="label label-default">42</span></a>
+                                <a class="dropdown-item" href="#"><i class="fa fa-file"></i> Projects<span class="label label-primary">42</span></a>
+                                <div class="divider"></div>
+                                <a class="dropdown-item" href="#"><i class="fa fa-shield"></i> Lock Account</a>
+                                <a class="dropdown-item" href="#"><i class="fa fa-lock"></i> Logout</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="action">
+                        <div class="btn-group dropup">
+                            <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="icon-people"></i>
+                                <span>Contacts</span>
+                                <span class="sr-only">Toggle Dropdown</span>
+                            </button>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-header">Contacts <a href="#" class="btn pull-right"><i class="icon-settings"></i></a></div>
+                                <a class="dropdown-item p-l-0" href="#">
+                                    <div class="avatar avatar-sm">
+                                        <img src="img/avatars/1.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                        <span class="avatar-status label-success"></span>
+                                    </div>
+                                    Anton Phunihel
+                                </a>
+                                <a class="dropdown-item p-l-0" href="#">
+                                    <div class="avatar avatar-sm">
+                                        <img src="img/avatars/2.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                        <span class="avatar-status label-success"></span>
+                                    </div>
+                                    Alphonse Ivo
+                                </a>
+                                <a class="dropdown-item p-l-0" href="#">
+                                    <div class="avatar avatar-sm">
+                                        <img src="img/avatars/3.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                        <span class="avatar-status label-success"></span>
+                                    </div>
+                                    Thancmar Theoph
+                                </a>
+                                <a class="dropdown-item p-l-0" href="#">
+                                    <div class="avatar avatar-sm">
+                                        <img src="img/avatars/4.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                        <span class="avatar-status label-warning"></span>
+                                    </div>
+                                    Walerian Khwaja
+                                </a>
+                                <a class="dropdown-item p-l-0" href="#">
+                                    <div class="avatar avatar-sm">
+                                        <img src="img/avatars/5.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                        <span class="avatar-status label-warning"></span>
+                                    </div>
+                                    Clemens Janko
+                                </a>
+                                <a class="dropdown-item p-l-0" href="#">
+                                    <div class="avatar avatar-sm">
+                                        <img src="img/avatars/6.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                        <span class="avatar-status label-warning"></span>
+                                    </div>
+                                    Chidubem Gottlob
+                                </a>
+                                <a class="dropdown-item p-l-0" href="#">
+                                    <div class="avatar avatar-sm">
+                                        <img src="img/avatars/7.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                        <span class="avatar-status label-danger"></span>
+                                    </div>
+                                    Hristofor Sergio
+                                </a>
+                                <a class="dropdown-item p-l-0" href="#">
+                                    <div class="avatar avatar-sm">
+                                        <img src="img/avatars/8.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                        <span class="avatar-status label-danger"></span>
+                                    </div>
+                                    Tadhg Griogair
+                                </a>
+                                <a class="dropdown-item p-l-0" href="#">
+                                    <div class="avatar avatar-sm">
+                                        <img src="img/avatars/1.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                        <span class="avatar-status label-danger"></span>
+                                    </div>
+                                    Pollux Beaumont
+                                </a>
+                                <a class="dropdown-item p-l-0" href="#">
+                                    <div class="avatar avatar-sm">
+                                        <img src="img/avatars/2.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                        <span class="avatar-status label-danger"></span>
+                                    </div>
+                                    Adam Alister
+                                </a>
+                                <a class="dropdown-item p-l-0" href="#">
+                                    <div class="avatar avatar-sm">
+                                        <img src="img/avatars/3.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                        <span class="avatar-status label-danger"></span>
+                                    </div>
+                                    Carlito Roffe
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="terms">
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Main content -->
+        <main id="content">
+            <!-- Page Header -->
+            <div class="page-header">
+                <div class="row">
+                    <div class="col-md-7">
+                        <h1 class="h2 page-title">Dashboard 2</h1>
+                        <div class="text-muted page-desc">Welcome to ROOT powerfull Bootstrap UI Kit</div>
+                    </div>
+                    <div class="col-md-5 charts">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-4 col-md-4">
+                                <div class="chart-wrapper">
+                                    <canvas id="header-chart-1" height="68" class="chart chart-bar"></canvas>
+                                </div>
+                                <div class="text-xs-center title">
+                                    <span class="text-muted">Income: </span>
+                                    <strong>$189.128</strong>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-4 col-md-4">
+                                <div class="chart-wrapper">
+                                    <canvas id="header-chart-2" height="68" class="chart chart-bar"></canvas>
+                                </div>
+                                <div class="text-xs-center title">
+                                    <span class="text-muted">New clients: </span>
+                                    <strong class="text-danger">1.128</strong>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-4 col-md-4">
+                                <div class="chart-wrapper">
+                                    <canvas id="header-chart-3" height="68" class="chart chart-bar"></canvas>
+                                </div>
+                                <div class="text-xs-center title">
+                                    <span class="text-muted">Orders: </span>
+                                    <strong class="text-success">2.345</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Breadcrumb -->
+            <ol class="breadcrumb">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Library</a></li>
+                <li class="active">Data</li>
+                <!-- Breadcrumb Menu-->
+                <div class="breadcrumb-menu">
+                    <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                        <a class="btn btn-secondary" href="#"><i class="icon-speech"></i></a>
+                        <a class="btn btn-secondary" href="app.main"><i class="icon-graph"></i> &nbsp;Dashboard</a>
+                        <div class="btn-group" role="group">
+                            <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="icon-settings"></i> &nbsp;Settings
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="btnGroupDrop1">
+                                <div class="dropdown-header text-xs-center">
+                                    <strong>Account</strong>
+                                </div>
+                                <a class="dropdown-item" href="#"><i class="fa fa-tasks"></i> Tasks<span class="label label-danger">13</span></a>
+                                <a class="dropdown-item" href="#"><i class="fa fa-comments"></i> Comments<span class="label label-warning">234</span></a>
+                                <div class="dropdown-header text-xs-center">
+                                    <strong>Settings</strong>
+                                </div>
+                                <a class="dropdown-item" href="#"><i class="fa fa-wrench"></i> Settings</a>
+                                <a class="dropdown-item" href="#"><i class="fa fa-usd"></i> Payments<span class="label label-default">75</span></a>
+                                <a class="dropdown-item" href="#"><i class="fa fa-file"></i> Projects<span class="label label-primary">2</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ol>
+            <div class="container-fluid">
+                <div class="animated fadeIn">
+                    <div class="row row-equal">
+                        <div class="col-sm-6 col-md-3">
+                            <div class="card card-inverse card-primary">
+                                <div class="card-block p-b-0">
+                                    <div class="btn-group pull-right">
+                                        <button type="button" class="btn btn-primary-outline active dropdown-toggle p-a-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="icon-settings"></i>
+                                        </button>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="#">Separated link</a>
+                                        </div>
+                                    </div>
+                                    <h4 class="m-b-0">9.823</h4>
+                                    <p>Members online</p>
+                                </div>
+                                <div class="chart-wrapper p-x-1">
+                                    <div>
+                                        <canvas id="card-chart1" class="chart chart-line" height="70"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/col-->
+                        <div class="col-sm-6 col-md-3">
+                            <div class="card card-inverse card-info">
+                                <div class="card-block p-b-0">
+                                    <button type="button" class="btn btn-info-outline active p-a-0 pull-right">
+                                        <i class="icon-location-pin"></i>
+                                    </button>
+                                    <h4 class="m-b-0">9.823</h4>
+                                    <p>Members online</p>
+                                </div>
+                                <div class="chart-wrapper p-x-1">
+                                    <div>
+                                        <canvas id="card-chart2" class="chart chart-line" width="auto" height="70"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/col-->
+                        <div class="col-sm-6 col-md-3">
+                            <div class="card card-inverse card-warning">
+                                <div class="card-block p-b-0">
+                                    <div class="btn-group pull-right">
+                                        <button type="button" class="btn btn-warning-outline active dropdown-toggle p-a-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="icon-settings"></i>
+                                        </button>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="#">Separated link</a>
+                                        </div>
+                                    </div>
+                                    <h4 class="m-b-0">9.823</h4>
+                                    <p>Members online</p>
+                                </div>
+                                <div class="chart-wrapper">
+                                    <div class="chart-wrapper">
+                                        <div>
+                                            <canvas id="card-chart3" class="chart chart-line" width="auto" height="70"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/col-->
+                        <div class="col-sm-6 col-md-3">
+                            <div class="card card-inverse card-danger">
+                                <div class="card-block p-b-0">
+                                    <div class="btn-group pull-right">
+                                        <button type="button" class="btn btn-danger-outline active dropdown-toggle p-a-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="icon-settings"></i>
+                                        </button>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="#">Separated link</a>
+                                        </div>
+                                    </div>
+                                    <h4 class="m-b-0">9.823</h4>
+                                    <p>Members online</p>
+                                </div>
+                                <div class="chart-wrapper p-x-1">
+                                    <div>
+                                        <canvas id="card-chart4" class="chart chart-bar" height="70"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/col-->
+                    </div>
+                    <!--/row-->
+                    <div class="card">
+                        <div class="card-block">
+                            <div class="row">
+                                <div class="col-xs-5">
+                                    <h4 class="card-title">Traffic</h4>
+                                    <div class="small text-muted" style="margin-top:-10px;">November 2015</div>
+                                </div>
+                                <div class="col-xs-7">
+                                    <div class="btn-toolbar pull-right" role="toolbar" aria-label="Toolbar with button groups">
+                                        <div class="btn-group" data-toggle="buttons" aria-label="First group">
+                                            <label class="btn btn-sm btn-secondary-outline">
+                                                <input type="radio" name="options" id="option1" autocomplete="off" checked> Day
+                                            </label>
+                                            <label class="btn btn-sm btn-secondary-outline active">
+                                                <input type="radio" name="options" id="option2" autocomplete="off"> Month
+                                            </label>
+                                            <label class="btn btn-sm btn-secondary-outline">
+                                                <input type="radio" name="options" id="option3" autocomplete="off"> Year
+                                            </label>
+                                        </div>
+                                        <div class="btn-group hidden-sm-down" role="group" aria-label="Second group">
+                                            <button type="button" class="btn btn-sm btn-primary"><i class="icon-cloud-download"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chart-wrapper" style="height:300px;margin-top:40px;">
+                                <canvas id="main-chart" height="300"></canvas>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <ul>
+                                <li>
+                                    <div class="text-muted">Visits</div>
+                                    <strong>29.703 Users (40%)</strong>
+                                    <progress class="progress progress-xs progress-success" value="40" max="100">40%</progress>
+                                </li>
+                                <li>
+                                    <div class="text-muted">Unique</div>
+                                    <strong>24.093 Unique Users (20%)</strong>
+                                    <progress class="progress progress-xs progress-info" value="20" max="100">20%</progress>
+                                </li>
+                                <li class="hidden-sm-down">
+                                    <div class="text-muted">Pageviews</div>
+                                    <strong>78.706 Views (60%)</strong>
+                                    <progress class="progress progress-xs progress-warning" value="60" max="100">60%</progress>
+                                </li>
+                                <li class="hidden-sm-down">
+                                    <div class="text-muted">New Users</div>
+                                    <strong>22.123 Users (80%)</strong>
+                                    <progress class="progress progress-xs progress-danger" value="80" max="100">80%</progress>
+                                </li>
+                                <li class="hidden-sm-down">
+                                    <div class="text-muted">Bounce Rate</div>
+                                    <strong>40.15%</strong>
+                                    <progress class="progress progress-xs progress-primary" value="40" max="100">40%</progress>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--/.card-->
+                    <div class="row row-equal">
+                        <div class="col-md-3 col-sm-6">
+                            <div class="social-box facebook">
+                                <i class="fa fa-facebook"></i>
+                                <div class="chart-wrapper">
+                                    <canvas id="social-box-chart-1" width="auto" height="90"></canvas>
+                                </div>
+                                <ul>
+                                    <li>
+                                        <strong>89k</strong>
+                                        <span>friends</span>
+                                    </li>
+                                    <li>
+                                        <strong>459</strong>
+                                        <span>feeds</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!--/.social-box-->
+                        </div>
+                        <!--/.col-->
+                        <div class="col-md-3 col-sm-6">
+                            <div class="social-box twitter">
+                                <i class="fa fa-twitter"></i>
+                                <div class="chart-wrapper">
+                                    <canvas id="social-box-chart-2" width="auto" height="90"></canvas>
+                                </div>
+                                <ul>
+                                    <li>
+                                        <strong>973k</strong>
+                                        <span>followers</span>
+                                    </li>
+                                    <li>
+                                        <strong>1.792</strong>
+                                        <span>tweets</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!--/.social-box-->
+                        </div>
+                        <!--/.col-->
+                        <div class="col-md-3 col-sm-6">
+                            <div class="social-box linkedin">
+                                <i class="fa fa-linkedin"></i>
+                                <div class="chart-wrapper">
+                                    <canvas id="social-box-chart-3" width="auto" height="90"></canvas>
+                                </div>
+                                <ul>
+                                    <li>
+                                        <strong>500+</strong>
+                                        <span>contacts</span>
+                                    </li>
+                                    <li>
+                                        <strong>292</strong>
+                                        <span>feeds</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!--/.social-box-->
+                        </div>
+                        <!--/.col-->
+                        <div class="col-md-3 col-sm-6">
+                            <div class="social-box google-plus">
+                                <i class="fa fa-google-plus"></i>
+                                <div class="chart-wrapper">
+                                    <canvas id="social-box-chart-4" width="auto" height="90"></canvas>
+                                </div>
+                                <ul>
+                                    <li>
+                                        <strong>894</strong>
+                                        <span>followers</span>
+                                    </li>
+                                    <li>
+                                        <strong>92</strong>
+                                        <span>circles</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!--/.social-box-->
+                        </div>
+                        <!--/.col-->
+                    </div>
+                    <!--/.row-->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-block">
+                                    <h3 class="card-title clearfix m-b-0">
+                                        Traffic &amp; Sales
+                                        <button type="button" class="btn btn-sm btn-primary-outline pull-right hidden-sm-down"><i class="icon-cloud-download"></i> &nbsp; Download</button>
+                                        <fieldset class="form-group pull-right hidden-sm-down col-sm-6">
+                                            <div class="input-group input-group-sm pull-right" style="width:230px;">
+                                                <span class="input-group-addon r-0"><i class="fa fa-calendar"></i></span>
+                                                <input name="daterange" class="form-control date-picker" type="text">
+                                            </div>
+                                        </fieldset>
+                                    </h3>
+                                    <hr class="m-a-0">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <div class="callout callout-info">
+                                                        <small class="text-muted">New Clients</small>
+                                                        <br>
+                                                        <strong class="h4">9,123</strong>
+                                                        <div class="chart-wrapper">
+                                                            <canvas id="sparkline-chart-1" width="100" height="30"></canvas>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!--/.col-->
+                                                <div class="col-sm-6">
+                                                    <div class="callout callout-danger">
+                                                        <small class="text-muted">Recuring Clients</small>
+                                                        <br>
+                                                        <strong class="h4">22,643</strong>
+                                                        <div class="chart-wrapper">
+                                                            <canvas id="sparkline-chart-2" width="100" height="30"></canvas>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!--/.col-->
+                                            </div>
+                                            <!--/.row-->
+                                            <hr class="m-t-0">
+                                            <ul class="horizontal-bars">
+                                                <li>
+                                                    <div class="title">
+                                                        Monday
+                                                    </div>
+                                                    <div class="bars">
+                                                        <progress class="progress progress-xs progress-info" value="34" max="100" style="margin-bottom: 2px;">34%</progress>
+                                                        <progress class="progress progress-xs progress-danger m-a-0" value="78" max="100">78%</progress>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="title">
+                                                        Tuesday
+                                                    </div>
+                                                    <div class="bars">
+                                                        <progress class="progress progress-xs progress-info" value="56" max="100" style="margin-bottom: 2px;">56%</progress>
+                                                        <progress class="progress progress-xs progress-danger m-a-0" value="94" max="100">94%</progress>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="title">
+                                                        Wednesday
+                                                    </div>
+                                                    <div class="bars">
+                                                        <progress class="progress progress-xs progress-info" value="12" max="100" style="margin-bottom: 2px;">12%</progress>
+                                                        <progress class="progress progress-xs progress-danger m-a-0" value="67" max="100">67%</progress>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="title">
+                                                        Thursday
+                                                    </div>
+                                                    <div class="bars">
+                                                        <progress class="progress progress-xs progress-info" value="43" max="100" style="margin-bottom: 2px;">43%</progress>
+                                                        <progress class="progress progress-xs progress-danger m-a-0" value="91" max="100">91%</progress>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="title">
+                                                        Friday
+                                                    </div>
+                                                    <div class="bars">
+                                                        <progress class="progress progress-xs progress-info" value="22" max="100" style="margin-bottom: 2px;">22%</progress>
+                                                        <progress class="progress progress-xs progress-danger m-a-0" value="73" max="100">73%</progress>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="title">
+                                                        Saturday
+                                                    </div>
+                                                    <div class="bars">
+                                                        <progress class="progress progress-xs progress-info" value="53" max="100" style="margin-bottom: 2px;">53%</progress>
+                                                        <progress class="progress progress-xs progress-danger m-a-0" value="82" max="100">82%</progress>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="title">
+                                                        Sunday
+                                                    </div>
+                                                    <div class="bars">
+                                                        <progress class="progress progress-xs progress-info" value="9" max="100" style="margin-bottom: 2px;">9%</progress>
+                                                        <progress class="progress progress-xs progress-danger m-a-0" value="69" max="100">69%</progress>
+                                                    </div>
+                                                </li>
+                                                <li class="legend">
+                                                    <span class="label label-pill label-info"></span>
+                                                    <small>New clients</small> &nbsp;
+                                                    <span class="label label-pill label-danger"></span>
+                                                    <small>Recurring clients</small>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <!--/.col-->
+                                        <div class="col-md-4">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <div class="callout callout-warning">
+                                                        <small class="text-muted">Pageviews</small>
+                                                        <br>
+                                                        <strong class="h4">78,623</strong>
+                                                        <div class="chart-wrapper">
+                                                            <canvas id="sparkline-chart-3" width="100" height="30"></canvas>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!--/.col-->
+                                                <div class="col-sm-6">
+                                                    <div class="callout callout-success">
+                                                        <small class="text-muted">Organic</small>
+                                                        <br>
+                                                        <strong class="h4">49,123</strong>
+                                                        <div class="chart-wrapper">
+                                                            <canvas id="sparkline-chart-4" width="100" height="30"></canvas>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!--/.col-->
+                                            </div>
+                                            <!--/.row-->
+                                            <hr class="m-t-0">
+                                            <ul class="horizontal-bars type-2">
+                                                <li>
+                                                    <i class="icon-user"></i>
+                                                    <span class="title">Male</span>
+                                                    <span class="value">43%</span>
+                                                    <div class="bars">
+                                                        <progress class="progress progress-xs progress-warning m-a-0" value="43" max="100">43%</progress>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <i class="icon-user-female"></i>
+                                                    <span class="title">Female</span>
+                                                    <span class="value">37%</span>
+                                                    <div class="bars">
+                                                        <progress class="progress progress-xs progress-warning m-a-0" value="37" max="100">37%</progress>
+                                                    </div>
+                                                </li>
+                                                <li class="divider"></li>
+                                                <li>
+                                                    <i class="icon-globe"></i>
+                                                    <span class="title">Organic Search</span>
+                                                    <span class="value">191,235
+                                                        <span class="text-muted small">(56%)</span>
+                                                    </span>
+                                                    <div class="bars">
+                                                        <progress class="progress progress-xs progress-success m-a-0" value="56" max="100">56%</progress>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <i class="icon-social-facebook"></i>
+                                                    <span class="title">Facebook</span>
+                                                    <span class="value">51,223
+                                                        <span class="text-muted small">(15%)</span>
+                                                    </span>
+                                                    <div class="bars">
+                                                        <progress class="progress progress-xs progress-success m-a-0" value="15" max="100">15%</progress>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <i class="icon-social-twitter"></i>
+                                                    <span class="title">Twitter</span>
+                                                    <span class="value">37,564
+                                                        <span class="text-muted small">(11%)</span>
+                                                    </span>
+                                                    <div class="bars">
+                                                        <progress class="progress progress-xs progress-success m-a-0" value="11" max="100">11%</progress>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <i class="icon-social-linkedin"></i>
+                                                    <span class="title">LinkedIn</span>
+                                                    <span class="value">27,319
+                                                        <span class="text-muted small">(8%)</span>
+                                                    </span>
+                                                    <div class="bars">
+                                                        <progress class="progress progress-xs progress-success m-a-0" value="8" max="100">8%</progress>
+                                                    </div>
+                                                </li>
+                                                <li class="divider text-xs-center">
+                                                    <button class="btn btn-sm btn-link text-muted" data-toggle="tooltip" data-placement="top" title="" data-original-title="show more"><i class="icon-options"></i></button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <!--/.col-->
+                                        <div class="col-md-4">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <div class="callout">
+                                                        <small class="text-muted">CTR</small>
+                                                        <br>
+                                                        <strong class="h4">23%</strong>
+                                                        <div class="chart-wrapper">
+                                                            <canvas id="sparkline-chart-5" width="100" height="30"></canvas>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!--/.col-->
+                                                <div class="col-sm-6">
+                                                    <div class="callout callout-primary">
+                                                        <small class="text-muted">Bounce Rate</small>
+                                                        <br>
+                                                        <strong class="h4">5%</strong>
+                                                        <div class="chart-wrapper">
+                                                            <canvas id="sparkline-chart-6" width="100" height="30"></canvas>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!--/.col-->
+                                            </div>
+                                            <!--/.row-->
+                                            <hr class="m-t-0">
+                                            <ul class="icons-list">
+                                                <li>
+                                                    <i class="icon-screen-desktop bg-primary"></i>
+                                                    <div class="desc">
+                                                        <div class="title">iMac 4k</div>
+                                                        <small>Lorem ipsum dolor sit amet</small>
+                                                    </div>
+                                                    <div class="value">
+                                                        <div class="small text-muted">Sold this week</div>
+                                                        <strong>1.924</strong>
+                                                    </div>
+                                                    <div class="actions">
+                                                        <button type="button" class="btn btn-link text-muted"><i class="icon-settings"></i></button>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <i class="icon-screen-smartphone bg-info"></i>
+                                                    <div class="desc">
+                                                        <div class="title">Samsung Galaxy Edge</div>
+                                                        <small>Lorem ipsum dolor sit amet</small>
+                                                    </div>
+                                                    <div class="value">
+                                                        <div class="small text-muted">Sold this week</div>
+                                                        <strong>1.224</strong>
+                                                    </div>
+                                                    <div class="actions">
+                                                        <button type="button" class="btn btn-link text-muted"><i class="icon-settings"></i></button>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <i class="icon-screen-smartphone bg-warning"></i>
+                                                    <div class="desc">
+                                                        <div class="title">iPhone 6S</div>
+                                                        <small>Lorem ipsum dolor sit amet</small>
+                                                    </div>
+                                                    <div class="value">
+                                                        <div class="small text-muted">Sold this week</div>
+                                                        <strong>1.163</strong>
+                                                    </div>
+                                                    <div class="actions">
+                                                        <button type="button" class="btn btn-link text-muted"><i class="icon-settings"></i></button>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <i class="icon-user bg-danger"></i>
+                                                    <div class="desc">
+                                                        <div class="title">Premium accounts</div>
+                                                        <small>Lorem ipsum dolor sit amet</small>
+                                                    </div>
+                                                    <div class="value">
+                                                        <div class="small text-muted">Sold this week</div>
+                                                        <strong>928</strong>
+                                                    </div>
+                                                    <div class="actions">
+                                                        <button type="button" class="btn btn-link text-muted"><i class="icon-settings"></i></button>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <i class="icon-social-spotify bg-success"></i>
+                                                    <div class="desc">
+                                                        <div class="title">Spotify Subscriptions</div>
+                                                        <small>Lorem ipsum dolor sit amet</small>
+                                                    </div>
+                                                    <div class="value">
+                                                        <div class="small text-muted">Sold this week</div>
+                                                        <strong>893</strong>
+                                                    </div>
+                                                    <div class="actions">
+                                                        <button type="button" class="btn btn-link text-muted"><i class="icon-settings"></i></button>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <i class="icon-cloud-download bg-danger"></i>
+                                                    <div class="desc">
+                                                        <div class="title">Ebook</div>
+                                                        <small>Lorem ipsum dolor sit amet</small>
+                                                    </div>
+                                                    <div class="value">
+                                                        <div class="small text-muted">Downloads</div>
+                                                        <strong>121.924</strong>
+                                                    </div>
+                                                    <div class="actions">
+                                                        <button type="button" class="btn btn-link text-muted"><i class="icon-settings"></i></button>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <i class="icon-camera bg-warning"></i>
+                                                    <div class="desc">
+                                                        <div class="title">Photos</div>
+                                                        <small>Lorem ipsum dolor sit amet</small>
+                                                    </div>
+                                                    <div class="value">
+                                                        <div class="small text-muted">Uploaded</div>
+                                                        <strong>12.125</strong>
+                                                    </div>
+                                                    <div class="actions">
+                                                        <button type="button" class="btn btn-link text-muted"><i class="icon-settings"></i></button>
+                                                    </div>
+                                                </li>
+                                                <li class="divider text-xs-center">
+                                                    <button class="btn btn-sm btn-link text-muted" data-toggle="tooltip" data-placement="top" title="show more"><i class="icon-options"></i></button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <!--/.col-->
+                                    </div>
+                                    <!--/.row-->
+                                    <br>
+                                    <table class="table table-hover table-outline hidden-sm-down m-b-0">
+                                        <thead class="thead-default">
+                                            <tr>
+                                                <th class="text-xs-center"><i class="icon-people"></i></th>
+                                                <th>User</th>
+                                                <th class="text-xs-center">Country</th>
+                                                <th>Usage</th>
+                                                <th class="text-xs-center">Payment Method</th>
+                                                <th>Activity</th>
+                                                <th class="text-xs-center">Satisfaction</th>
+                                                <th class="text-xs-center"><i class="icon-settings"></i></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="text-xs-center">
+                                                    <div class="avatar">
+                                                        <img src="img/avatars/1.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                                        <span class="avatar-status label-success"></span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div>Yiorgos Avraamu</div>
+                                                    <div class="small text-muted">
+                                                        <span>New</span> | Registered: Jan 1, 2015
+                                                    </div>
+                                                </td>
+                                                <td class="text-xs-center">
+                                                    <img src="img/flags/USA.png" alt="USA" style="height:24px;">
+                                                </td>
+                                                <td>
+                                                    <div class="clearfix">
+                                                        <div class="pull-left">
+                                                            <strong>50%</strong>
+                                                        </div>
+                                                        <div class="pull-right">
+                                                            <small class="text-muted">Jun 11, 2015 - Jul 10, 2015</small>
+                                                        </div>
+                                                    </div>
+                                                    <progress class="progress progress-xs progress-success" value="50" max="100" style="margin:5px 0 0 0;">50%</progress>
+                                                </td>
+                                                <td class="text-xs-center">
+                                                    <i class="fa fa-cc-mastercard" style="font-size:24px"></i>
+                                                </td>
+                                                <td>
+                                                    <div class="small text-muted">Last login</div>
+                                                    <strong>10 sec ago</strong>
+                                                </td>
+                                                <td class="text-xs-center">
+                                                    <div class="gaugejs-wrap sparkline" style="width:34px;height:34px">
+                                                        <canvas id="gauge-1" width="34" height="34"></canvas>
+                                                        <span class="value">48%</span>
+                                                    </div>
+                                                </td>
+                                                <td class="text-xs-center">
+                                                    <button type="button" class="btn btn-link text-muted"><i class="icon-settings"></i></button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-xs-center">
+                                                    <div class="avatar">
+                                                        <img src="img/avatars/2.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                                        <span class="avatar-status label-danger"></span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div>Avram Tarasios</div>
+                                                    <div class="small text-muted">
+                                                        <span>Recurring</span> | Registered: Jan 1, 2015
+                                                    </div>
+                                                </td>
+                                                <td class="text-xs-center">
+                                                    <img src="img/flags/Brazil.png" alt="Brazil" style="height:24px;">
+                                                </td>
+                                                <td>
+                                                    <div class="clearfix">
+                                                        <div class="pull-left">
+                                                            <strong>10%</strong>
+                                                        </div>
+                                                        <div class="pull-right">
+                                                            <small class="text-muted">Jun 11, 2015 - Jul 10, 2015</small>
+                                                        </div>
+                                                    </div>
+                                                    <progress class="progress progress-xs progress-info" value="10" max="100" style="margin:5px 0 0 0;">10%</progress>
+                                                </td>
+                                                <td class="text-xs-center">
+                                                    <i class="fa fa-cc-visa" style="font-size:24px"></i>
+                                                </td>
+                                                <td>
+                                                    <div class="small text-muted">Last login</div>
+                                                    <strong>5 minutes ago</strong>
+                                                </td>
+                                                <td class="text-xs-center">
+                                                    <div class="gaugejs-wrap sparkline" style="width:34px;height:34px">
+                                                        <canvas id="gauge-2" width="34" height="34"></canvas>
+                                                        <span class="value">61%</span>
+                                                    </div>
+                                                </td>
+                                                <td class="text-xs-center">
+                                                    <button type="button" class="btn btn-link text-muted"><i class="icon-settings"></i></button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-xs-center">
+                                                    <div class="avatar">
+                                                        <img src="img/avatars/3.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                                        <span class="avatar-status label-warning"></span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div>Quintin Ed</div>
+                                                    <div class="small text-muted">
+                                                        <span>New</span> | Registered: Jan 1, 2015</div>
+                                                </td>
+                                                <td class="text-xs-center">
+                                                    <img src="img/flags/India.png" alt="India" style="height:24px;">
+                                                </td>
+                                                <td>
+                                                    <div class="clearfix">
+                                                        <div class="pull-left">
+                                                            <strong>74%</strong>
+                                                        </div>
+                                                        <div class="pull-right">
+                                                            <small class="text-muted">Jun 11, 2015 - Jul 10, 2015</small>
+                                                        </div>
+                                                    </div>
+                                                    <progress class="progress progress-xs progress-warning" value="74" max="100" style="margin:5px 0 0 0;">74%</progress>
+                                                </td>
+                                                <td class="text-xs-center">
+                                                    <i class="fa fa-cc-stripe" style="font-size:24px"></i>
+                                                </td>
+                                                <td>
+                                                    <div class="small text-muted">Last login</div>
+                                                    <strong>1 hour ago</strong>
+                                                </td>
+                                                <td class="text-xs-center">
+                                                    <div class="gaugejs-wrap sparkline" style="width:34px;height:34px">
+                                                        <canvas id="gauge-3" width="34" height="34"></canvas>
+                                                        <span class="value">33%</span>
+                                                    </div>
+                                                </td>
+                                                <td class="text-xs-center">
+                                                    <button type="button" class="btn btn-link text-muted"><i class="icon-settings"></i></button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-xs-center">
+                                                    <div class="avatar">
+                                                        <img src="img/avatars/4.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                                        <span class="avatar-status label-default"></span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div>Enéas Kwadwo</div>
+                                                    <div class="small text-muted">
+                                                        <span>New</span>
+                                                        | Registered: Jan 1, 2015</div>
+                                                </td>
+                                                <td class="text-xs-center">
+                                                    <img src="img/flags/France.png" alt="France" style="height:24px;">
+                                                </td>
+                                                <td>
+                                                    <div class="clearfix">
+                                                        <div class="pull-left">
+                                                            <strong>98%</strong>
+                                                        </div>
+                                                        <div class="pull-right">
+                                                            <small class="text-muted">Jun 11, 2015 - Jul 10, 2015</small>
+                                                        </div>
+                                                    </div>
+                                                    <progress class="progress progress-xs progress-danger" value="98" max="100" style="margin:5px 0 0 0;">98%</progress>
+                                                </td>
+                                                <td class="text-xs-center">
+                                                    <i class="fa fa-paypal" style="font-size:24px"></i>
+                                                </td>
+                                                <td>
+                                                    <div class="small text-muted">Last login</div>
+                                                    <strong>Last month</strong>
+                                                </td>
+                                                <td class="text-xs-center">
+                                                    <div class="gaugejs-wrap sparkline" style="width:34px;height:34px">
+                                                        <canvas id="gauge-4" width="34" height="34"></canvas>
+                                                        <span class="value">23%</span>
+                                                    </div>
+                                                </td>
+                                                <td class="text-xs-center">
+                                                    <button type="button" class="btn btn-link text-muted"><i class="icon-settings"></i></button>
+                                                </td>
+                                            </tr>
+                                            <!-- end ngRepeat: user in users -->
+                                            <tr>
+                                                <td class="text-xs-center">
+                                                    <div class="avatar">
+                                                        <img src="img/avatars/5.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                                        <span class="avatar-status label-success"></span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div>Agapetus Tadeáš</div>
+                                                    <div class="small text-muted">
+                                                        <span>New</span>
+                                                        | Registered: Jan 1, 2015</div>
+                                                </td>
+                                                <td class="text-xs-center">
+                                                    <img src="img/flags/Spain.png" alt="Spain" style="height:24px;">
+                                                </td>
+                                                <td>
+                                                    <div class="clearfix">
+                                                        <div class="pull-left">
+                                                            <strong>22%</strong>
+                                                        </div>
+                                                        <div class="pull-right">
+                                                            <small class="text-muted">Jun 11, 2015 - Jul 10, 2015</small>
+                                                        </div>
+                                                    </div>
+                                                    <progress class="progress progress-xs progress-info" value="22" max="100" style="margin:5px 0 0 0;">22%</progress>
+                                                </td>
+                                                <td class="text-xs-center">
+                                                    <i class="fa fa-google-wallet" style="font-size:24px"></i>
+                                                </td>
+                                                <td>
+                                                    <div class="small text-muted">Last login</div>
+                                                    <strong>Last week</strong>
+                                                </td>
+                                                <td class="text-xs-center">
+                                                    <div class="gaugejs-wrap sparkline" style="width:34px;height:34px">
+                                                        <canvas id="gauge-5" width="34" height="34"></canvas>
+                                                        <span class="value">78%</span>
+                                                    </div>
+                                                </td>
+                                                <td class="text-xs-center">
+                                                    <button type="button" class="btn btn-link text-muted"><i class="icon-settings"></i></button>
+                                                </td>
+                                            </tr>
+                                            <!-- end ngRepeat: user in users -->
+                                            <tr>
+                                                <td class="text-xs-center">
+                                                    <div class="avatar">
+                                                        <img src="img/avatars/6.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                                        <span class="avatar-status label-danger"></span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div>Friderik Dávid</div>
+                                                    <div class="small text-muted">
+                                                        <span>New</span> | Registered: Jan 1, 2015
+                                                    </div>
+                                                </td>
+                                                <td class="text-xs-center">
+                                                    <img src="img/flags/Poland.png" alt="Poland" style="height:24px;">
+                                                </td>
+                                                <td>
+                                                    <div class="clearfix">
+                                                        <div class="pull-left">
+                                                            <strong>43%</strong>
+                                                        </div>
+                                                        <div class="pull-right">
+                                                            <small class="text-muted">Jun 11, 2015 - Jul 10, 2015</small>
+                                                        </div>
+                                                    </div>
+                                                    <progress class="progress progress-xs progress-success" value="43" max="100" style="margin:5px 0 0 0;">43%</progress>
+                                                </td>
+                                                <td class="text-xs-center">
+                                                    <i class="fa fa-cc-amex" style="font-size:24px"></i>
+                                                </td>
+                                                <td>
+                                                    <div class="small text-muted">Last login</div>
+                                                    <strong>Yesterday</strong>
+                                                </td>
+                                                <td class="text-xs-center">
+                                                    <div class="gaugejs-wrap sparkline" style="width:34px;height:34px">
+                                                        <canvas id="gauge-6" width="34" height="34"></canvas>
+                                                        <span class="value">11%</span>
+                                                    </div>
+                                                </td>
+                                                <td class="text-xs-center">
+                                                    <button type="button" class="btn btn-link text-muted"><i class="icon-settings"></i></button>
+                                                </td>
+                                            </tr>
+                                            <!-- end ngRepeat: user in users -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/.col-->
+                    </div>
+                    <!--/.row-->
+                </div>
+            </div>
+            <!-- /.conainer-fluid -->
+        </main>
+        <footer id="footer">
+            <span class="text-left">
+                <a href="http://bootstrapmaster.com">Root</a> &copy; 2016 creativeLabs.
+            </span>
+            <span class="pull-right">
+                Powered by <a href="http://genesisui.com">GenesisUI</a>
+            </span>
+        </footer>
+        <!-- Bootstrap and necessary plugins -->
+        <script src="js/libs/jquery.min.js"></script>
+        <script src="js/libs/tether.min.js"></script>
+        <script src="js/libs/bootstrap.min.js"></script>
+        <script src="js/libs/pace.min.js"></script>
+        <!-- Plugins and scripts required by all views -->
+        <script src="js/libs/Chart.min.js"></script>
+        <script src="js/views/shared.js"></script>
+        <!-- GenesisUI main scripts -->
+        <script src="js/app.js"></script>
+        <!-- Plugins and scripts required by this views -->
+        <script src="js/libs/toastr.min.js"></script>
+        <script src="js/libs/gauge.min.js"></script>
+        <script src="js/libs/moment.min.js"></script>
+        <script src="js/libs/daterangepicker.min.js"></script>
+        <!-- Custom scripts required by this view -->
+        <script src="js/views/main.js"></script>
+        <!-- Grunt watch plugin -->
+        <script src="//localhost:35729/livereload.js"></script>
+    </body>
+</html>

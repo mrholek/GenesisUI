@@ -231,10 +231,10 @@ $(document).ready(function($){
 		}
 
 		if ($($(this))[0].href==cUrl) {
-			$(this).parent().addClass('active');
+			$(this).addClass('active');
 
 			$(this).parents('ul').add(this).each(function(){
-			    $(this).show().parent().addClass('opened');
+			    $(this).parent().addClass('open');
 			});
 		}
 	});
@@ -248,43 +248,8 @@ $(document).ready(function($){
 
         if ($(this).hasClass('nav-dropdown-toggle')) {
 			$(this).parent().toggleClass('open');
-			//$(this).next('.nav-dropdown-items').show();
 		}
-
-		// if (!$(this).parent().hasClass('hover')) {
-		// 	if ($(this).parent().find('ul').size() != 0) {
-		//
-		// 		if ($(this).parent().hasClass('opened')) {
-		// 			$(this).parent().removeClass('opened');
-		// 		} else {
-		// 			$(this).parent().addClass('opened');
-		// 		}
-		//
-		// 		$(this).parent().parent().find('ul').each(function(){
-		// 			if (!$(this).parent().hasClass('opened')) {
-		// 				$(this).slideUp();
-		// 			}
-		// 		});
-		//
-		// 		if (!$(this).parent().parent().parent().hasClass('opened')) {
-		// 			$('.nav a').not(this).parent().find('ul').slideUp('slow', function(){
-		// 				$(this).parent().removeClass('opened').find('.opened').each(function(){
-		// 					$(this).removeClass('opened');
-		// 				});
-		// 			});
-		// 		}
-		//
-		// 	} else {
-		//
-		// 		if (!$(this).parent().parent().parent().hasClass('opened')) {
-		// 			$('.nav a').not(this).parent().find('ul').slideUp('slow', function(){
-		// 				$(this).parent().removeClass('opened').find('.opened').each(function(){
-		// 					$(this).removeClass('opened')
-		// 				});
-		// 			});
-		// 		}
-		// 	}
-		// }
+		
 	});
 
 	/* ---------- Main Menu Open/Close, Min/Full ---------- */

@@ -1,0 +1,327 @@
+<script>
+var requireJS = [];
+loadJS(requireJS, "assets/js/views/widgets.js");
+</script>
+<div class="animated fadeIn">
+    <div class="row row-equal">
+        <div class="col-sm-6 col-md-3">
+            <div class="card card-inverse card-primary">
+                <div class="card-block p-b-0">
+                    <div class="btn-group pull-right">
+                        <button type="button" class="btn btn-primary-outline active dropdown-toggle p-a-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="icon-settings"></i>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Separated link</a>
+                        </div>
+                    </div>
+                    <h4 class="m-b-0">9.823</h4>
+                    <p>Members online</p>
+                </div>
+                <div class="chart-wrapper p-x-1">
+                    <div>
+                        <canvas id="card-chart1" class="chart chart-line" height="70"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/col-->
+        <div class="col-sm-6 col-md-3">
+            <div class="card card-inverse card-info">
+                <div class="card-block p-b-0">
+                    <button type="button" class="btn btn-info-outline active p-a-0 pull-right">
+                        <i class="icon-location-pin"></i>
+                    </button>
+                    <h4 class="m-b-0">9.823</h4>
+                    <p>Members online</p>
+                </div>
+                <div class="chart-wrapper p-x-1">
+                    <div>
+                        <canvas id="card-chart2" class="chart chart-line" width="auto" height="70"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/col-->
+        <div class="col-sm-6 col-md-3">
+            <div class="card card-inverse card-warning">
+                <div class="card-block p-b-0">
+                    <div class="btn-group pull-right">
+                        <button type="button" class="btn btn-warning-outline active dropdown-toggle p-a-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="icon-settings"></i>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Separated link</a>
+                        </div>
+                    </div>
+                    <h4 class="m-b-0">9.823</h4>
+                    <p>Members online</p>
+                </div>
+                <div class="chart-wrapper">
+                    <div class="chart-wrapper">
+                        <div>
+                            <canvas id="card-chart3" class="chart chart-line" width="auto" height="70"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/col-->
+        <div class="col-sm-6 col-md-3">
+            <div class="card card-inverse card-danger">
+                <div class="card-block p-b-0">
+                    <div class="btn-group pull-right">
+                        <button type="button" class="btn btn-danger-outline active dropdown-toggle p-a-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="icon-settings"></i>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Separated link</a>
+                        </div>
+                    </div>
+                    <h4 class="m-b-0">9.823</h4>
+                    <p>Members online</p>
+                </div>
+                <div class="chart-wrapper p-x-1">
+                    <div>
+                        <canvas id="card-chart4" class="chart chart-bar" height="70"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/col-->
+    </div>
+    <!--/row-->
+    <div class="row row-equal">
+        <div class="col-md-2 col-sm-4">
+            <div class="card">
+                <div class="card-block text-xs-center">
+                    <div class="text-muted small text-uppercase font-weight-bold">Title</div>
+                    <div class="h2 p-y-1">1,123</div>
+                    <div class="chart-wrapper">
+                        <canvas id="chart-1" class="chart chart-bar" height="40" width="80"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/col-->
+        <div class="col-md-2 col-sm-4">
+            <div class="card">
+                <div class="card-block text-xs-center">
+                    <div class="text-muted small text-uppercase font-weight-bold">Title</div>
+                    <div class="h2 p-y-1">1,123</div>
+                    <div class="chart-wrapper">
+                        <canvas id="chart-2" class="chart chart-bar" height="40" width="80"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/col-->
+        <div class="col-md-2 col-sm-4">
+            <div class="card">
+                <div class="card-block text-xs-center">
+                    <div class="text-muted small text-uppercase font-weight-bold">Title</div>
+                    <div class="h2 p-y-1">1,123</div>
+                    <div class="chart-wrapper">
+                        <canvas id="chart-3" class="chart chart-bar" height="40" width="80"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/col-->
+        <div class="col-md-2 col-sm-4">
+            <div class="card">
+                <div class="card-block text-xs-center">
+                    <div class="text-muted small text-uppercase font-weight-bold">Title</div>
+                    <div class="h2 p-y-1">1,123</div>
+                    <div class="chart-wrapper">
+                        <canvas id="chart-4" class="chart chart-line" height="40" width="100"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/col-->
+        <div class="col-md-2 col-sm-4">
+            <div class="card">
+                <div class="card-block text-xs-center">
+                    <div class="text-muted small text-uppercase font-weight-bold">Title</div>
+                    <div class="h2 p-y-1">1,123</div>
+                    <div class="chart-wrapper">
+                        <canvas id="chart-5" class="chart chart-line" height="40" width="100"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/col-->
+        <div class="col-md-2 col-sm-4">
+            <div class="card">
+                <div class="card-block text-xs-center">
+                    <div class="text-muted small text-uppercase font-weight-bold">Title</div>
+                    <div class="h2 p-y-1">1,123</div>
+                    <div class="chart-wrapper">
+                        <canvas id="chart-6" class="chart chart-line" height="40" width="100"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/col-->
+    </div>
+    <!--/row-->
+    <div class="row row-equal">
+        <div class="col-lg-3 col-sm-6 col-xs-6 col-xxs-12">
+            <div class="smallstat">
+                <i class="fa fa-bell bg-primary"></i>
+                <span class="value text-primary">$1 999,99</span>
+                <span class="title">Income</span>
+            </div>
+            <!--/.smallstat-->
+        </div>
+        <!--/.col-->
+        <div class="col-lg-3 col-sm-6 col-xs-6 col-xxs-12">
+            <div class="smallstat">
+                <i class="fa fa-cogs bg-success"></i>
+                <span class="value text-success">$1 999,99</span>
+                <span class="title">Income</span>
+            </div>
+            <!--/.smallstat-->
+        </div>
+        <!--/.col-->
+        <div class="col-lg-3 col-sm-6 col-xs-6 col-xxs-12">
+            <div class="smallstat">
+                <i class="fa fa-laptop bg-info"></i>
+                <span class="value text-info">$1 999,99</span>
+                <span class="title">Income</span>
+            </div>
+            <!--/.smallstat-->
+        </div>
+        <!--/.col-->
+        <div class="col-lg-3 col-sm-6 col-xs-6 col-xxs-12">
+            <div class="smallstat">
+                <i class="fa fa-moon-o bg-warning"></i>
+                <span class="value text-warning">$1 999,99</span>
+                <span class="title">Income</span>
+            </div>
+            <!--/.smallstat-->
+        </div>
+        <!--/.col-->
+        <div class="col-lg-3 col-sm-6 col-xs-6 col-xxs-12">
+            <div class="smallstat">
+                <i class="fa fa-bell bg-danger"></i>
+                <span class="value text-danger">$1 999,99</span>
+                <span class="title">Income</span>
+            </div>
+            <!--/.smallstat-->
+        </div>
+        <!--/.col-->
+        <div class="col-lg-3 col-sm-6 col-xs-6 col-xxs-12">
+            <div class="smallstat">
+                <i class="fa fa-bell bg-primary"></i>
+                <span class="value text-primary">$1 999,99</span>
+                <span class="title">Income</span>
+            </div>
+            <!--/.smallstat-->
+        </div>
+        <!--/.col-->
+        <div class="col-lg-3 col-sm-6 col-xs-6 col-xxs-12">
+            <div class="smallstat">
+                <i class="fa fa-cogs bg-success"></i>
+                <span class="value text-success">$1 999,99</span>
+                <span class="title">Income</span>
+            </div>
+            <!--/.smallstat-->
+        </div>
+        <!--/.col-->
+        <div class="col-lg-3 col-sm-6 col-xs-6 col-xxs-12">
+            <div class="smallstat">
+                <i class="fa fa-laptop bg-info"></i>
+                <span class="value text-info">$1 999,99</span>
+                <span class="title">Income</span>
+            </div>
+            <!--/.smallstat-->
+        </div>
+        <!--/.col-->
+    </div>
+    <!--/.row-->
+    <div class="row">
+        <div class="col-md-3 col-sm-6">
+            <div class="social-box facebook">
+                <i class="fa fa-facebook"></i>
+                <ul>
+                    <li>
+                        <strong>89k</strong>
+                        <span>friends</span>
+                    </li>
+                    <li>
+                        <strong>459</strong>
+                        <span>feeds</span>
+                    </li>
+                </ul>
+            </div>
+            <!--/social-box-->
+        </div>
+        <!--/col-->
+        <div class="col-md-3 col-sm-6">
+            <div class="social-box twitter">
+                <i class="fa fa-twitter"></i>
+                <ul>
+                    <li>
+                        <strong>973k</strong>
+                        <span>followers</span>
+                    </li>
+                    <li>
+                        <strong>1.792</strong>
+                        <span>tweets</span>
+                    </li>
+                </ul>
+            </div>
+            <!--/social-box-->
+        </div>
+        <!--/col-->
+        <div class="col-md-3 col-sm-6">
+            <div class="social-box linkedin">
+                <i class="fa fa-linkedin"></i>
+                <ul>
+                    <li>
+                        <strong>500+</strong>
+                        <span>contacts</span>
+                    </li>
+                    <li>
+                        <strong>292</strong>
+                        <span>feeds</span>
+                    </li>
+                </ul>
+            </div>
+            <!--/social-box-->
+        </div>
+        <!--/col-->
+        <div class="col-md-3 col-sm-6">
+            <div class="social-box google-plus">
+                <i class="fa fa-google-plus"></i>
+                <ul>
+                    <li>
+                        <strong>894</strong>
+                        <span>followers</span>
+                    </li>
+                    <li>
+                        <strong>92</strong>
+                        <span>circles</span>
+                    </li>
+                </ul>
+            </div>
+            <!--/social-box-->
+        </div>
+        <!--/col-->
+    </div>
+    <!--/row-->
+</div>

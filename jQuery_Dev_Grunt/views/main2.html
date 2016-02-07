@@ -1,19 +1,14 @@
 <script>
-
-	var requireJS = [
-        "js/libs/toastr.min.js",
-        "js/libs/gauge.min.js",
-        "js/libs/moment.min.js",
-        "js/libs/daterangepicker.min.js"
-	];
-
-	loadJS(requireJS, "js/views/main2.js");
-
+var requireJS = [
+    "js/libs/toastr.min.js",
+    "js/libs/gauge.min.js",
+    "js/libs/moment.min.js",
+    "js/libs/daterangepicker.min.js"
+];
+loadJS(requireJS, "js/views/main2.js");
 </script>
-
 <div id="current-title" hidden>Dashboard</div>
 <div id="current-desc" hidden>Welcome to ROOT powerfull Bootstrap UI Kit</div>
-
 <div class="animated fadeIn">
     <div class="card card-full">
         <div class="card-block">
@@ -74,8 +69,8 @@
                 </li>
             </ul>
         </div>
-    </div><!--/.card-->
-
+    </div>
+    <!--/.card-->
     <div class="row row-equal">
         <div class="col-md-3 col-sm-6">
             <div class="social-box facebook">
@@ -93,9 +88,10 @@
                         <span>feeds</span>
                     </li>
                 </ul>
-            </div><!--/.social-box-->
-        </div><!--/.col-->
-
+            </div>
+            <!--/.social-box-->
+        </div>
+        <!--/.col-->
         <div class="col-md-3 col-sm-6">
             <div class="social-box twitter">
                 <i class="fa fa-twitter"></i>
@@ -112,11 +108,11 @@
                         <span>tweets</span>
                     </li>
                 </ul>
-            </div><!--/.social-box-->
-        </div><!--/.col-->
-
+            </div>
+            <!--/.social-box-->
+        </div>
+        <!--/.col-->
         <div class="col-md-3 col-sm-6">
-
             <div class="social-box linkedin">
                 <i class="fa fa-linkedin"></i>
                 <div class="chart-wrapper">
@@ -132,9 +128,10 @@
                         <span>feeds</span>
                     </li>
                 </ul>
-            </div><!--/.social-box-->
-        </div><!--/.col-->
-
+            </div>
+            <!--/.social-box-->
+        </div>
+        <!--/.col-->
         <div class="col-md-3 col-sm-6">
             <div class="social-box google-plus">
                 <i class="fa fa-google-plus"></i>
@@ -151,10 +148,12 @@
                         <span>circles</span>
                     </li>
                 </ul>
-            </div><!--/.social-box-->
-        </div><!--/.col-->
-    </div><!--/.row-->
-
+            </div>
+            <!--/.social-box-->
+        </div>
+        <!--/.col-->
+    </div>
+    <!--/.row-->
     <div class="row">
         <div class="col-md-12">
             <div class="card">
@@ -165,36 +164,38 @@
                         <fieldset class="form-group pull-right hidden-sm-down col-sm-6">
                             <div class="input-group input-group-sm pull-right" style="width:230px;">
                                 <span class="input-group-addon r-0"><i class="fa fa-calendar"></i></span>
-                                <input name="daterange" class="form-control date-picker" type="text"/>
+                                <input name="daterange" class="form-control date-picker" type="text" />
                             </div>
                         </fieldset>
                     </h3>
-
                     <hr class="m-a-0">
-
                     <div class="row">
-
                         <div class="col-md-4">
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="callout callout-info">
-                                        <small class="text-muted">New Clients</small><br>
+                                        <small class="text-muted">New Clients</small>
+                                        <br>
                                         <strong class="h4">9,123</strong>
                                         <div class="chart-wrapper">
                                             <canvas id="sparkline-chart-1" width="100" height="30"></canvas>
                                         </div>
                                     </div>
-                                </div><!--/.col-->
+                                </div>
+                                <!--/.col-->
                                 <div class="col-sm-6">
                                     <div class="callout callout-danger">
-                                        <small class="text-muted">Recuring Clients</small><br>
+                                        <small class="text-muted">Recuring Clients</small>
+                                        <br>
                                         <strong class="h4">22,643</strong>
                                         <div class="chart-wrapper">
                                             <canvas id="sparkline-chart-2" width="100" height="30"></canvas>
                                         </div>
                                     </div>
-                                </div><!--/.col-->
-                            </div><!--/.row-->
+                                </div>
+                                <!--/.col-->
+                            </div>
+                            <!--/.row-->
                             <hr class="m-t-0">
                             <ul class="horizontal-bars">
                                 <li>
@@ -261,31 +262,40 @@
                                     </div>
                                 </li>
                                 <li class="legend">
-                                    <span class="label label-pill label-info"></span> <small>New clients</small> &nbsp; <span class="label label-pill label-danger"></span> <small>Recurring clients</small>
+                                    <span class="label label-pill label-info"></span>
+                                    <small>New clients</small> &nbsp;
+                                    <span class="label label-pill label-danger"></span>
+                                    <small>Recurring clients</small>
                                 </li>
                             </ul>
-                        </div><!--/.col-->
+                        </div>
+                        <!--/.col-->
                         <div class="col-md-4">
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="callout callout-warning">
-                                        <small class="text-muted">Pageviews</small><br>
+                                        <small class="text-muted">Pageviews</small>
+                                        <br>
                                         <strong class="h4">78,623</strong>
                                         <div class="chart-wrapper">
                                             <canvas id="sparkline-chart-3" width="100" height="30"></canvas>
                                         </div>
                                     </div>
-                                </div><!--/.col-->
+                                </div>
+                                <!--/.col-->
                                 <div class="col-sm-6">
                                     <div class="callout callout-success">
-                                        <small class="text-muted">Organic</small><br>
+                                        <small class="text-muted">Organic</small>
+                                        <br>
                                         <strong class="h4">49,123</strong>
                                         <div class="chart-wrapper">
                                             <canvas id="sparkline-chart-4" width="100" height="30"></canvas>
                                         </div>
                                     </div>
-                                </div><!--/.col-->
-                            </div><!--/.row-->
+                                </div>
+                                <!--/.col-->
+                            </div>
+                            <!--/.row-->
                             <hr class="m-t-0">
                             <ul class="horizontal-bars type-2">
                                 <li>
@@ -308,7 +318,9 @@
                                 <li>
                                     <i class="icon-globe"></i>
                                     <span class="title">Organic Search</span>
-                                    <span class="value">191,235 <span class="text-muted small">(56%)</span></span>
+                                    <span class="value">191,235
+                                        <span class="text-muted small">(56%)</span>
+                                    </span>
                                     <div class="bars">
                                         <progress class="progress progress-xs progress-success m-a-0" value="56" max="100">56%</progress>
                                     </div>
@@ -316,7 +328,9 @@
                                 <li>
                                     <i class="icon-social-facebook"></i>
                                     <span class="title">Facebook</span>
-                                    <span class="value">51,223 <span class="text-muted small">(15%)</span></span>
+                                    <span class="value">51,223
+                                        <span class="text-muted small">(15%)</span>
+                                    </span>
                                     <div class="bars">
                                         <progress class="progress progress-xs progress-success m-a-0" value="15" max="100">15%</progress>
                                     </div>
@@ -324,7 +338,9 @@
                                 <li>
                                     <i class="icon-social-twitter"></i>
                                     <span class="title">Twitter</span>
-                                    <span class="value">37,564 <span class="text-muted small">(11%)</span></span>
+                                    <span class="value">37,564
+                                        <span class="text-muted small">(11%)</span>
+                                    </span>
                                     <div class="bars">
                                         <progress class="progress progress-xs progress-success m-a-0" value="11" max="100">11%</progress>
                                     </div>
@@ -332,7 +348,9 @@
                                 <li>
                                     <i class="icon-social-linkedin"></i>
                                     <span class="title">LinkedIn</span>
-                                    <span class="value">27,319 <span class="text-muted small">(8%)</span></span>
+                                    <span class="value">27,319
+                                        <span class="text-muted small">(8%)</span>
+                                    </span>
                                     <div class="bars">
                                         <progress class="progress progress-xs progress-success m-a-0" value="8" max="100">8%</progress>
                                     </div>
@@ -341,28 +359,34 @@
                                     <button class="btn btn-sm btn-link text-muted" data-toggle="tooltip" data-placement="top" title="" data-original-title="show more"><i class="icon-options"></i></button>
                                 </li>
                             </ul>
-                        </div><!--/.col-->
+                        </div>
+                        <!--/.col-->
                         <div class="col-md-4">
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="callout">
-                                        <small class="text-muted">CTR</small><br>
+                                        <small class="text-muted">CTR</small>
+                                        <br>
                                         <strong class="h4">23%</strong>
                                         <div class="chart-wrapper">
                                             <canvas id="sparkline-chart-5" width="100" height="30"></canvas>
                                         </div>
                                     </div>
-                                </div><!--/.col-->
+                                </div>
+                                <!--/.col-->
                                 <div class="col-sm-6">
                                     <div class="callout callout-primary">
-                                        <small class="text-muted">Bounce Rate</small><br>
+                                        <small class="text-muted">Bounce Rate</small>
+                                        <br>
                                         <strong class="h4">5%</strong>
                                         <div class="chart-wrapper">
                                             <canvas id="sparkline-chart-6" width="100" height="30"></canvas>
                                         </div>
                                     </div>
-                                </div><!--/.col-->
-                            </div><!--/.row-->
+                                </div>
+                                <!--/.col-->
+                            </div>
+                            <!--/.row-->
                             <hr class="m-t-0">
                             <ul class="icons-list">
                                 <li>
@@ -467,8 +491,10 @@
                                     <button class="btn btn-sm btn-link text-muted" data-toggle="tooltip" data-placement="top" title="show more"><i class="icon-options"></i></button>
                                 </li>
                             </ul>
-                        </div><!--/.col-->
-                    </div><!--/.row-->
+                        </div>
+                        <!--/.col-->
+                    </div>
+                    <!--/.row-->
                     <br/>
                     <table class="table table-hover table-outline hidden-sm-down m-b-0">
                         <thead class="thead-default">
@@ -538,7 +564,7 @@
                                 <td>
                                     <div>Avram Tarasios</div>
                                     <div class="small text-muted">
-										<span>Recurring</span> | Registered: Jan 1, 2015
+                                        <span>Recurring</span> | Registered: Jan 1, 2015
                                     </div>
                                 </td>
                                 <td class="text-xs-center">
@@ -658,7 +684,7 @@
                                     <button type="button" class="btn btn-link text-muted"><i class="icon-settings"></i></button>
                                 </td>
                             </tr>
-							<tr>
+                            <tr>
                                 <td class="text-xs-center">
                                     <div class="avatar">
                                         <img src="img/avatars/5.jpg" class="img-avatar" alt="admin@bootstrapmaster.com" src="img/avatars/5.jpg">
@@ -701,7 +727,7 @@
                                     <button type="button" class="btn btn-link text-muted"><i class="icon-settings"></i></button>
                                 </td>
                             </tr>
-							<tr>
+                            <tr>
                                 <td class="text-xs-center">
                                     <div class="avatar">
                                         <img src="img/avatars/6.jpg" class="img-avatar" alt="admin@bootstrapmaster.com" src="img/avatars/6.jpg">
@@ -749,6 +775,8 @@
                     </table>
                 </div>
             </div>
-        </div><!--/.col-->
-    </div><!--/.row-->
+        </div>
+        <!--/.col-->
+    </div>
+    <!--/.row-->
 </div>

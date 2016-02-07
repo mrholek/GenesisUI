@@ -1,0 +1,23 @@
+<script>
+var requireJS = [
+    "assets/js/libs/moment.min.js",
+    "assets/js/libs/fullcalendar.min.js",
+    "assets/js/libs/gcal.min.js",
+];
+loadJS(requireJS, "assets/js/views/calendar.js");
+</script>
+<div class="animated fadeIn">
+    <div class="card">
+        <div class="card-header">
+            <i class="icon-calendar"></i> FullCalendar
+            <div class="card-actions">
+                <a href="http://angular-ui.github.io/ui-calendar/">
+                    <small class="text-muted">docs</small>
+                </a>
+            </div>
+        </div>
+        <div class="card-block">
+            <div id="calendar"></div>
+        </div>
+    </div>
+</div>

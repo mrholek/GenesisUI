@@ -1,0 +1,48 @@
+@mixin button-social-size($padding-y, $padding-x, $font-size, $line-height, $border-radius) {
+    padding: $padding-y $padding-x;
+    font-size: $font-size;
+    line-height: $line-height;
+    border: 0;
+    @include border-radius($border-radius);
+
+    &:before {
+        height: ($padding-y * 2) + ($font-size * $line-height);
+        width: ($padding-y * 2) + ($font-size * $line-height);
+        line-height: $line-height;
+        padding: $padding-y 0;
+        font-size: $font-size;
+        @include border-radius($border-radius);
+    }
+
+    span {
+        margin-left: ($padding-y * 2) + ($font-size * $line-height);
+    }
+
+    &.icon {
+        height: ($padding-y * 2) + ($font-size * $line-height);
+        width: ($padding-y * 2) + ($font-size * $line-height);
+    }
+}
+
+@mixin avatar($width, $status-width) {
+    position: relative;
+    display: inline-block;
+    width: $width;
+    margin: 0 10px;
+
+    .img-avatar {
+        height: $width;
+        width: $width;
+    }
+
+    .avatar-status {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        border-radius:50em;
+        border: 1px solid #fff;
+        height: $status-width;
+        width: $status-width;
+        display: block;
+    }
+}

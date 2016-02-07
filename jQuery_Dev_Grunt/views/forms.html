@@ -1,16 +1,12 @@
 <script>
-
-	var requireJS = [
-        "js/libs/jquery.maskedinput.min.js",
-        "js/libs/moment.min.js",
-        "js/libs/select2.min.js",
-        "js/libs/daterangepicker.min.js"
-	];
-
-	loadJS(requireJS, "js/views/forms.js");
-
+var requireJS = [
+    "js/libs/jquery.maskedinput.min.js",
+    "js/libs/moment.min.js",
+    "js/libs/select2.min.js",
+    "js/libs/daterangepicker.min.js"
+];
+loadJS(requireJS, "js/views/forms.js");
 </script>
-
 <div class="animated fadeIn">
     <div class="row">
         <div class="col-md-6">
@@ -18,12 +14,13 @@
                 <div class="card-header">
                     <i class="fa fa-edit"></i> Masked Input Plugin for jQuery
                     <div class="card-actions">
-                        <a href="https://github.com/digitalBush/jquery.maskedinput"><small class="text-muted">docs</small></a>
+                        <a href="https://github.com/digitalBush/jquery.maskedinput">
+                            <small class="text-muted">docs</small>
+                        </a>
                     </div>
                 </div>
                 <div class="card-block collapse in">
                     <form>
-
                         <fieldset class="form-group">
                             <label>Date input</label>
                             <div class="input-group">
@@ -32,7 +29,6 @@
                             </div>
                             <small class="text-muted">ex. 99/99/9999</small>
                         </fieldset>
-
                         <fieldset class="form-group">
                             <label>Phone input</label>
                             <div class="input-group">
@@ -41,7 +37,6 @@
                             </div>
                             <small class="text-muted">ex. (999) 999-9999</small>
                         </fieldset>
-
                         <fieldset class="form-group">
                             <label>Taxpayer Identification Numbers</label>
                             <div class="input-group">
@@ -50,7 +45,6 @@
                             </div>
                             <small class="text-muted">ex. 99-9999999</small>
                         </fieldset>
-
                         <fieldset class="form-group">
                             <label>Social Security Number</label>
                             <div class="input-group">
@@ -59,7 +53,6 @@
                             </div>
                             <small class="text-muted">ex. 999-99-9999</small>
                         </fieldset>
-
                         <fieldset class="form-group">
                             <label>Eye Script</label>
                             <div class="input-group">
@@ -68,7 +61,6 @@
                             </div>
                             <small class="text-muted">ex. ~9.99 ~9.99 999</small>
                         </fieldset>
-
                         <fieldset class="form-group">
                             <label>Credit Card Number</label>
                             <div class="input-group">
@@ -77,17 +69,19 @@
                             </div>
                             <small class="text-muted">ex. 9999 9999 9999 9999</small>
                         </fieldset>
-
                     </form>
                 </div>
             </div>
-        </div><!-- /.col -->
+        </div>
+        <!-- /.col -->
         <div class="col-md-6">
             <div class="card">
                 <div class="card-header">
                     <i class="fa fa-edit"></i> Select2
                     <div class="card-actions">
-                        <a href="https://select2.github.io"><small class="text-muted">docs</small></a>
+                        <a href="https://select2.github.io">
+                            <small class="text-muted">docs</small>
+                        </a>
                     </div>
                 </div>
                 <div class="card-block">
@@ -177,7 +171,9 @@
                 <div class="card-header">
                     <i class="fa fa-edit"></i> DateRangePicker
                     <div class="card-actions">
-                        <a href="http://www.daterangepicker.com"><small class="text-muted">docs</small></a>
+                        <a href="http://www.daterangepicker.com">
+                            <small class="text-muted">docs</small>
+                        </a>
                     </div>
                 </div>
                 <div class="card-block">
@@ -185,11 +181,13 @@
                         <label>DateRangePicker</label>
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
-                            <input name="daterange" class="form-control" type="text"/>
+                            <input name="daterange" class="form-control" type="text" />
                         </div>
                     </fieldset>
                 </div>
             </div>
-        </div><!-- /.col -->
-    </div><!-- /.row -->
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
 </div>

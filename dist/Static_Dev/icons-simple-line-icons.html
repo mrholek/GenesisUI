@@ -1,0 +1,1018 @@
+<!--
+* GenesisUI Bootstrap 4 Admin Template built as framework!
+* Version 1.3.0
+* https://GenesisUI.com
+* Copyright 2016 creativeLabs Łukasz Holeczek
+* License : https://GenesisUI.com/license.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="ROOT Admin - UI Admin Kit Powered by Bootstrap 4.0.0">
+        <meta name="author" content="Lukasz Holeczek">
+        <meta name="keyword" content="ROOT Admin - UI Admin Kit Powered by Bootstrap 4.0.0">
+        <!-- <link rel="shortcut icon" href="assets/ico/favicon.png"> -->
+        <title>ROOT Admin - UI Admin Kit</title>
+        <!-- Main styles for this application -->
+        <link href="assets/css/style.css" rel="stylesheet">
+    </head>
+    <!-- BODY options, add following classes to body to change options.
+		1. 'compact-nav'     	  - Switch sidebar to minified version (width 50px)
+		2. 'sidebar-nav'		  - Navigation on the left
+		3. 'fixed-nav'			  - Fixed navigation
+		4. 'navbar-fixed'		  - Fixed navbar
+	-->
+    <body class="navbar-fixed sidebar-nav fixed-nav">
+        <header class="navbar navbar-light brand-dark">
+            <button class="navbar-toggler mobile-toggler hidden-lg-up" type="button">&#9776;</button>
+            <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler layout-toggler hidden-md-down" type="button" data-before="sidebar-nav" data-after="sidebar-nav compact-nav">&#9776;</button>
+            <ul class="nav navbar-nav pull-right hidden-md-down">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                        <img src="assets/img/flags/United-Kingdom.png" class="img-flag" alt="English">
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <div class="dropdown-header text-xs-center">
+                            <strong>Choose language</strong>
+                        </div>
+                        <a class="dropdown-item" href="#">
+                            <img src="assets/img/flags/Poland.png" class="img-flag" alt="Polish"> Polish</a>
+                        <a class="dropdown-item" href="#">
+                            <img src="assets/img/flags/United-Kingdom.png" class="img-flag" alt="English"> English</a>
+                        <a class="dropdown-item" href="#">
+                            <img src="assets/img/flags/Spain.png" class="img-flag" alt="Espa&#xF1;ol"> Español</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="icon-bell"></i><span class="label label-pill label-danger">5</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="icon-list"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="icon-location-pin"></i></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                        <img src="assets/img/avatars/6.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                        <span class="hidden-md-down">admin</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <div class="dropdown-header text-xs-center">
+                            <strong>Account</strong>
+                        </div>
+                        <a class="dropdown-item" href="#"><i class="fa fa-bell-o"></i> Updates<span class="label label-info">42</span></a>
+                        <a class="dropdown-item" href="#"><i class="fa fa-envelope-o"></i> Messages<span class="label label-success">42</span></a>
+                        <a class="dropdown-item" href="#"><i class="fa fa-tasks"></i> Tasks<span class="label label-danger">42</span></a>
+                        <a class="dropdown-item" href="#"><i class="fa fa-comments"></i> Comments<span class="label label-warning">42</span></a>
+                        <div class="dropdown-header text-xs-center">
+                            <strong>Settings</strong>
+                        </div>
+                        <a class="dropdown-item" href="#"><i class="fa fa-user"></i> Profile</a>
+                        <a class="dropdown-item" href="#"><i class="fa fa-wrench"></i> Settings</a>
+                        <a class="dropdown-item" href="#"><i class="fa fa-usd"></i> Payments<span class="label label-default">42</span></a>
+                        <a class="dropdown-item" href="#"><i class="fa fa-file"></i> Projects<span class="label label-primary">42</span></a>
+                        <div class="divider"></div>
+                        <a class="dropdown-item" href="#"><i class="fa fa-shield"></i> Lock Account</a>
+                        <a class="dropdown-item" href="#"><i class="fa fa-lock"></i> Logout</a>
+                    </div>
+                </li>
+            </ul>
+        </header>
+        <nav id="navigation" class="collapse navbar-toggleable-sm nav-dark">
+            <div id="navigation-header">
+                <img src="assets/img/avatars/8.jpg" class="img-avatar" alt="Avatar">
+                <div>
+                    <strong>JOHN DOE</strong>
+                </div>
+                <div class="text-muted">
+                    <small>Founder &amp; CEO</small>
+                </div>
+                <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                    <button type="button" class="btn btn-link">
+                        <i class="icon-settings"></i>
+                    </button>
+                    <button type="button" class="btn btn-link">
+                        <i class="icon-speech"></i>
+                        <span class="label label-warning label-pill">5</span>
+                    </button>
+                    <div class="btn-group" role="group">
+                        <button id="btnGroupDrop1" type="button" class="btn btn-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="icon-user"></i>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                            <div class="dropdown-header text-xs-center">
+                                <strong>Account</strong>
+                            </div>
+                            <a class="dropdown-item" href="#"><i class="fa fa-bell-o"></i> Updates<span class="label label-info">42</span></a>
+                            <a class="dropdown-item" href="#"><i class="fa fa-envelope-o"></i> Messages<span class="label label-success">42</span></a>
+                            <a class="dropdown-item" href="#"><i class="fa fa-tasks"></i> Tasks<span class="label label-danger">42</span></a>
+                            <a class="dropdown-item" href="#"><i class="fa fa-comments"></i> Comments<span class="label label-warning">42</span></a>
+                            <div class="dropdown-header text-xs-center">
+                                <strong>Settings</strong>
+                            </div>
+                            <a class="dropdown-item" href="#"><i class="fa fa-user"></i> Profile</a>
+                            <a class="dropdown-item" href="#"><i class="fa fa-wrench"></i> Settings</a>
+                            <a class="dropdown-item" href="#"><i class="fa fa-usd"></i> Payments<span class="label label-default">42</span></a>
+                            <a class="dropdown-item" href="#"><i class="fa fa-file"></i> Projects<span class="label label-primary">42</span></a>
+                            <div class="divider"></div>
+                            <a class="dropdown-item" href="#"><i class="fa fa-shield"></i> Lock Account</a>
+                            <a class="dropdown-item" href="#"><i class="fa fa-lock"></i> Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="navigation-items">
+                <ul class="nav">
+                    <li class="nav-title">
+                        Dashboard
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html"><i class="icon-speedometer"></i> DASHBOARD <span class="label label-info">NEW</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index2.html"><i class="icon-speedometer"></i> DASHBOARD 2 <span class="label label-warning">NEW</span></a>
+                    </li>
+                    <li class="divider"></li>
+                    <li class="nav-title">
+                        UI Elements
+                    </li>
+                    <li class="nav-item nav-dropdown">
+                        <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-puzzle"></i> Components</a>
+                        <ul class="nav-dropdown-items">
+                            <li class="nav-item">
+                                <a class="nav-link" href="components-buttons.html"><i class="icon-puzzle"></i> BUTTONS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="components-social-buttons.html"><i class="icon-puzzle"></i> Social Buttons</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="components-cards.html"><i class="icon-puzzle"></i> CARDS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="components-forms.html"><i class="icon-puzzle"></i> FORMS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="components-switches.html"><i class="icon-puzzle"></i> SWITCHES</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="components-tables.html"><i class="icon-puzzle"></i> TABLES</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item nav-dropdown">
+                        <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-star"></i> ICONS</a>
+                        <ul class="nav-dropdown-items">
+                            <li class="nav-item">
+                                <a class="nav-link" href="icons-font-awesome.html"><i class="icon-star"></i> Font Awesome</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="icons-simple-line-icons.html"><i class="icon-star"></i> Simple Line Icons</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item nav-dropdown">
+                        <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-energy"></i> Plugins</a>
+                        <ul class="nav-dropdown-items">
+                            <li class="nav-item">
+                                <a class="nav-link" href="plugins-calendar.html"><i class="icon-calendar"></i> CALENDAR</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="plugins-notifications.html"><i class="icon-info"></i> NOTIFICATIONS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="plugins-sliders.html"><i class="icon-equalizer"></i> SLIDERS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="plugins-tables.html"><i class="icon-list"></i> TABLES</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="forms.html"><i class="icon-note"></i> FORMS <span class="label label-danger">NEW</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="widgets.html"><i class="icon-calculator"></i> WIDGETS <span class="label label-info">NEW</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="charts.html"><i class="icon-pie-chart"></i> CHARTS</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li class="nav-title">
+                        Extras
+                    </li>
+                    <li class="nav-item nav-dropdown">
+                        <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-star"></i> PAGES</a>
+                        <ul class="nav-dropdown-items">
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages-login.html" target="_top"><i class="icon-star"></i> Login</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages-register.html" target="_top"><i class="icon-star"></i> Register</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages-404.html" target="_top"><i class="icon-star"></i> Error 404</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages-500.html" target="_top"><i class="icon-star"></i> Error 500</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item nav-dropdown">
+                        <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-layers"></i> UI Kits</a>
+                        <ul class="nav-dropdown-items">
+                            <li class="nav-item nav-dropdown">
+                                <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-speech"></i> INVOICING</a>
+                                <ul class="nav-dropdown-items">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="UIkits-invoicing-invoice.html"><i class="icon-speech"></i> INVOICE</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul class="nav-dropdown-items">
+                            <li class="nav-item nav-dropdown">
+                                <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-speech"></i> EMAIL</a>
+                                <ul class="nav-dropdown-items">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="UIkits-email-inbox.html"><i class="icon-speech"></i> INBOX</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="UIkits-email-message.html"><i class="icon-speech"></i> MESSAGE</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="UIkits-email-compose.html"><i class="icon-speech"></i> COMPOSE</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div id="navigation-footer">
+                <ul class="menu">
+                    <li>
+                        <div class="btn-group dropup">
+                            <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="icon-speedometer"></i>
+                                <span>Usage</span>
+                            </button>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-header">Usage <a href="#" class="btn pull-right"><i class="icon-settings"></i></a></div>
+                                <div class="dropdown-item">
+                                    <div class="title">Memory
+                                        <span>2GB of 8GB</span>
+                                    </div>
+                                    <progress class="progress progress-xs progress-success m-b-0" value="25" max="100">25%</progress>
+                                </div>
+                                <div class="dropdown-item">
+                                    <div class="title">HDD
+                                        <span>750GB of 1TB</span>
+                                    </div>
+                                    <progress class="progress progress-xs progress-warning m-b-0" value="75" max="100">75%</progress>
+                                </div>
+                                <div class="dropdown-item">
+                                    <div class="title">SSD
+                                        <span>300GB of 1TB</span>
+                                    </div>
+                                    <progress class="progress progress-xs progress-info m-b-0" value="30" max="100">30%</progress>
+                                </div>
+                                <div class="dropdown-item">
+                                    <div class="title">Bandwidth
+                                        <span>50TB of 50TB</span>
+                                    </div>
+                                    <progress class="progress progress-xs progress-danger m-b-0" value="100" max="100">100%</progress>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="btn-group dropup">
+                            <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="icon-list"></i>
+                                <span>Menu</span>
+                            </button>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-header text-xs-center">
+                                    <strong>Account</strong>
+                                </div>
+                                <a class="dropdown-item" href="#"><i class="fa fa-bell-o"></i> Updates<span class="label label-info">42</span></a>
+                                <a class="dropdown-item" href="#"><i class="fa fa-envelope-o"></i> Messages<span class="label label-success">42</span></a>
+                                <a class="dropdown-item" href="#"><i class="fa fa-tasks"></i> Tasks<span class="label label-danger">42</span></a>
+                                <a class="dropdown-item" href="#"><i class="fa fa-comments"></i> Comments<span class="label label-warning">42</span></a>
+                                <div class="dropdown-header text-xs-center">
+                                    <strong>Settings</strong>
+                                </div>
+                                <a class="dropdown-item" href="#"><i class="fa fa-user"></i> Profile</a>
+                                <a class="dropdown-item" href="#"><i class="fa fa-wrench"></i> Settings</a>
+                                <a class="dropdown-item" href="#"><i class="fa fa-usd"></i> Payments<span class="label label-default">42</span></a>
+                                <a class="dropdown-item" href="#"><i class="fa fa-file"></i> Projects<span class="label label-primary">42</span></a>
+                                <div class="divider"></div>
+                                <a class="dropdown-item" href="#"><i class="fa fa-shield"></i> Lock Account</a>
+                                <a class="dropdown-item" href="#"><i class="fa fa-lock"></i> Logout</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="action">
+                        <div class="btn-group dropup">
+                            <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="icon-people"></i>
+                                <span>Contacts</span>
+                                <span class="sr-only">Toggle Dropdown</span>
+                            </button>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-header">Contacts <a href="#" class="btn pull-right"><i class="icon-settings"></i></a></div>
+                                <a class="dropdown-item p-l-0" href="#">
+                                    <div class="avatar avatar-sm">
+                                        <img src="assets/img/avatars/1.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                        <span class="avatar-status label-success"></span>
+                                    </div>
+                                    Anton Phunihel
+                                </a>
+                                <a class="dropdown-item p-l-0" href="#">
+                                    <div class="avatar avatar-sm">
+                                        <img src="assets/img/avatars/2.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                        <span class="avatar-status label-success"></span>
+                                    </div>
+                                    Alphonse Ivo
+                                </a>
+                                <a class="dropdown-item p-l-0" href="#">
+                                    <div class="avatar avatar-sm">
+                                        <img src="assets/img/avatars/3.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                        <span class="avatar-status label-success"></span>
+                                    </div>
+                                    Thancmar Theoph
+                                </a>
+                                <a class="dropdown-item p-l-0" href="#">
+                                    <div class="avatar avatar-sm">
+                                        <img src="assets/img/avatars/4.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                        <span class="avatar-status label-warning"></span>
+                                    </div>
+                                    Walerian Khwaja
+                                </a>
+                                <a class="dropdown-item p-l-0" href="#">
+                                    <div class="avatar avatar-sm">
+                                        <img src="assets/img/avatars/5.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                        <span class="avatar-status label-warning"></span>
+                                    </div>
+                                    Clemens Janko
+                                </a>
+                                <a class="dropdown-item p-l-0" href="#">
+                                    <div class="avatar avatar-sm">
+                                        <img src="assets/img/avatars/6.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                        <span class="avatar-status label-warning"></span>
+                                    </div>
+                                    Chidubem Gottlob
+                                </a>
+                                <a class="dropdown-item p-l-0" href="#">
+                                    <div class="avatar avatar-sm">
+                                        <img src="assets/img/avatars/7.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                        <span class="avatar-status label-danger"></span>
+                                    </div>
+                                    Hristofor Sergio
+                                </a>
+                                <a class="dropdown-item p-l-0" href="#">
+                                    <div class="avatar avatar-sm">
+                                        <img src="assets/img/avatars/8.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                        <span class="avatar-status label-danger"></span>
+                                    </div>
+                                    Tadhg Griogair
+                                </a>
+                                <a class="dropdown-item p-l-0" href="#">
+                                    <div class="avatar avatar-sm">
+                                        <img src="assets/img/avatars/1.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                        <span class="avatar-status label-danger"></span>
+                                    </div>
+                                    Pollux Beaumont
+                                </a>
+                                <a class="dropdown-item p-l-0" href="#">
+                                    <div class="avatar avatar-sm">
+                                        <img src="assets/img/avatars/2.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                        <span class="avatar-status label-danger"></span>
+                                    </div>
+                                    Adam Alister
+                                </a>
+                                <a class="dropdown-item p-l-0" href="#">
+                                    <div class="avatar avatar-sm">
+                                        <img src="assets/img/avatars/3.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                                        <span class="avatar-status label-danger"></span>
+                                    </div>
+                                    Carlito Roffe
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="terms">
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Main content -->
+        <main id="content">
+            <!-- Page Header -->
+            <div class="page-header">
+                <div class="row">
+                    <div class="col-md-7">
+                        <h1 class="h2 page-title">Page Title</h1>
+                        <div class="text-muted page-desc">Page Description</div>
+                    </div>
+                    <div class="col-md-5 charts">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-4 col-md-4">
+                                <div class="chart-wrapper">
+                                    <canvas id="header-chart-1" height="68" class="chart chart-bar"></canvas>
+                                </div>
+                                <div class="text-xs-center title">
+                                    <span class="text-muted">Income: </span>
+                                    <strong>$189.128</strong>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-4 col-md-4">
+                                <div class="chart-wrapper">
+                                    <canvas id="header-chart-2" height="68" class="chart chart-bar"></canvas>
+                                </div>
+                                <div class="text-xs-center title">
+                                    <span class="text-muted">New clients: </span>
+                                    <strong class="text-danger">1.128</strong>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-4 col-md-4">
+                                <div class="chart-wrapper">
+                                    <canvas id="header-chart-3" height="68" class="chart chart-bar"></canvas>
+                                </div>
+                                <div class="text-xs-center title">
+                                    <span class="text-muted">Orders: </span>
+                                    <strong class="text-success">2.345</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Breadcrumb -->
+            <ol class="breadcrumb">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Library</a></li>
+                <li class="active">Data</li>
+                <!-- Breadcrumb Menu-->
+                <div class="breadcrumb-menu">
+                    <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                        <a class="btn btn-secondary" href="#"><i class="icon-speech"></i></a>
+                        <a class="btn btn-secondary" href="app.main"><i class="icon-graph"></i> &nbsp;Dashboard</a>
+                        <div class="btn-group" role="group">
+                            <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="icon-settings"></i> &nbsp;Settings
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="btnGroupDrop1">
+                                <div class="dropdown-header text-xs-center">
+                                    <strong>Account</strong>
+                                </div>
+                                <a class="dropdown-item" href="#"><i class="fa fa-tasks"></i> Tasks<span class="label label-danger">13</span></a>
+                                <a class="dropdown-item" href="#"><i class="fa fa-comments"></i> Comments<span class="label label-warning">234</span></a>
+                                <div class="dropdown-header text-xs-center">
+                                    <strong>Settings</strong>
+                                </div>
+                                <a class="dropdown-item" href="#"><i class="fa fa-wrench"></i> Settings</a>
+                                <a class="dropdown-item" href="#"><i class="fa fa-usd"></i> Payments<span class="label label-default">75</span></a>
+                                <a class="dropdown-item" href="#"><i class="fa fa-file"></i> Projects<span class="label label-primary">2</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ol>
+            <div class="container-fluid">
+                <div class="animated fadeIn">
+                    <div class="card card-default">
+                        <div class="card-header">
+                            <i class="fa fa-picture-o"></i> Simple Line Icons
+                            <div class="card-actions">
+                                <a href="#" class="btn-setting"><i class="icon-settings"></i></a>
+                                <a href="#" class="btn-minimize"><i class="icon-arrow-up"></i></a>
+                                <a href="#" class="btn-close"><i class="icon-close"></i></a>
+                            </div>
+                        </div>
+                        <div class="card-block">
+                            <div class="row">
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-user"></i> &nbsp;icon-user
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-user-female"></i> &nbsp;icon-user-female
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-people"></i> &nbsp;icon-people
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-user-follow"></i> &nbsp;icon-user-follow
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-user-following"></i> &nbsp;icon-user-following
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-user-unfollow"></i> &nbsp;icon-user-unfollow
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-trophy"></i> &nbsp;icon-trophy
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-speedometer"></i> &nbsp;icon-speedometer
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-social-youtube"></i> &nbsp;icon-social-youtube
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-social-twitter"></i> &nbsp;icon-social-twitter
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-social-tumblr"></i> &nbsp;icon-social-tumblr
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-social-facebook"></i> &nbsp;icon-social-facebook
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-social-dropbox"></i> &nbsp;icon-social-dropbox
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-social-dribbble"></i> &nbsp;icon-social-dribbble
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-shield"></i> &nbsp;icon-shield
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-screen-tablet"></i> &nbsp;icon-screen-tablet
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-screen-smartphone"></i> &nbsp;icon-screen-smartphone
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-screen-desktop"></i> &nbsp;icon-screen-desktop
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-plane"></i> &nbsp;icon-plane
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-notebook"></i> &nbsp;icon-notebook
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-mustache"></i> &nbsp;icon-mustache
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-mouse"></i> &nbsp;icon-mouse
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-magnet"></i> &nbsp;icon-magnet
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-magic-wand"></i> &nbsp;icon-magic-wand
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-hourglass"></i> &nbsp;icon-hourglass
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-graduation"></i> &nbsp;icon-graduation
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-ghost"></i> &nbsp;icon-ghost
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-game-controller"></i> &nbsp;icon-game-controller
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-fire"></i> &nbsp;icon-fire
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-eyeglass"></i> &nbsp;icon-eyeglass
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-envelope-open"></i> &nbsp;icon-envelope-open
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-envelope-letter"></i> &nbsp;icon-envelope-letter
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-energy"></i> &nbsp;icon-energy
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-emotsmile"></i> &nbsp;icon-emotsmile
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-disc"></i> &nbsp;icon-disc
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-cursor-move"></i> &nbsp;icon-cursor-move
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-crop"></i> &nbsp;icon-crop
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-credit-card"></i> &nbsp;icon-credit-card
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-chemistry"></i> &nbsp;icon-chemistry
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-bell"></i> &nbsp;icon-bell
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-badge"></i> &nbsp;icon-badge
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-anchor"></i> &nbsp;icon-anchor
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-action-redo"></i> &nbsp;icon-action-redo
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-action-undo"></i> &nbsp;icon-action-undo
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-bag"></i> &nbsp;icon-bag
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-basket"></i> &nbsp;icon-basket
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-basket-loaded"></i> &nbsp;icon-basket-loaded
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-book-open"></i> &nbsp;icon-book-open
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-briefcase"></i> &nbsp;icon-briefcase
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-bubbles"></i> &nbsp;icon-bubbles
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-calculator"></i> &nbsp;icon-calculator
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-call-end"></i> &nbsp;icon-call-end
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-call-in"></i> &nbsp;icon-call-in
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-call-out"></i> &nbsp;icon-call-out
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-compass"></i> &nbsp;icon-compass
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-cup"></i> &nbsp;icon-cup
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-diamond"></i> &nbsp;icon-diamond
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-direction"></i> &nbsp;icon-direction
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-directions"></i> &nbsp;icon-directions
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-docs"></i> &nbsp;icon-docs
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-drawar"></i> &nbsp;icon-drawar
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-drop"></i> &nbsp;icon-drop
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-earphones"></i> &nbsp;icon-earphones
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-earphones-alt"></i> &nbsp;icon-earphones-alt
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-feed"></i> &nbsp;icon-feed
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-film"></i> &nbsp;icon-film
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-folder-alt"></i> &nbsp;icon-folder-alt
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-frame"></i> &nbsp;icon-frame
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-globe"></i> &nbsp;icon-globe
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-globe-alt"></i> &nbsp;icon-globe-alt
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-handbag"></i> &nbsp;icon-handbag
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-layers"></i> &nbsp;icon-layers
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-map"></i> &nbsp;icon-map
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-picture"></i> &nbsp;icon-picture
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-pin"></i> &nbsp;icon-pin
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-playlist"></i> &nbsp;icon-playlist
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-present"></i> &nbsp;icon-present
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-printer"></i> &nbsp;icon-printer
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-puzzle"></i> &nbsp;icon-puzzle
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-speech"></i> &nbsp;icon-speech
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-vector"></i> &nbsp;icon-vector
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-wallet"></i> &nbsp;icon-wallet
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-arrow-down"></i> &nbsp;icon-arrow-down
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-arrow-left"></i> &nbsp;icon-arrow-left
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-arrow-right"></i> &nbsp;icon-arrow-right
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-arrow-up"></i> &nbsp;icon-arrow-up
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-chart"></i> &nbsp;icon-chart
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-bulb"></i> &nbsp;icon-bulb
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-calendar"></i> &nbsp;icon-calendar
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-control-end"></i> &nbsp;icon-control-end
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-control-forward"></i> &nbsp;icon-control-forward
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-control-pause"></i> &nbsp;icon-control-pause
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-control-play"></i> &nbsp;icon-control-play
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-control-rewind"></i> &nbsp;icon-control-rewind
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-control-start"></i> &nbsp;icon-control-start
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-cursor"></i> &nbsp;icon-cursor
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-dislike"></i> &nbsp;icon-dislike
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-equalizer"></i> &nbsp;icon-equalizer
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-graph"></i> &nbsp;icon-graph
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-grid"></i> &nbsp;icon-grid
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-home"></i> &nbsp;icon-home
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-like"></i> &nbsp;icon-like
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-list"></i> &nbsp;icon-list
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-login"></i> &nbsp;icon-login
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-logout"></i> &nbsp;icon-logout
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-loop"></i> &nbsp;icon-loop
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-microphone"></i> &nbsp;icon-microphone
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-music-tone"></i> &nbsp;icon-music-tone
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-music-tone-alt"></i> &nbsp;icon-music-tone-alt
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-note"></i> &nbsp;icon-note
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-pencil"></i> &nbsp;icon-pencil
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-pie-chart"></i> &nbsp;icon-pie-chart
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-question"></i> &nbsp;icon-question
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-rocket"></i> &nbsp;icon-rocket
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-share"></i> &nbsp;icon-share
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-share-alt"></i> &nbsp;icon-share-alt
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-shuffle"></i> &nbsp;icon-shuffle
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-size-actual"></i> &nbsp;icon-size-actual
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-size-fullscreen"></i> &nbsp;icon-size-fullscreen
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-support"></i> &nbsp;icon-support
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-tag"></i> &nbsp;icon-tag
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-trash"></i> &nbsp;icon-trash
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-umbrella"></i> &nbsp;icon-umbrella
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-wrench"></i> &nbsp;icon-wrench
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-ban"></i> &nbsp;icon-ban
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-bubble"></i> &nbsp;icon-bubble
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-camrecorder"></i> &nbsp;icon-camrecorder
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-camera"></i> &nbsp;icon-camera
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-check"></i> &nbsp;icon-check
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-clock"></i> &nbsp;icon-clock
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-close"></i> &nbsp;icon-close
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-cloud-download"></i> &nbsp;icon-cloud-download
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-cloud-upload"></i> &nbsp;icon-cloud-upload
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-doc"></i> &nbsp;icon-doc
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-envelope"></i> &nbsp;icon-envelope
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-eye"></i> &nbsp;icon-eye
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-flag"></i> &nbsp;icon-flag
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-folder"></i> &nbsp;icon-folder
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-heart"></i> &nbsp;icon-heart
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-info"></i> &nbsp;icon-info
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-key"></i> &nbsp;icon-key
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-link"></i> &nbsp;icon-link
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-lock"></i> &nbsp;icon-lock
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-lock-open"></i> &nbsp;icon-lock-open
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-magnifier"></i> &nbsp;icon-magnifier
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-magnifier-add"></i> &nbsp;icon-magnifier-add
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-magnifier-remove"></i> &nbsp;icon-magnifier-remove
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-paper-clip"></i> &nbsp;icon-paper-clip
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-paper-plane"></i> &nbsp;icon-paper-plane
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-plus"></i> &nbsp;icon-plus
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-pointer"></i> &nbsp;icon-pointer
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-power"></i> &nbsp;icon-power
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-refresh"></i> &nbsp;icon-refresh
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-reload"></i> &nbsp;icon-reload
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-settings"></i> &nbsp;icon-settings
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-star"></i> &nbsp;icon-star
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-symbol-female"></i> &nbsp;icon-symbol-female
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-symbol-male"></i> &nbsp;icon-symbol-male
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-target"></i> &nbsp;icon-target
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-volume-1"></i> &nbsp;icon-volume-1
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-volume-2"></i> &nbsp;icon-volume-2
+                                </div>
+                                <div class="col-md-3 col-sm-4">
+                                    <i class="icon-volume-off"></i> &nbsp;icon-volume-off
+                                </div>
+                            </div>
+                            <!--/.row-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.conainer-fluid -->
+        </main>
+        <footer id="footer">
+            <span class="text-left">
+                <a href="http://bootstrapmaster.com">Root</a> &copy; 2016 creativeLabs.
+            </span>
+            <span class="pull-right">
+                Powered by <a href="http://genesisui.com">GenesisUI</a>
+            </span>
+        </footer>
+        <!-- Bootstrap and necessary plugins -->
+        <script src="assets/js/libs/jquery.min.js"></script>
+        <script src="assets/js/libs/tether.min.js"></script>
+        <script src="assets/js/libs/bootstrap.min.js"></script>
+        <script src="assets/js/libs/pace.min.js"></script>
+        <!-- Plugins and scripts required by all views -->
+        <script src="assets/js/libs/Chart.min.js"></script>
+        <script src="assets/js/views/shared.js"></script>
+        <!-- GenesisUI main scripts -->
+        <script src="assets/js/app.js"></script>
+        
+        
+    </body>
+</html>
