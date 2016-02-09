@@ -10,6 +10,6 @@ Demo: <a href="http://GenesisUI.com?ref=github">GenesisUI</a>
 
 #License
 
-Are you working on non-commercial project? GenesisUI is free for all non-commercial purposes, including evaluations, education, research, and personal projects. The non-commercial version of GenesisUI is fully functional but doesn't contain SCSS, Grunt & Bower files.
+Are you working on non-commercial project? GenesisUI is free for all non-commercial purposes, including evaluations, education, research, and personal projects. The non-commercial version of GenesisUI is fully functional.
 
 License types: <a href="https://genesisui.com/license.html?ref=github">GenesisUI License Types</a>. 
