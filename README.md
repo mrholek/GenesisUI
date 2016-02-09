@@ -4,8 +4,10 @@ Spend less time worrying about front-end and more focusing on your product
 
 Demo: <a href="http://GenesisUI.com?ref=github">GenesisUI</a>
 
+**NOTE:** Please remember to **STAR** this project and **FOLLOW** [my Github](https://github.com/mrholek) to keep you update with this template.
+
 #License
 
-If you are working on non-commercial project you can use GenesisUI for free. 
+Are you working on non-commercial project? GenesisUI is free for all non-commercial purposes, including evaluations, education, research, and personal projects. The non-commercial version of GenesisUI is fully functional but doesn't contain SCSS, Grunt & Bower files.
 
-If you are working on commercial project you have to purchase proper license. License types: <a href="https://genesisui.com/license.html?ref=github">GenesisUI License Types</a>. 
+License types: <a href="https://genesisui.com/license.html?ref=github">GenesisUI License Types</a>. 
