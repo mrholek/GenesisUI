@@ -1,6 +1,6 @@
-# GenesisUI Admin Template based on Bootstrap 4
+# Bootstrap Admin Template built as framework!
 
-Spend less time worrying about front-end and more focusing on your product
+GenesisUI was designed as its own extended version of Bootstrap 4. Spend less time worrying about front-end and more focusing on your product
 
 Demo: <a href="http://GenesisUI.com?ref=github">GenesisUI</a>
 
