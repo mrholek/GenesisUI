@@ -27,7 +27,7 @@ bootstrap/
     ├── jQuery_Dev/
     ├── jQuery_Seed/
     ├── Static_Dev/
-    └──  Static_Seed/
+    └── Static_Seed/
 ```
 
 ###Bugs and feature requests
