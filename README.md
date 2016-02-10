@@ -14,7 +14,7 @@ Demo: <a href="http://GenesisUI.com?ref=github">GenesisUI</a>
 Within the download you'll find the following directories and files, You'll see something like this:
 
 ```
-bootstrap/
+GenesisUI/
 ├── Angular_Dev_Grunt/
 ├── Angular_Seed_Grunt/
 ├── jQuery_Dev_Grunt/
