@@ -24,6 +24,13 @@ var nav = {
     color: 'dark' // options: light, dark
 }
 
+//Default colours
+var brandPrimary =  '#20a8d8';
+var brandSuccess =  '#4dbd74';
+var brandInfo =     '#63c2de';
+var brandWarning =  '#f8cb00';
+var brandDanger =   '#f86c6b';
+
 angular
     .module('app', [
         'ngAnimate',

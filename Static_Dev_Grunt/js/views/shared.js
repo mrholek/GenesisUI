@@ -18,59 +18,57 @@ $(function(){
     }
 
     var options = {
+        pointHitDetectionRadius : 0,
         showScale: false,
-        scaleFontSize: 0,
-        scaleShowGridLines: false,
-        barStrokeWidth : 2,
+        scaleLineWidth: 0.001,
+        scaleShowLabels : false,
+        scaleShowGridLines : false,
+        pointDot : false,
+        showTooltips: false,
         responsive: true,
-    };
+    }
 
     var data = {
         labels: labels,
         datasets: [
             {
                 label: 'My First dataset',
-                fillColor : '#d1d4d7',
-        		strokeColor : "rgba(0,0,0,0)",
-        		highlightFill: '#818a91',
-                pointStrokeColor: '#fff',
+                fillColor: 'transparent',
+        		strokeColor : $.brandInfo,
                 data: data
             },
         ]
-    };
+    }
+
     var ctx = $('#header-chart-1').get(0).getContext('2d');
-    var headerChart = new Chart(ctx).Bar(data, options);
+    var headerChart = new Chart(ctx).Line(data, options);
 
     var data = {
         labels: labels,
         datasets: [
             {
                 label: 'My First dataset',
-                fillColor : '#d1d4d7',
-        		strokeColor : "rgba(0,0,0,0)",
-        		highlightFill: '#818a91',
-                pointStrokeColor: '#fff',
+                fillColor: 'transparent',
+        		strokeColor : $.brandDanger,
                 data: data1
             },
         ]
     };
     var ctx = $('#header-chart-2').get(0).getContext('2d');
-    var headerChart2 = new Chart(ctx).Bar(data, options);
+    var headerChart2 = new Chart(ctx).Line(data, options);
 
     var data = {
         labels: labels,
         datasets: [
             {
                 label: 'My First dataset',
-                fillColor : '#d1d4d7',
-        		strokeColor : "rgba(0,0,0,0)",
-        		highlightFill: '#818a91',
-                pointStrokeColor: '#fff',
+                fillColor: 'transparent',
+        		strokeColor : $.brandSuccess,
                 data: data2
             },
         ]
     };
     var ctx = $('#header-chart-3').get(0).getContext('2d');
-    var headerChart3 = new Chart(ctx).Bar(data, options);
+    var headerChart3 = new Chart(ctx).Line(data, options);
 
 });

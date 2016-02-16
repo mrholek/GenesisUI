@@ -22,6 +22,13 @@
 	$.panelIconOpened = 'icon-arrow-up';
 	$.panelIconClosed = 'icon-arrow-down';
 
+	//Default colours
+	$.brandPrimary =  '#20a8d8';
+	$.brandSuccess =  '#4dbd74';
+	$.brandInfo =     '#63c2de';
+	$.brandWarning =  '#f8cb00';
+	$.brandDanger =   '#f86c6b';
+
 /*****
 * ASYNC LOAD
 * Load JS files and CSS files asynchronously in ajax mode
@@ -249,7 +256,7 @@ $(document).ready(function($){
         if ($(this).hasClass('nav-dropdown-toggle')) {
 			$(this).parent().toggleClass('open');
 		}
-		
+
 	});
 
 	/* ---------- Main Menu Open/Close, Min/Full ---------- */

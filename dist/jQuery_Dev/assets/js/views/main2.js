@@ -17,13 +17,6 @@ $(function(){
         }
     });
 
-    //Default colours
-    var brandPrimary =  '#20a8d8';
-    var brandSuccess =  '#4dbd74';
-    var brandInfo =     '#63c2de';
-    var brandWarning =  '#f8cb00';
-    var brandDanger =   '#f86c6b';
-
     //convert Hex to RGBA
     function convertHex(hex,opacity){
         hex = hex.replace('#','');
@@ -58,25 +51,25 @@ $(function(){
         datasets: [
             {
                 label: 'My First dataset',
-                fillColor: convertHex(brandInfo,10),
-                strokeColor: brandInfo,
-                pointColor: brandInfo,
+                fillColor: convertHex($.brandInfo,10),
+                strokeColor: $.brandInfo,
+                pointColor: $.brandInfo,
                 pointStrokeColor: 'transparent',
                 data: data1
             },
             {
                 label: 'My Second dataset',
                 fillColor: 'transparent',
-                strokeColor: brandSuccess,
-                pointColor: brandSuccess,
+                strokeColor: $.brandSuccess,
+                pointColor: $.brandSuccess,
                 pointStrokeColor: 'transparent',
                 data: data2
             },
             {
                 label: 'My Third dataset',
                 fillColor: 'transparent',
-                strokeColor: brandDanger,
-                pointColor: brandDanger,
+                strokeColor: $.brandDanger,
+                pointColor: $.brandDanger,
                 pointStrokeColor: 'transparent',
                 data: data3
             }
@@ -194,7 +187,7 @@ $(function(){
         datasets: [
             {
                 fillColor: 'transparent',
-                strokeColor: brandPrimary,
+                strokeColor: $.brandPrimary,
                 highlightFill: 'rgba(47, 132, 71, 0.8)',
                 highlightStroke: 'rgba(47, 132, 71, 0.8)',
                 data: [35, 23, 56, 22, 97, 23, 64]
@@ -209,7 +202,7 @@ $(function(){
         datasets: [
             {
                 fillColor: 'transparent',
-                strokeColor: brandDanger,
+                strokeColor: $.brandDanger,
                 highlightFill: 'rgba(47, 132, 71, 0.8)',
                 highlightStroke: 'rgba(47, 132, 71, 0.8)',
                 data: [78, 81, 80, 45, 34, 12, 40]
@@ -224,7 +217,7 @@ $(function(){
         datasets: [
             {
                 fillColor: 'transparent',
-                strokeColor: brandWarning,
+                strokeColor: $.brandWarning,
                 highlightFill: 'rgba(47, 132, 71, 0.8)',
                 highlightStroke: 'rgba(47, 132, 71, 0.8)',
                 data: [35, 23, 56, 22, 97, 23, 64]
@@ -239,7 +232,7 @@ $(function(){
         datasets: [
             {
                 fillColor: 'transparent',
-                strokeColor: brandSuccess,
+                strokeColor: $.brandSuccess,
                 highlightFill: 'rgba(47, 132, 71, 0.8)',
                 highlightStroke: 'rgba(47, 132, 71, 0.8)',
                 data: [78, 81, 80, 45, 34, 12, 40]
@@ -269,7 +262,7 @@ $(function(){
         datasets: [
             {
                 fillColor: 'transparent',
-                strokeColor: brandInfo,
+                strokeColor: $.brandInfo,
                 highlightFill: 'rgba(47, 132, 71, 0.8)',
                 highlightStroke: 'rgba(47, 132, 71, 0.8)',
                 data: [78, 81, 80, 45, 34, 12, 40]
@@ -291,8 +284,8 @@ $(function(){
             color: '#000000' // Fill color
         },
         limitMax: 'false',   // If true, the pointer will not go past the end of the gauge
-        colorStart: brandInfo,   // Colors
-        colorStart: brandInfo,    // just experiment with them
+        colorStart: $.brandInfo,   // Colors
+        colorStart: $.brandInfo,    // just experiment with them
         strokeColor: '#d1d4d7',   // to see which ones work best for you
         generateGradient: true
     };

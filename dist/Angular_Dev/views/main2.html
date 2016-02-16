@@ -58,8 +58,8 @@
                 </li>
             </ul>
         </div>
-    </div><!--/.card-->
-
+    </div>
+    <!--/.card-->
     <div class="row row-equal" ng-controller="socialBoxCtrl">
         <div class="col-md-3 col-sm-6">
             <div class="social-box facebook">
@@ -77,9 +77,10 @@
                         <span>feeds</span>
                     </li>
                 </ul>
-            </div><!--/.social-box-->
-        </div><!--/.col-->
-
+            </div>
+            <!--/.social-box-->
+        </div>
+        <!--/.col-->
         <div class="col-md-3 col-sm-6">
             <div class="social-box twitter">
                 <i class="fa fa-twitter"></i>
@@ -96,11 +97,11 @@
                         <span>tweets</span>
                     </li>
                 </ul>
-            </div><!--/.social-box-->
-        </div><!--/.col-->
-
+            </div>
+            <!--/.social-box-->
+        </div>
+        <!--/.col-->
         <div class="col-md-3 col-sm-6">
-
             <div class="social-box linkedin">
                 <i class="fa fa-linkedin"></i>
                 <div class="chart-wrapper">
@@ -116,9 +117,10 @@
                         <span>feeds</span>
                     </li>
                 </ul>
-            </div><!--/.social-box-->
-        </div><!--/.col-->
-
+            </div>
+            <!--/.social-box-->
+        </div>
+        <!--/.col-->
         <div class="col-md-3 col-sm-6">
             <div class="social-box google-plus">
                 <i class="fa fa-google-plus"></i>
@@ -135,10 +137,12 @@
                         <span>circles</span>
                     </li>
                 </ul>
-            </div><!--/.social-box-->
-        </div><!--/.col-->
-    </div><!--/.row-->
-
+            </div>
+            <!--/.social-box-->
+        </div>
+        <!--/.col-->
+    </div>
+    <!--/.row-->
     <div class="row">
         <div class="col-md-12">
             <div class="card">
@@ -149,36 +153,38 @@
                         <fieldset class="form-group pull-right hidden-sm-down col-sm-6" ng-controller="dateRangeCtrl">
                             <div class="input-group input-group-sm pull-right" style="width:230px;">
                                 <span class="input-group-addon r-0"><i class="fa fa-calendar"></i></span>
-                                <input date-range-picker class="form-control date-picker" type="text" ng-model="date" options="opts"/>
+                                <input date-range-picker class="form-control date-picker" type="text" ng-model="date" options="opts" />
                             </div>
                         </fieldset>
                     </h3>
-
                     <hr class="m-a-0">
-
                     <div class="row">
-
                         <div class="col-md-4">
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="callout callout-info">
-                                        <small class="text-muted">New Clients</small><br>
+                                        <small class="text-muted">New Clients</small>
+                                        <br>
                                         <strong class="h4">9,123</strong>
                                         <div class="chart-wrapper" ng-controller="sparklineChartCtrl">
                                             <canvas class="chart chart-line" chart-data="data4" chart-labels="labels" chart-legend="false" chart-series="series" chart-options="options" chart-colours="primary" width="100" height="30"></canvas>
                                         </div>
                                     </div>
-                                </div><!--/.col-->
+                                </div>
+                                <!--/.col-->
                                 <div class="col-sm-6">
                                     <div class="callout callout-danger">
-                                        <small class="text-muted">Recuring Clients</small><br>
+                                        <small class="text-muted">Recuring Clients</small>
+                                        <br>
                                         <strong class="h4">22,643</strong>
                                         <div class="chart-wrapper" ng-controller="sparklineChartCtrl">
                                             <canvas class="chart chart-line" chart-data="data3" chart-labels="labels" chart-legend="false" chart-series="series" chart-options="options" chart-colours="danger" width="100" height="30"></canvas>
                                         </div>
                                     </div>
-                                </div><!--/.col-->
-                            </div><!--/.row-->
+                                </div>
+                                <!--/.col-->
+                            </div>
+                            <!--/.row-->
                             <hr class="m-t-0">
                             <ul class="horizontal-bars" ng-controller="horizontalBarsCtrl">
                                 <li ng-repeat="row in data">
@@ -191,31 +197,40 @@
                                     </div>
                                 </li>
                                 <li class="legend">
-                                    <span class="label label-pill label-info"></span> <small>New clients</small> &nbsp; <span class="label label-pill label-danger"></span> <small>Recurring clients</small>
+                                    <span class="label label-pill label-info"></span>
+                                    <small>New clients</small> &nbsp;
+                                    <span class="label label-pill label-danger"></span>
+                                    <small>Recurring clients</small>
                                 </li>
                             </ul>
-                        </div><!--/.col-->
+                        </div>
+                        <!--/.col-->
                         <div class="col-md-4">
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="callout callout-warning">
-                                        <small class="text-muted">Pageviews</small><br>
+                                        <small class="text-muted">Pageviews</small>
+                                        <br>
                                         <strong class="h4">78,623</strong>
                                         <div class="chart-wrapper" ng-controller="sparklineChartCtrl">
                                             <canvas class="chart chart-line" chart-data="data4" chart-labels="labels" chart-legend="false" chart-series="series" chart-options="options" chart-colours="warning" width="100" height="30"></canvas>
                                         </div>
                                     </div>
-                                </div><!--/.col-->
+                                </div>
+                                <!--/.col-->
                                 <div class="col-sm-6">
                                     <div class="callout callout-success">
-                                        <small class="text-muted">Organic</small><br>
+                                        <small class="text-muted">Organic</small>
+                                        <br>
                                         <strong class="h4">49,123</strong>
                                         <div class="chart-wrapper" ng-controller="sparklineChartCtrl">
                                             <canvas class="chart chart-line" chart-data="data3" chart-labels="labels" chart-legend="false" chart-series="series" chart-options="options" chart-colours="success" width="100" height="30"></canvas>
                                         </div>
                                     </div>
-                                </div><!--/.col-->
-                            </div><!--/.row-->
+                                </div>
+                                <!--/.col-->
+                            </div>
+                            <!--/.row-->
                             <hr class="m-t-0">
                             <ul class="horizontal-bars type-2" ng-controller="horizontalBarsType2Ctrl">
                                 <li ng-repeat="row in gender">
@@ -230,7 +245,9 @@
                                 <li ng-repeat="row in source">
                                     <i ng-class="row.icon"></i>
                                     <span class="title">{{ row.title }}</span>
-                                    <span class="value">{{ row.value | number }} <span class="text-muted small">({{ row.percent }}%)</span></span>
+                                    <span class="value">{{ row.value | number }}
+                                        <span class="text-muted small">({{ row.percent }}%)</span>
+                                    </span>
                                     <div class="bars">
                                         <progress class="progress progress-xs progress-success m-a-0" value="{{ row.percent }}" max="100">{{ row.percent }}%</progress>
                                     </div>
@@ -239,28 +256,34 @@
                                     <button class="btn btn-sm btn-link text-muted" data-toggle="tooltip" data-placement="top" title="show more"><i class="icon-options"></i></button>
                                 </li>
                             </ul>
-                        </div><!--/.col-->
+                        </div>
+                        <!--/.col-->
                         <div class="col-md-4">
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="callout">
-                                        <small class="text-muted">CTR</small><br>
+                                        <small class="text-muted">CTR</small>
+                                        <br>
                                         <strong class="h4">23%</strong>
                                         <div class="chart-wrapper" ng-controller="sparklineChartCtrl">
                                             <canvas class="chart chart-line" chart-data="data4" chart-labels="labels" chart-legend="false" chart-series="series" chart-options="options" chart-colours="default" width="100" height="30"></canvas>
                                         </div>
                                     </div>
-                                </div><!--/.col-->
+                                </div>
+                                <!--/.col-->
                                 <div class="col-sm-6">
                                     <div class="callout callout-primary">
-                                        <small class="text-muted">Bounce Rate</small><br>
+                                        <small class="text-muted">Bounce Rate</small>
+                                        <br>
                                         <strong class="h4">5%</strong>
                                         <div class="chart-wrapper" ng-controller="sparklineChartCtrl">
                                             <canvas class="chart chart-line" chart-data="data3" chart-labels="labels" chart-legend="false" chart-series="series" chart-options="options" chart-colours="primary" width="100" height="30"></canvas>
                                         </div>
                                     </div>
-                                </div><!--/.col-->
-                            </div><!--/.row-->
+                                </div>
+                                <!--/.col-->
+                            </div>
+                            <!--/.row-->
                             <hr class="m-t-0">
                             <ul class="icons-list">
                                 <li>
@@ -365,8 +388,10 @@
                                     <button class="btn btn-sm btn-link text-muted" data-toggle="tooltip" data-placement="top" title="show more"><i class="icon-options"></i></button>
                                 </li>
                             </ul>
-                        </div><!--/.col-->
-                    </div><!--/.row-->
+                        </div>
+                        <!--/.col-->
+                    </div>
+                    <!--/.row-->
                     <br/>
                     <table class="table table-hover table-outline hidden-sm-down">
                         <thead class="thead-default">
@@ -397,7 +422,7 @@
                                     <div class="small text-muted">
                                         <span ng-if="user.new == true">New</span>
                                         <span ng-if="user.new == false">Recurring</span>
-                                         | Registered: {{ user.registered }}</div>
+                                        | Registered: {{ user.registered }}</div>
                                 </td>
                                 <td class="text-xs-center">
                                     <img ng-src="assets/img/flags/{{ user.flag }}" alt="{{ user.country }}" style="height:24px;">
@@ -411,24 +436,19 @@
                                             <small class="text-muted">{{ user.period }}</small>
                                         </div>
                                     </div>
-                                    <progress class="progress progress-xs"
-                                              ng-class="{ 'progress-info'    : user.usage <= 25,
+                                    <progress class="progress progress-xs" ng-class="{ 'progress-info'    : user.usage <= 25,
                                                           'progress-success' : user.usage > 25 && user.usage <= 50,
                                                           'progress-warning' : user.usage > 50 && user.usage <= 75,
-                                                          'progress-danger'  : user.usage > 75 && user.usage <= 100 }"
-                                              value="{{ user.usage }}"
-                                              max="100" style="margin:5px 0 0 0;">{{ user.usage }}%</progress>
+                                                          'progress-danger'  : user.usage > 75 && user.usage <= 100 }" value="{{ user.usage }}" max="100" style="margin:5px 0 0 0;">{{ user.usage }}%</progress>
                                 </td>
                                 <td class="text-xs-center">
-                                    <i class="fa"
-                                       ng-class="{ 'fa-cc-mastercard' : user.payment == 'mastercard',
+                                    <i class="fa" ng-class="{ 'fa-cc-mastercard' : user.payment == 'mastercard',
                                                    'fa-cc-visa' : user.payment == 'visa',
                                                    'fa-cc-amex' : user.payment == 'amex',
                                                    'fa-cc-diners-club' : user.payment == 'diners',
                                                    'fa-cc-stripe' : user.payment == 'stripe',
                                                    'fa-paypal' : user.payment == 'paypal',
-                                                   'fa-google-wallet' : user.payment == 'google' }"
-                                       style="font-size:24px"></i>
+                                                   'fa-google-wallet' : user.payment == 'google' }" style="font-size:24px"></i>
                                 </td>
                                 <td>
                                     <div class="small text-muted">Last login</div>
@@ -480,8 +500,9 @@
                     </div>-->
                 </div>
             </div>
-        </div><!--/.col-->
-    </div><!--/.row-->
+        </div>
+        <!--/.col-->
+    </div>
+    <!--/.row-->
 </div>
-
 <div ng-controller="toastrWelcome"></div>

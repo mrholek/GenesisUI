@@ -4,9 +4,13 @@
     <button class="navbar-toggler layout-toggler hidden-md-down" type="button" data-before="sidebar-nav" data-after="sidebar-nav compact-nav">&#9776;</button>
     <ul class="nav navbar-nav pull-right hidden-md-down">
         <li class="nav-item dropdown" ng-controller="languageCtrl">
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><img ng-src="img/flags/{{flag}}" class="img-flag" alt="{{lang}}"></a>
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                <img ng-src="img/flags/{{flag}}" class="img-flag" alt="{{lang}}">
+            </a>
             <div class="dropdown-menu dropdown-menu-right">
-                <div class="dropdown-header text-xs-center"><strong>{{ 'CHOOSE_LANGUAGE' | translate }}</strong></div>
+                <div class="dropdown-header text-xs-center">
+                    <strong>{{ 'CHOOSE_LANGUAGE' | translate }}</strong>
+                </div>
                 <a ng-repeat="language in languages" class="dropdown-item" href="#" ng-click="changeLanguage(language.langKey)">
                     <img ng-src="img/flags/{{language.flag}}" class="img-flag" alt="{{language.lang}}"> {{language.lang}}
                 </a>
@@ -27,16 +31,16 @@
                 <span class="hidden-md-down">admin</span>
             </a>
             <div class="dropdown-menu dropdown-menu-right">
-
-                <div class="dropdown-header text-xs-center"><strong>{{ 'ACCOUNT' | translate }}</strong></div>
-
+                <div class="dropdown-header text-xs-center">
+                    <strong>{{ 'ACCOUNT' | translate }}</strong>
+                </div>
                 <a class="dropdown-item" href="#"><i class="fa fa-bell-o"></i> {{ 'UPDATES' | translate }}<span class="label label-info">42</span></a>
                 <a class="dropdown-item" href="#"><i class="fa fa-envelope-o"></i> {{ 'MESSAGES' | translate }}<span class="label label-success">42</span></a>
                 <a class="dropdown-item" href="#"><i class="fa fa-tasks"></i> {{ 'TASKS' | translate }}<span class="label label-danger">42</span></a>
                 <a class="dropdown-item" href="#"><i class="fa fa-comments"></i> {{ 'COMMENTS' | translate }}<span class="label label-warning">42</span></a>
-
-                <div class="dropdown-header text-xs-center"><strong>{{ 'SETTINGS' | translate }}</strong></div>
-
+                <div class="dropdown-header text-xs-center">
+                    <strong>{{ 'SETTINGS' | translate }}</strong>
+                </div>
                 <a class="dropdown-item" href="#"><i class="fa fa-user"></i> {{ 'PROFILE' | translate }}</a>
                 <a class="dropdown-item" href="#"><i class="fa fa-wrench"></i> {{ 'SETTINGS' | translate }}</a>
                 <a class="dropdown-item" href="#"><i class="fa fa-usd"></i> {{ 'PAYMENTS' | translate }}<span class="label label-default">42</span></a>

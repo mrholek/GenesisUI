@@ -30,18 +30,33 @@ function chartsCtrl($scope) {
     $scope.data2 = [data2];
 
     $scope.options = {
-        showScale: false,
-        scaleFontSize: 0,
-        scaleShowGridLines: false,
-        barStrokeWidth : 2,
-
-        // pointDot :false,
-        // scaleLineColor: 'transparent',
+        pointHitDetectionRadius : 0,
+		showScale: false,
+		scaleLineWidth: 0.001,
+		scaleShowLabels : false,
+		scaleShowGridLines : false,
+		pointDot : false,
+		showTooltips: false,
+		responsive: true,
     };
 
     $scope.colours = [{
-        fillColor : '#d1d4d7',
-		strokeColor : "rgba(0,0,0,0)",
+        fillColor : "rgba(0,0,0,0)",
+		strokeColor : brandInfo,
+		highlightFill: '#818a91',
+        pointStrokeColor: '#fff'
+    }];
+
+    $scope.colours2 = [{
+        fillColor : "rgba(0,0,0,0)",
+		strokeColor : brandWarning,
+		highlightFill: '#818a91',
+        pointStrokeColor: '#fff'
+    }];
+
+    $scope.colours3 = [{
+        fillColor : "rgba(0,0,0,0)",
+		strokeColor : brandSuccess,
 		highlightFill: '#818a91',
         pointStrokeColor: '#fff'
     }];

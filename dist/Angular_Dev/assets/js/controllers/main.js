@@ -27,14 +27,6 @@ function toastrWelcome($scope, toastr) {
     });
 }
 
-
-//Default colours
-var brandPrimary =  '#20a8d8';
-var brandSuccess =  '#4dbd74';
-var brandInfo =     '#63c2de';
-var brandWarning =  '#f8cb00';
-var brandDanger =   '#f86c6b';
-
 //convert Hex to RGBA
 function convertHex(hex,opacity){
     hex = hex.replace('#','');

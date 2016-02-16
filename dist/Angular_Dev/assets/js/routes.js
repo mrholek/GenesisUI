@@ -30,13 +30,13 @@ angular
                         return $ocLazyLoad.load([{
                             serie: true,
                             name: 'chart.js',
-                            files: ['js/libs/Chart.min.js', 'js/libs/angular-chart.min.js']
+                            files: ['assets/js/libs/Chart.min.js', 'assets/js/libs/angular-chart.min.js']
                         }]);
                     }],
                     loadMyCtrl: ['$ocLazyLoad', function($ocLazyLoad) {
                         // you can lazy load controllers
                         return $ocLazyLoad.load({
-                            files: ['js/controllers/shared.js']
+                            files: ['assets/js/controllers/shared.js']
                         });
                     }]
                 }
@@ -56,31 +56,31 @@ angular
                         return $ocLazyLoad.load([
                             {
                                 serie: true,
-                                files: ['js/libs/moment.min.js']
+                                files: ['assets/js/libs/moment.min.js']
                             },
                             {
                                 serie: true,
-                                files: ['js/libs/daterangepicker.min.js', 'js/libs/angular-daterangepicker.min.js']
+                                files: ['assets/js/libs/daterangepicker.min.js', 'assets/js/libs/angular-daterangepicker.min.js']
                             },
                             {
                                 serie: true,
                                 name: 'chart.js',
-                                files: ['js/libs/Chart.min.js', 'js/libs/angular-chart.min.js']
+                                files: ['assets/js/libs/Chart.min.js', 'assets/js/libs/angular-chart.min.js']
                             },
                             {
                                 serie: true,
-                                files: ['js/libs/gauge.min.js']
+                                files: ['assets/js/libs/gauge.min.js']
                             },
                             {
                                 serie: true,
-                                files: ['js/libs/angular-toastr.tpls.min.js']
+                                files: ['assets/js/libs/angular-toastr.tpls.min.js']
                             }
                         ]);
                     }],
                     loadMyCtrl: ['$ocLazyLoad', function($ocLazyLoad) {
                         // you can lazy load controllers
                         return $ocLazyLoad.load({
-                            files: ['js/controllers/main.js']
+                            files: ['assets/js/controllers/main.js']
                         });
                     }]
                 }
@@ -98,27 +98,27 @@ angular
                         return $ocLazyLoad.load([
                             {
                                 serie: true,
-                                files: ['js/libs/moment.min.js']
+                                files: ['assets/js/libs/moment.min.js']
                             },
                             {
                                 serie: true,
-                                files: ['js/libs/daterangepicker.min.js', 'js/libs/angular-daterangepicker.min.js']
+                                files: ['assets/js/libs/daterangepicker.min.js', 'assets/js/libs/angular-daterangepicker.min.js']
                             },
                             {
                                 serie: true,
                                 name: 'chart.js',
-                                files: ['js/libs/Chart.min.js', 'js/libs/angular-chart.min.js']
+                                files: ['assets/js/libs/Chart.min.js', 'assets/js/libs/angular-chart.min.js']
                             },
                             {
                                 serie: true,
-                                files: ['js/libs/gauge.min.js']
+                                files: ['assets/js/libs/gauge.min.js']
                             }
                         ]);
                     }],
                     loadMyCtrl: ['$ocLazyLoad', function($ocLazyLoad) {
                         // you can lazy load controllers
                         return $ocLazyLoad.load({
-                            files: ['js/controllers/main.js']
+                            files: ['assets/js/controllers/main.js']
                         });
                     }]
                 }
@@ -204,14 +204,14 @@ angular
                         // you can lazy load files for an existing module
                         return $ocLazyLoad.load([
                             {
-                                files: ['js/libs/select.min.js']
+                                files: ['assets/js/libs/select.min.js']
                             }
                         ]);
                     }],
                     loadMyCtrl: ['$ocLazyLoad', function($ocLazyLoad) {
                         // you can lazy load controllers
                         return $ocLazyLoad.load({
-                            files: ['js/controllers/uikits/email.js']
+                            files: ['assets/js/controllers/uikits/email.js']
                         });
                     }]
                 }
