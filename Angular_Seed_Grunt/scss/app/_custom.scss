@@ -62,6 +62,10 @@ $spacer:                     1rem !default;
 $spacer-x:                   $spacer !default;
 $spacer-y:                   $spacer !default;
 $spacers: (
+  h: (
+    x:   ($spacer-x * 0.5),
+    y:   ($spacer-y * 0.5)
+  ),
   0: (
     x:   0,
     y:   0
@@ -367,7 +371,6 @@ $zindex-modal:             1050 !default;
 
 // Navbar
 
-$navbar-height:                     55px;
 $navbar-border-radius:              $border-radius !default;
 $navbar-padding-horizontal:         $spacer !default;
 $navbar-padding-vertical:           0; //($spacer / 2) !default;
@@ -381,9 +384,6 @@ $navbar-light-color:                rgba(0,0,0,.3);
 $navbar-light-hover-color:          rgba(0,0,0,.6);
 $navbar-light-active-color:         rgba(0,0,0,.8);
 $navbar-light-disabled-color:       rgba(0,0,0,.15);
-
-$navbar-bg-light:                   #fff;
-$navbar-bg-dark:                    $gray-dark;
 
 
 // Navs
@@ -674,7 +674,7 @@ $pre-border-color:            #ccc !default;
 $pre-scrollable-max-height:   340px !default;
 
 
-// Genesis Variables
+// GenesisUI Variables
 
 $border-color: $gray-lighter;
 
@@ -707,16 +707,112 @@ $vine: #00bf8f;
 $foursquare: #1073af;
 $vimeo: #aad450;
 
-// #Navigation
+// Navbar
+$navbar-height:                     55px;
+$navbar-bg:                         #fff;
+$navbar-brand-bg:                   darken($gray-dark,10%);
+$navbar-brand-logo:                 url('../img/logo-light.png');
+$navbar-border: (
+    bottom: (
+        size:                           1px,
+        style:                          solid,
+        color:                          $border-color
+    )
+);
 
-$sidebar-width: 200px;
-$sidebar-compact-width: 50px;
-$sidebar-compact-height: $sidebar-compact-width;
-$nav-color-dark: $gray-dark;
-$nav-color-light: #fff;
+$navbar-color:                      rgba(0,0,0,.3);
+$navbar-hover-color:                rgba(0,0,0,.6);
+$navbar-active-color:               rgba(0,0,0,.8);
+$navbar-disabled-color:             rgba(0,0,0,.15);
+
+// Navigation
+$sidebar-width:                     200px;
+$sidebar-compact-width:             50px;
+$sidebar-compact-height:            $sidebar-compact-width;
+
+$nav-bg:                            $gray-dark;
+$nav-color:                         #fff;
+$nav-header-bg:                     rgba(0,0,0,.2);
+$nav-footer-bg:                     rgba(0,0,0,.2);
+
+$nav-title-color:                   $gray-lighter;
+
+$nav-link-color:                    #fff;
+$nav-link-bg:                       $brand-primary;
+
+$nav-link-borders: (
+  left: (
+    size:                           3px,
+    style:                          solid,
+    color:                          transparent
+  )
+);
+$nav-link-hover-color:              #fff;
+$nav-link-hover-bg:                 $brand-primary;
+
+$nav-link-hover-borders: (
+  left: (
+    size:                           3px,
+    style:                          solid,
+    color:                          $brand-primary
+  )
+);
+$nav-link-active-color:             #fff;
+$nav-link-active-bg:                lighten($nav-bg, 5%);
+
+$nav-link-active-borders: (
+  left: (
+    size:                           3px,
+    style:                          solid,
+    color:                          $brand-primary
+  )
+);
+
+$nav-dropdown-bg:                   rgba(0,0,0,.2);
+$nav-dropdown-borders: (
+  left: (
+    size:                           3px,
+    style:                          solid,
+    color:                          $brand-primary
+  )
+);
+
+$nav-top-bg:                        #fff;
+$nav-top-color:                     $body-color;
+$nav-top-borders: (
+  bottom: (
+    size:                           1px,
+    style:                          solid,
+    color:                          $border-color
+  )
+);
+$nav-top-ul-borders: (
+  all: (
+    size:                           1px,
+    style:                          solid,
+    color:                          $border-color
+  )
+);
+
+$nav-top-hover-color:               #fff;
+$nav-top-hover-bg:                  $brand-primary;
+$nav-top-active-color:              #fff;
+$nav-top-active-bg:                 $brand-primary;
 
 $navigation-height: $navbar-height - 15px;
 
 // Footer
-
 $footer-height: 50px;
+$footer-bg:     $gray-lightest;
+$footer-color:  $body-color;
+$footer-borders: (
+  top: (
+    size:                           1px,
+    style:                          solid,
+    color:                          $border-color
+  )
+);
+
+// Cards
+$card-icon-bg:                      transparent;
+$card-icon-color:                   $body-color;

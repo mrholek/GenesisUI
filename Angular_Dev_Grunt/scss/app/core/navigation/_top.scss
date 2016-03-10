@@ -8,12 +8,18 @@ body.top-nav {
         height: $navigation-height;
         width: 100%;
         z-index: $zindex-navbar-fixed - 1;
+        background: $nav-top-bg;
+        @include borders($nav-top-borders);
+
+        .sidebar-close {
+            display: none;
+        }    
 
         #navigation-footer {
             display: none;
         }
 
-        ul.nav, ol.nav {
+        ul.nav {
 
             li.nav-title, li.divider {
                 display: none;
@@ -24,10 +30,12 @@ body.top-nav {
                 margin: 0;
                 position:relative;
 
-                ul, ol {
+                ul {
                     margin: 0;
                     padding: 0;
                     display: none;
+                    background: $nav-top-bg;
+                    @include borders($nav-top-ul-borders);
 
                     li {
                         padding: 0 0 0 0px;
@@ -36,6 +44,7 @@ body.top-nav {
                 }
 
                 a.nav-link {
+                    color: $nav-top-color;
                     line-height: $navigation-height;
                     font-size: 12px;
                     font-weight: 400;
@@ -59,9 +68,19 @@ body.top-nav {
                         margin-top: 13px;
                         margin-left: 10px;
                     }
+
+                    &:hover {
+                        background: $nav-top-hover-bg;
+                        color: $nav-top-hover-color;
+                    }
+
+                    &.active {
+                        background: $nav-top-active-bg;
+                        color: $nav-top-active-color;
+                    }
                 }
 
-                ul, ol {
+                ul {
                     position: absolute;
                     top: $navigation-height - 1px;
                     left: 0;
@@ -74,7 +93,7 @@ body.top-nav {
                             min-width: 200px;
                         }
 
-                        ul, ol {
+                        ul {
                             position: absolute;
                             top: 0;
                             left: 100%;
@@ -83,69 +102,69 @@ body.top-nav {
                 }
 
                 &:hover {
-                    > ul, > ol {
+                    > ul {
                         display: inline;
                     }
                 }
             }
         }
-        &.nav-dark {
-            background: $nav-color-dark;
-
-            li.nav-item {
-                a.nav-link {
-                    color: #fff;
-
-                    &:hover, &.active {
-                        background: $brand-primary;
-                    }
-                }
-                ul, ol {
-                    background: $nav-color-dark;
-                }
-            }
-        }
-
-        &.nav-light {
-            background: $nav-color-light;
-            border-bottom: 1px solid $border-color;
-
-            li.nav-item {
-                a.nav-link {
-                    color: $gray-dark;
-                    height: $navigation-height;
-                    border-left: 1px solid transparent;
-                    border-right: 1px solid transparent;
-
-                    &:hover, &.active {
-                        background: $brand-primary;
-                        color: #fff;
-                    }
-                }
-
-                ul, ol {
-                    background: $nav-color-light;
-                    border: 1px solid $border-color;
-                    z-index: -1;
-
-                    li {
-                        ul, ol {
-                            border: 1px solid $border-color;
-                        }
-                    }
-                }
-            }
-
-            ul.nav, ol.nav {
-                > li.nav-item.nav-dropdown:hover {
-                    > a.nav-link {
-                        background: $gray-lightest;
-                        border: 1px solid $border-color;
-                        border-top: 0;
-                        border-bottom: 1px solid white;
-                    }
-                }
-            }
-        }
+        // &.nav-dark {
+        //     background: $nav-color-dark;
+        //
+        //     li.nav-item {
+        //         a.nav-link {
+        //             color: #fff;
+        //
+        //             &:hover, &.active {
+        //                 background: $brand-primary;
+        //             }
+        //         }
+        //         ul, ol {
+        //             background: $nav-color-dark;
+        //         }
+        //     }
+        // }
+        //
+        // &.nav-light {
+        //     background: $nav-color-light;
+        //     border-bottom: 1px solid $border-color;
+        //
+        //     li.nav-item {
+        //         a.nav-link {
+        //             color: $gray-dark;
+        //             height: $navigation-height;
+        //             border-left: 1px solid transparent;
+        //             border-right: 1px solid transparent;
+        //
+        //             &:hover, &.active {
+        //                 background: $brand-primary;
+        //                 color: #fff;
+        //             }
+        //         }
+        //
+        //         ul, ol {
+        //             background: $nav-color-light;
+        //             border: 1px solid $border-color;
+        //             z-index: -1;
+        //
+        //             li {
+        //                 ul, ol {
+        //                     border: 1px solid $border-color;
+        //                 }
+        //             }
+        //         }
+        //     }
+        //
+        //     ul.nav, ol.nav {
+        //         > li.nav-item.nav-dropdown:hover {
+        //             > a.nav-link {
+        //                 background: $gray-lightest;
+        //                 border: 1px solid $border-color;
+        //                 border-top: 0;
+        //                 border-bottom: 1px solid white;
+        //             }
+        //         }
+        //     }
+        // }
     }
 }

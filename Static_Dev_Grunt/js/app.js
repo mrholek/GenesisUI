@@ -29,6 +29,12 @@
 	$.brandWarning =  '#f8cb00';
 	$.brandDanger =   '#f86c6b';
 
+	$.grayDark =      '#2a2c36';
+	$.gray =          '#55595c';
+	$.grayLight =     '#818a91';
+	$.grayLighter =   '#d1d4d7';
+	$.grayLightest =  '#f8f9fa';
+
 /*****
 * ASYNC LOAD
 * Load JS files and CSS files asynchronously in ajax mode
@@ -262,12 +268,23 @@ $(document).ready(function($){
 	/* ---------- Main Menu Open/Close, Min/Full ---------- */
 	$('.navbar-toggler').click(function(){
 
-		if ($(this).hasClass('layout-toggler')) {
-			$('body').toggleClass('compact-nav');
+		var bodyClass = localStorage.getItem('body-class');
+
+		if ($(this).hasClass('layout-toggler') && $('body').hasClass('sidebar-off-canvas')) {
+			$('body').toggleClass('sidebar-opened').parent().toggleClass('sidebar-opened');
+		} else if ($(this).hasClass('layout-toggler') && ($('body').hasClass('sidebar-nav') || bodyClass == 'sidebar-nav')) {
+			$('body').toggleClass('sidebar-nav');
+			localStorage.setItem('body-class', 'sidebar-nav');
+			if (bodyClass == 'sidebar-nav') {
+				localStorage.clear();
+			}
 		} else {
 			$('body').toggleClass('mobile-open');
 		}
+	});
 
+	$('.sidebar-close').click(function(){
+		$('body').toggleClass('sidebar-opened').parent().toggleClass('sidebar-opened');
 	});
 
 	/* ---------- Disable moving to top ---------- */
@@ -321,12 +338,17 @@ $(window).bind('resize', navigationSmartResize);
 
 function navigationSmartResize(e) {
 
-	if ($('body').hasClass('sidebar-nav') && $('body').hasClass('fixed-nav')) {
+	if ($('body').hasClass('sidebar-nav') && $('body').hasClass('fixed-nav') && !$('body').hasClass('sidebar-off-canvas')) {
 		var bodyHeight = $(window).height();
 		var headerHeight = $('header').outerHeight();
 		var navHeaderHeight = $('#navigation-header').outerHeight();
 		var navFooterHeight = $('#navigation-footer').outerHeight();
 		$('#navigation-items').css('height', bodyHeight - headerHeight - navHeaderHeight - navFooterHeight);
+	} else if ($('body').hasClass('sidebar-nav') && $('body').hasClass('fixed-nav') && $('body').hasClass('sidebar-off-canvas')) {
+		var bodyHeight = $(window).height();
+		var navHeaderHeight = $('#navigation-header').outerHeight();
+		var navFooterHeight = $('#navigation-footer').outerHeight();
+		$('#navigation-items').css('height', bodyHeight - navHeaderHeight - navFooterHeight);
 	}
 
 }

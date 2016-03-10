@@ -1,51 +1,11 @@
-// Small Stats
-
-.smallstat {
-	background: white;
-	position: relative;
-	margin-bottom: $card-spacer-y;
-	height: 80px;
-	padding: 15px;
-    border: 1px solid $border-color;
-
-	i {
-		text-align: center;
-		display: block;
-		color: white;
-		width: 50px;
-		height: 50px;
-		font-size: 22px;
-		line-height: 50px;
-		float: left;
-		margin-right: 10px;
-	}
-
-	.title, .value {
-		display: block;
-		width: 100%;
-	}
-
-	.value {
-		padding-top: 3px;
-		font-size: 18px;
-	}
-
-	.title {
-		font-size: 12px;
-        font-weight: 600;
-		text-transform: uppercase;
-        color: $gray-lighter;
-	}
-}
-
 // .social-box
-
 .social-box {
 	min-height: 160px;
 	background: white;
 	margin-bottom: $card-spacer-y;
 	text-align: center;
-    border: 1px solid $border-color;
+    border: $card-border-width solid $card-border-color;
+	@include border-radius($card-border-radius);
 
 	i {
 		display: block;
@@ -53,6 +13,7 @@
 		line-height: 90px;
 		background: $gray-lighter;
         margin: -1px -1px 0 -1px;
+		@include border-radius($card-border-radius-inner $card-border-radius-inner 0 0);
 	}
 
 	.chart-wrapper {
@@ -120,56 +81,6 @@
 		i {
 			background: $google-plus;
 			color: white;
-		}
-	}
-}
-
-.card-group.stats-group {
-	border: 1px solid $border-color;
-	margin-bottom: $card-spacer-y;
-
-	.card {
-		border: 0;
-
-		.card-block {
-			margin: 20px 5px;
-			height: 60px;
-			padding: 0;
-			border-right: 1px solid $border-color;
-		}
-
-		&:last-child {
-			.card-block {
-				border: 0;
-			}
-		}
-
-		i {
-			display: inline-block;
-			font-size: 34px;
-			line-height: 70px;
-			height: 70px;
-			width: 70px;
-			text-align:center;
-			float: left;
-			margin-top: -5px;
-		}
-
-		.value {
-			padding-top: 7px;
-			font-size: 24px;
-			.currency {
-				font-size: 12px;
-			}
-		}
-
-		.label {
-			display: block;
-			margin: -5px 0 0 0;
-			@extend .text-muted;
-			text-transform: uppercase;
-			text-align: left;
-			font-size: 8px;
 		}
 	}
 }

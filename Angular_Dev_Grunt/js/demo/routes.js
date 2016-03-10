@@ -511,6 +511,14 @@ angular
                     label: '{{ "WIDGETS" | translate }}'
                 },
                 resolve: {
+                    loadPlugin: ['$ocLazyLoad', function ($ocLazyLoad) {
+                        return $ocLazyLoad.load([
+                            {
+                                serie: true,
+                                files: ['js/libs/gauge.min.js']
+                            }
+                        ]);
+                    }],
                     loadMyCtrl: ['$ocLazyLoad', function($ocLazyLoad) {
                         // you can lazy load controllers
                         return $ocLazyLoad.load({

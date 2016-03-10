@@ -1,7 +1,54 @@
 
 .card {
-    background-color: #fff;
-    border: 1px solid $border-color;
+
+}
+
+.card-header {
+
+    i.icon-bg {
+        display: inline-block;
+        background: $card-icon-bg;
+        color: $card-icon-color;
+        margin-top: -$card-spacer-y;
+        margin-bottom: -$card-spacer-y;
+        margin-left: -$card-spacer-x;
+        margin-right: $card-spacer-x;
+        padding: $card-spacer-y $card-spacer-x !important;
+        line-height: inherit;
+        border-right: $card-border-width solid $card-border-color;
+        vertical-align: bottom;
+    }
+
+    ul.nav.nav-tabs {
+
+        margin-top: -$card-spacer-y;
+
+        li.nav-item {
+            border-top: 0;
+            a.nav-link {
+                border-top: 0;
+                padding: $card-spacer-y $card-spacer-x/2;
+                color: $text-muted;
+
+                &.active {
+                    background: #fff;
+                    color: $body-color;
+                }
+            }
+        }
+    }
+
+    &.card-header-inverse {
+        color: #fff;
+    }
+
+    @each $variant, $color in (primary: $brand-primary, secondary: $gray-lighter, success: $brand-success, info: $brand-info, warning: $brand-warning, danger: $brand-danger) {
+        &.card-header-#{$variant} {
+            background: $color;
+            border-bottom: 1px solid $color;
+            margin: -1px -1px 0 -1px;
+        }
+    }
 
 }
 
@@ -28,54 +75,45 @@
 
 }
 
-.card-primary {
-    background-color: $brand-primary;
-    border: 0;
+@mixin card-variant($color) {
+    background-color: $color;
+
+    .card-header {
+        border-color: darken($color,5%);
+    }
 
     .card-header, .card-footer {
-        background-color: darken($brand-primary,10%);
-        border: 0;
+        background-color: darken($color,5%);
+
     }
 }
-.card-success {
-    background-color: $brand-success;
-    border: 0;
 
-    .card-header, .card-footer {
-        background-color: darken($brand-success,10%);
-        border: 0;
-    }
-}
-.card-info {
-    background-color: $brand-info;
-    border: 0;
-
-    .card-header, .card-footer {
-        background-color: darken($brand-info,10%);
-        border: 0;
-    }
-}
-.card-warning {
-    background-color: $brand-warning;
-    border: 0;
-
-    .card-header, .card-footer {
-        background-color: darken($brand-warning,10%);
-        border: 0;
-    }
-}
-.card-danger {
-    background-color: $brand-danger;
-    border: 0;
-
-    .card-header, .card-footer {
-        background-color: darken($brand-danger,10%);
-        border: 0;
+@each $variant, $color in (primary: $brand-primary, secondary: $gray-lighter, success: $brand-success, info: $brand-info, warning: $brand-warning, danger: $brand-danger) {
+    .card-#{$variant} {
+        @include card-variant($color)
     }
 }
 
 .card-inverse {
     color: #fff;
+
+    .text-muted {
+        color: rgba(255,255,255,.6);
+    }
+
+    .progress[value]::-webkit-progress-bar {
+        background-color: rgba(255,255,255,.4) !important;
+    }
+
+    @-moz-document url-prefix() {
+        .progress[value] {
+            background-color: rgba(255,255,255,.4) !important;
+        }
+    }
+
+    .progress {
+        @include progress-variant(#fff !important);
+    }
 }
 
 .card-header {

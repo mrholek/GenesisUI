@@ -112,6 +112,10 @@ angular
                             {
                                 serie: true,
                                 files: ['assets/js/libs/gauge.min.js']
+                            },
+                            {
+                                serie: true,
+                                files: ['assets/js/libs/angular-toastr.tpls.min.js']
                             }
                         ]);
                     }],

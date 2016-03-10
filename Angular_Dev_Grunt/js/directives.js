@@ -2,16 +2,16 @@ angular
     .module('app')
     .directive('title', titleDirective)
     .directive('poweredby', poweredByDirective)
-    .directive('body', layoutDirective)
     .directive('breadcrumb', breadcrumbPrefixDirective)
     .directive('a', preventClickDirective)
     .directive('a', bootstrapCollapseDirective)
     .directive('a', navigationDirective)
     .directive('nav', navigationDynamicResizeDirective)
-    .directive('after', layoutTogglerDirective)
+    .directive('button', layoutTogglerDirective)
     .directive('button', collapseMenuTogglerDirective)
     .directive('div', bootstrapCarouselDirective)
     .directive('toggle', bootstrapTooltipsPopoversDirective)
+    .directive('tab', bootstrapTabsDirective)
     .directive('button', cardCollapseDirective)
     .directive('ionslider', ionSliderDirective)
     .directive('lrform', loginPageDirective)
@@ -24,38 +24,6 @@ angular
 * @desc this directive add meta title
 * @example <title></title>
 */
-
-function layoutDirective() {
-    var directive = {
-        restrict: 'E',
-        link: link
-    }
-    return directive;
-
-    function link(scope, element, attrs) {
-
-        if (header.fixed) {
-            angular.element('body').addClass('navbar-fixed');
-        }
-
-        if (nav.active) {
-            angular.element('body').addClass(nav.position + '-nav');
-        }
-
-        if (nav.fixed) {
-            angular.element('body').addClass('fixed-nav');
-        }
-
-        if (nav.compact) {
-            angular.element('body').addClass('compact-nav');
-        }
-
-        scope.$watch( function() {
-            element.find('header').addClass('navbar-' + header.color).addClass('brand-' + brand.color);
-            element.find('#navigation').addClass('nav-' + nav.color);
-        });
-    }
-}
 
 function titleDirective() {
     var directive = {
@@ -117,7 +85,7 @@ function bootstrapCollapseDirective() {
     return directive;
 
     function link(scope, element, attrs) {
-        if (attrs.toggle=="collapse"){
+        if (attrs.toggle=='collapse'){
             element.attr('href','javascript;;').attr('data-target',attrs.href.replace('index.html',''));
         }
     }
@@ -148,7 +116,6 @@ function navigationDirective() {
 
 //Dynamic resize #navigation-items
 navigationDynamicResizeDirective.$inject = ['$window', '$timeout'];
-
 function navigationDynamicResizeDirective($window, $timeout) {
     var directive = {
         restrict: 'E',
@@ -157,7 +124,7 @@ function navigationDynamicResizeDirective($window, $timeout) {
     return directive;
 
     function link(scope, element, attrs) {
-        if (element.attr('id') == 'navigation' && angular.element('body').hasClass('sidebar-nav') && angular.element('body').hasClass('fixed-nav')) {
+        if (element.attr('id') == 'navigation' && angular.element('body').hasClass('sidebar-nav') && angular.element('body').hasClass('fixed-nav') && !angular.element('body').hasClass('sidebar-off-canvas')) {
 
             var bodyHeight = angular.element(window).height();
 
@@ -176,6 +143,22 @@ function navigationDynamicResizeDirective($window, $timeout) {
                 angular.element('#navigation-items').css('height', bodyHeight - headerHeight - navHeaderHeight - navFooterHeight);
                 //scope.$digest();
             });
+        } else if (element.attr('id') == 'navigation' && angular.element('body').hasClass('sidebar-nav') && angular.element('body').hasClass('fixed-nav') && angular.element('body').hasClass('sidebar-off-canvas')) {
+            var bodyHeight = angular.element(window).height();
+
+            scope.$watch(function(){
+                var navHeaderHeight = angular.element('#navigation-header').outerHeight();
+                var navFooterHeight = angular.element('#navigation-footer').outerHeight();
+                angular.element('#navigation-items').css('height', bodyHeight - navHeaderHeight - navFooterHeight);
+            })
+
+            angular.element($window).bind('resize', function(){
+                var bodyHeight = angular.element(window).height();
+                var navHeaderHeight = angular.element('#navigation-header').outerHeight();
+                var navFooterHeight = angular.element('#navigation-footer').outerHeight();
+                angular.element('#navigation-items').css('height', bodyHeight - navHeaderHeight - navFooterHeight);
+                //scope.$digest();
+            });
         }
     }
 }
@@ -183,19 +166,25 @@ function navigationDynamicResizeDirective($window, $timeout) {
 //Layout Toggler
 function layoutTogglerDirective() {
     var directive = {
-        restrict: 'A',
+        restrict: 'E',
         link: link
     }
     return directive;
 
     function link(scope, element, attrs) {
         element.on('click', function(){
-            var before = element.attr('data-before');
-            var after = element.attr('data-after');
 
-            angular.element('body').removeClass(before).addClass(after);
-            element.attr('data-before', after)
-                   .attr('data-after', before);
+            var bodyClass = localStorage.getItem('body-class');
+
+            if ((element.hasClass('layout-toggler') || element.hasClass('sidebar-close')) && angular.element('body').hasClass('sidebar-off-canvas')) {
+                angular.element('body').toggleClass('sidebar-opened').parent().toggleClass('sidebar-opened');
+            } else if (element.hasClass('layout-toggler') && (angular.element('body').hasClass('sidebar-nav') || bodyClass == 'sidebar-nav')) {
+                angular.element('body').toggleClass('sidebar-nav');
+                localStorage.setItem('body-class', 'sidebar-nav');
+                if (bodyClass == 'sidebar-nav') {
+                    localStorage.clear();
+                }
+            }
         });
     }
 }
@@ -210,7 +199,7 @@ function collapseMenuTogglerDirective() {
 
     function link(scope, element, attrs) {
         element.on('click', function(){
-            if (element.hasClass('navbar-toggler')) {
+            if (element.hasClass('navbar-toggler') && !element.hasClass('layout-toggler')) {
                 angular.element('body').toggleClass('mobile-open')
             }
         })
@@ -226,7 +215,7 @@ function bootstrapCarouselDirective() {
     return directive;
 
     function link(scope, element, attrs) {
-        if (attrs.ride=="carousel"){
+        if (attrs.ride=='carousel'){
             element.find('a').each(function(){
                 $(this).attr('data-target',$(this).attr('href').replace('index.html','')).attr('href','javascript;;')
             });
@@ -243,12 +232,28 @@ function bootstrapTooltipsPopoversDirective() {
     return directive;
 
     function link(scope, element, attrs) {
-        if (attrs.toggle=="tooltip"){
+        if (attrs.toggle=='tooltip'){
             angular.element(element).tooltip();
         }
-        if (attrs.toggle=="popover"){
+        if (attrs.toggle=='popover'){
             angular.element(element).popover();
         }
+    }
+}
+
+//Bootstrap Tabs
+function bootstrapTabsDirective() {
+    var directive = {
+        restrict: 'A',
+        link: link
+    }
+    return directive;
+
+    function link(scope, element, attrs) {
+        element.click(function(e) {
+            e.preventDefault();
+            angular.element(element).tab('show');
+        });
     }
 }
 
@@ -261,7 +266,7 @@ function cardCollapseDirective() {
     return directive;
 
     function link(scope, element, attrs) {
-        if (attrs.toggle=="collapse" && element.parent().hasClass('card-actions')){
+        if (attrs.toggle=='collapse' && element.parent().hasClass('card-actions')){
 
             if (element.parent().parent().parent().find('.card-block').hasClass('in')) {
                 element.find('i').addClass('r180');
@@ -337,16 +342,16 @@ function ionSliderDirective($timeout) {
             }
         });
         scope.$watch('min', function(value) {
-            $timeout(function(){ element.data("ionRangeSlider").update({min: value}); });
+            $timeout(function(){ element.data('ionRangeSlider').update({min: value}); });
         },true);
         scope.$watch('max', function(value) {
-            $timeout(function(){ element.data("ionRangeSlider").update({max: value}); });
+            $timeout(function(){ element.data('ionRangeSlider').update({max: value}); });
         });
         scope.$watch('from', function(value) {
-            $timeout(function(){ element.data("ionRangeSlider").update({from: value}); });
+            $timeout(function(){ element.data('ionRangeSlider').update({from: value}); });
         });
         scope.$watch('disable', function(value) {
-            $timeout(function(){ element.data("ionRangeSlider").update({disable: value}); });
+            $timeout(function(){ element.data('ionRangeSlider').update({disable: value}); });
         });
     }
 }

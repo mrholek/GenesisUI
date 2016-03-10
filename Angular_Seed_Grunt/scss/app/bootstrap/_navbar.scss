@@ -3,6 +3,8 @@ header.navbar {
     height: $navbar-height;
     line-height: $navbar-height;
     position: relative;
+    background-color: $navbar-bg;
+    @include borders($navbar-border);
 
     .nav-item {
         position: relative;
@@ -12,9 +14,7 @@ header.navbar {
 
         .nav-link {
             i {
-                display:inline-block;
-                font-size: 1rem;
-                margin-top: 1.25rem;
+                vertical-align: middle;
             }
 
             .label {
@@ -49,6 +49,11 @@ header.navbar {
         width: $sidebar-width;
         margin-left: - $navbar-padding-horizontal;
         padding: $navbar-padding-vertical $navbar-padding-horizontal;
+        background-color: $navbar-brand-bg;
+        background-image: $navbar-brand-logo;
+        background-size: 70px auto;
+        background-position: center center;
+        background-repeat: no-repeat;
     }
 
     button.navbar-toggler.layout-toggler {
@@ -62,49 +67,6 @@ header.navbar {
         border: 0;
     }
 
-    &.navbar-light {
-        background: $navbar-bg-light;
-        border-bottom: 1px solid $gray-lighter;
-
-        button.navbar-toggler.layout-toggler {
-            background: $gray-lightest;
-            border-bottom: 1px solid $border-color;
-            border-right: 1px solid $border-color;
-        }
-    }
-
-    &.brand-light {
-        a.navbar-brand {
-
-            border-bottom: 1px solid $border-color;
-            border-right: 1px solid $border-color;
-            background: $gray-lightest url('../img/logo-dark.png') center center no-repeat;
-            background-size: 70px auto;
-
-        }
-    }
-
-    &.navbar-dark {
-        background: $navbar-bg-dark;
-        color: #fff;
-
-        a.nav-link {
-            color: #fff;
-        }
-
-        button.navbar-toggler.layout-toggler {
-            background: darken($navbar-bg-dark,10%);
-            border-right: 1px solid darken($navbar-bg-dark,15%);
-        }
-    }
-
-    &.brand-dark {
-        a.navbar-brand {
-            border-right: 1px solid darken($navbar-bg-dark,15%);
-            background: darken($navbar-bg-dark,10%) url('../img/logo-light.png') center center no-repeat;
-            background-size: 70px auto;
-        }
-    }
 }
 
 header.navbar {
@@ -120,4 +82,35 @@ header.navbar {
             padding-bottom: 0;
         }
     }
+}
+
+.navbar-brand {
+    color: $navbar-active-color;
+
+    @include hover-focus {
+        color: $navbar-active-color;
+    }
+}
+
+.navbar-nav {
+    .nav-link {
+        color: $navbar-color;
+
+        @include hover-focus {
+            color: $navbar-hover-color;
+        }
+    }
+
+    .open > .nav-link,
+    .active > .nav-link,
+    .nav-link.open,
+    .nav-link.active {
+        @include plain-hover-focus {
+            color: $navbar-active-color;
+        }
+    }
+}
+
+.navbar-divider {
+    background-color: rgba(0,0,0,.075);
 }

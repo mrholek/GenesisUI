@@ -46,3 +46,48 @@
         display: block;
     }
 }
+
+@mixin borders($borders) {
+    @each $border in $borders {
+        $direction: nth($border, 1);
+        @if $direction == 'all' {
+            $size: map-get(map-get($borders, $direction), size);
+            $style: map-get(map-get($borders, $direction), style);
+            $color: map-get(map-get($borders, $direction), color);
+            border: $size $style $color;
+        } @else if $direction == 'top' {
+            $size: map-get(map-get($borders, $direction), size);
+            $style: map-get(map-get($borders, $direction), style);
+            $color: map-get(map-get($borders, $direction), color);
+            border-top: $size $style $color;
+        } @else if $direction == 'right' {
+            $size: map-get(map-get($borders, $direction), size);
+            $style: map-get(map-get($borders, $direction), style);
+            $color: map-get(map-get($borders, $direction), color);
+            border-right: $size $style $color;
+        } @else if $direction == 'bottom' {
+            $size: map-get(map-get($borders, $direction), size);
+            $style: map-get(map-get($borders, $direction), style);
+            $color: map-get(map-get($borders, $direction), color);
+            border-bottom: $size $style $color;
+        } @else if $direction == 'left' {
+            $size: map-get(map-get($borders, $direction), size);
+            $style: map-get(map-get($borders, $direction), style);
+            $color: map-get(map-get($borders, $direction), color);
+            border-left: $size $style $color;
+        }
+    }
+}
+
+@mixin bg-variant($parent, $color) {
+    #{$parent} {
+        @include border-radius($card-border-radius-inner $card-border-radius-inner $card-border-radius-inner $card-border-radius-inner);
+        color: #fff !important;
+        background-color: $color !important;
+    }
+    a#{$parent} {
+        @include hover-focus {
+            background-color: darken($color, 10%);
+        }
+    }
+}

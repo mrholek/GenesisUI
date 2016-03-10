@@ -1,4 +1,7 @@
 <nav id="navigation" class="collapse navbar-toggleable-sm">
+    <button type="button" class="sidebar-close" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
     <div id="navigation-header">
         <img src="assets/img/avatars/8.jpg" class="img-avatar" alt="Avatar">
         <div>
@@ -148,8 +151,6 @@
                             </li>
                         </ul>
                     </li>
-                </ul>
-                <ul class="nav-dropdown-items">
                     <li class="nav-item nav-dropdown" ng-class="{open: $state.includes('app.uikits.email')}">
                         <a class="nav-link nav-dropdown-toggle" ng-class="{active: $state.includes('app.uikits.email')}" href="#"><i class="icon-speech"></i> {{ 'EMAIL' | translate }}</a>
                         <ul class="nav-dropdown-items">

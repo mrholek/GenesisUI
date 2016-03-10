@@ -3,9 +3,10 @@ footer#footer {
     bottom: 0;
     left: 0;
     right: 0;
-    border-top: 1px solid $border-color;
+    @include borders($footer-borders);
     padding: 0 $spacer-x;
-    background: $gray-lightest;
+    background: $footer-bg;
+    color: $footer-color;
     height: $footer-height;
     line-height: $footer-height;
 }
