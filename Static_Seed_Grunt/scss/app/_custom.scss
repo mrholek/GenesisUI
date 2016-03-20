@@ -682,7 +682,7 @@ $border-color: $gray-lighter;
 
 $facebook: #3b5998;
 $twitter: #00aced;
-$linkedin: #4875B4;
+$linkedin: #4875b4;
 $google-plus: #d34836;
 $flickr: #ff0084;
 $tumblr: #32506d;
@@ -691,7 +691,7 @@ $github: #4183c4;
 $html5: #e34f26;
 $openid: #f78c40;
 $stack-overflow: #fe7a15;
-$youtube: #bb0000;
+$youtube: #b00;
 $css3: #0170ba;
 $dribbble: #ea4c89;
 $google-plus: #bb4b39;
@@ -729,6 +729,7 @@ $navbar-disabled-color:             rgba(0,0,0,.15);
 $sidebar-width:                     200px;
 $sidebar-compact-width:             50px;
 $sidebar-compact-height:            $sidebar-compact-width;
+$sidebar-borders:                   none;
 
 $nav-bg:                            $gray-dark;
 $nav-color:                         #fff;

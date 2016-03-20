@@ -4,20 +4,24 @@
     right: $breadcrumb-padding-horizontal;
     line-height: 43px;
 
+    &:before {
+        display: none;
+    }
+
     .btn.btn-secondary {
-        border: 0;
         color: $text-muted;
+        border: 0;
 
         &:hover, &.active {
-            background: transparent;
             color: $body-color;
+            background: transparent;
         }
     }
 
     .open {
         .btn.btn-secondary {
-            background: transparent;
             color: $body-color;
+            background: transparent;
         }
     }
     //margin-top: - ($spacer-y + (2 * $breadcrumb-padding-vertical) + $font-size-base);

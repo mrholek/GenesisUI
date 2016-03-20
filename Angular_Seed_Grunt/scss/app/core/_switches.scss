@@ -33,54 +33,54 @@
     }
 
     .switch-label {
-        border: 1px solid $border-color;
-        border-radius: 2px;
         position: relative;
         display: block;
         height: inherit;
-        font-size: $font-size;
-        font-weight: 600;
-        text-transform: uppercase;
         @if $type == icon {
             font-family: FontAwesome;
         }
+        font-size: $font-size;
+        font-weight: 600;
+        text-transform: uppercase;
         @if $type == ddd {
             background-color: $gray-lightest;
         } @else {
             background-color: #fff;
         }
+        border: 1px solid $border-color;
+        border-radius: 2px;
+        -moz-transition: 0.15s ease-out;
+        -o-transition: 0.15s ease-out;
         -webkit-transition: 0.15s ease-out;
-           -moz-transition: 0.15s ease-out;
-             -o-transition: 0.15s ease-out;
-                transition: 0.15s ease-out;
+        transition: 0.15s ease-out;
+        -moz-transition-property: opacity background;
+        -o-transition-property: opacity background;
         -webkit-transition-property: opacity background;
-           -moz-transition-property: opacity background;
-             -o-transition-property: opacity background;
-                transition-property: opacity background;
+        transition-property: opacity background;
     }
     @if $type == text or $type == icon {
         .switch-label:before,
         .switch-label:after {
             position: absolute;
             top: 50%;
+            width: 50%;
             margin-top: -.5em;
             line-height: 1;
-            width: 50%;
             text-align: center;
+            -moz-transition: inherit;
+            -o-transition: inherit;
             -webkit-transition: inherit;
-               -moz-transition: inherit;
-                 -o-transition: inherit;
-                    transition: inherit;
+            transition: inherit;
         }
         .switch-label:before {
-            content: attr(data-off);
             right: 1px;
             color: $gray-lighter;
+            content: attr(data-off);
         }
         .switch-label:after {
-            content: attr(data-on);
             left: 1px;
-            color: white;
+            color: #fff;
+            content: attr(data-on);
             opacity: 0;
         }
     }
@@ -100,14 +100,13 @@
         left: $handle-margin;
         width: $height - $handle-margin * 2;
         height: $height - $handle-margin * 2;
-        background: white;
+        background: #fff;
         border: 1px solid $border-color;
         border-radius: 1px;
-        background: white;
+        -moz-transition: left 0.15s ease-out;
+        -o-transition: left 0.15s ease-out;
         -webkit-transition: left 0.15s ease-out;
-           -moz-transition: left 0.15s ease-out;
-             -o-transition: left 0.15s ease-out;
-                transition: left 0.15s ease-out;
+        transition: left 0.15s ease-out;
         @if $type == ddd {
             border: 0;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
@@ -163,13 +162,13 @@
     } @else if $type == ddd {
 
         &.switch-lg {
-            @include switch-size($switch-lg-width, $switch-lg-height, $switch-lg-font-size, 0px);
+            @include switch-size($switch-lg-width, $switch-lg-height, $switch-lg-font-size, 0);
         }
         &.switch-sm {
-            @include switch-size($switch-sm-width, $switch-sm-height, $switch-sm-font-size, 0px);
+            @include switch-size($switch-sm-width, $switch-sm-height, $switch-sm-font-size, 0);
         }
         &.switch-xs {
-            @include switch-size($switch-xs-width, $switch-xs-height, $switch-xs-font-size, 0px);
+            @include switch-size($switch-xs-width, $switch-xs-height, $switch-xs-font-size, 0);
         }
     }
 }
@@ -187,8 +186,8 @@
 
 @mixin switch-outline-variant($color) {
     > .switch-input:checked ~ .switch-label {
-        border-color: $color;
         background: #fff !important;
+        border-color: $color;
 
         &:after {
             color: $color;
@@ -202,8 +201,8 @@
 
 @mixin switch-outline-alt-variant($color) {
     > .switch-input:checked ~ .switch-label {
-        border-color: $color;
         background: #fff !important;
+        border-color: $color;
 
         &:after {
             color: $color;
@@ -211,8 +210,8 @@
     }
 
     > .switch-input:checked ~ .switch-handle {
-        border-color: $color;
         background: $color !important;
+        border-color: $color;
     }
 }
 
@@ -281,7 +280,7 @@ $switch-icon-xs-font-size: 7px;
 }
 
 .switch.switch-3d {
-    @include switch('ddd', $switch-width, $switch-height, $switch-font-size, 0px);
+    @include switch('ddd', $switch-width, $switch-height, $switch-font-size, 0);
 }
 
 //pills style
@@ -313,53 +312,3 @@ $switch-icon-xs-font-size: 7px;
         @include switch-outline-alt-variant($color);
     }
 }
-
-//normal style
-// .switch-primary {
-//     @include switch-variant($brand-primary);
-// }
-//
-// .switch-secondary {
-//     @include switch-variant($gray-lighter);
-// }
-//
-// .switch-success {
-//     @include switch-variant($brand-success);
-// }
-//
-// .switch-info {
-//     @include switch-variant($brand-info);
-// }
-//
-// .switch-warning {
-//     @include switch-variant($brand-warning);
-// }
-//
-// .switch-danger {
-//     @include switch-variant($brand-danger);
-// }
-
-//outline style
-// .switch-primary-outline {
-//     @include switch-outline-variant($brand-primary);
-// }
-//
-// .switch-secondary-outline {
-//     @include switch-outline-variant($gray-lighter);
-// }
-//
-// .switch-success-outline {
-//     @include switch-outline-variant($brand-success);
-// }
-//
-// .switch-info-outline {
-//     @include switch-outline-variant($brand-info);
-// }
-//
-// .switch-warning-outline {
-//     @include switch-outline-variant($brand-warning);
-// }
-//
-// .switch-danger-outline {
-//     @include switch-outline-variant($brand-danger);
-// }

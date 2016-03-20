@@ -1,8 +1,9 @@
 
 header.navbar {
-    height: $navbar-height;
-    line-height: $navbar-height;
     position: relative;
+    height: $navbar-height;
+    padding: $navbar-padding-vertical 0;
+    line-height: $navbar-height;
     background-color: $navbar-bg;
     @include borders($navbar-border);
 
@@ -45,24 +46,24 @@ header.navbar {
 
     a.navbar-brand {
         display: inline-block;
+        width: $sidebar-width + 1px;
         height: $navbar-height;
-        width: $sidebar-width;
-        margin-left: - $navbar-padding-horizontal;
         padding: $navbar-padding-vertical $navbar-padding-horizontal;
+        margin-left: - $navbar-padding-horizontal;
         background-color: $navbar-brand-bg;
         background-image: $navbar-brand-logo;
-        background-size: 70px auto;
-        background-position: center center;
         background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 70px auto;
     }
 
     button.navbar-toggler.layout-toggler {
-        display: block;
         position: absolute;
         top: 0;
         left: $sidebar-width;
-        padding: 0 $navbar-padding-horizontal;
+        display: block;
         height: $navbar-height;
+        padding: 0 $navbar-padding-horizontal;
         line-height: $navbar-height;
         border: 0;
     }

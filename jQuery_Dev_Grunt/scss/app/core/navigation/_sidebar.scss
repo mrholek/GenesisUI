@@ -1,28 +1,29 @@
 body.sidebar-nav {
 
     #navigation {
-        display: inline !important;
-        width: $sidebar-width;
         position: absolute;
         top: 0;
         left: 0;
-        height: 100%;
         z-index: 1;
-        background: $nav-bg;
+        display: inline !important;
+        width: $sidebar-width;
+        height: 100%;
         color: $nav-color;
+        background: $nav-bg;
+        @include borders($sidebar-borders);
 
         .sidebar-close {
+            position: absolute;
+            right: 0;
+            display: none;
+            padding: 0 $spacer-x;
+            font-size: 24px;
+            font-weight: 800;
+            line-height: $navbar-height;
             color: $nav-color;
             background: 0;
             border: 0;
-            padding: 0 $spacer-x;
-            line-height: $navbar-height;
-            font-size: 24px;
-            font-weight: 800;
-            position: absolute;
-            right: 0;
             opacity: .8;
-            display: none;
 
             &:hover {
                 opacity: 1;
@@ -30,14 +31,14 @@ body.sidebar-nav {
         }
 
         #navigation-header {
-            background: $nav-header-bg;
             padding-bottom: 10px;
             text-align: center;
+            background: $nav-header-bg;
 
             .img-avatar {
-                border-radius: 50em;
                 width: 80px;
-                margin: 20px auto 10px auto;
+                margin: 20px auto 10px;
+                border-radius: 50em;
             }
 
             .text-muted {
@@ -67,12 +68,12 @@ body.sidebar-nav {
         ul.nav {
 
             li.nav-title {
-                line-height: 40px;
                 padding: 0 15px;
-                text-transform: uppercase;
                 font-size: 11px;
                 font-weight: 600;
+                line-height: 40px;
                 color: $nav-title-color;
+                text-transform: uppercase;
             }
 
             li.divider {
@@ -80,54 +81,54 @@ body.sidebar-nav {
             }
 
             li.nav-item {
+                position: relative;
                 margin: 0;
-                position:relative;
 
                 ul {
-                    margin: 0;
-                    padding: 0;
                     display: none;
+                    padding: 0;
+                    margin: 0;
 
                     li {
-                        padding: 0 0 0 0px;
+                        padding: 0;
                         list-style: none;
                     }
                 }
 
                 a.nav-link {
-                    color: $nav-link-color;
-                    line-height: 40px;
-                    font-size: 12px;
-                    font-weight: 400;
-                    text-transform: uppercase;
-                    text-decoration: none;
                     display: block;
                     padding: 0 15px;
+                    font-size: 12px;
+                    font-weight: 400;
+                    line-height: 40px;
+                    color: $nav-link-color;
+                    text-decoration: none;
+                    text-transform: uppercase;
                     @include borders($nav-link-borders);
 
                     &:hover {
-                        background: $nav-link-hover-bg !important;
                         color: $nav-link-hover-color !important;
+                        background: $nav-link-hover-bg !important;
                         @include borders($nav-link-hover-borders);
                     }
 
                     &.active {
-                        background: $nav-link-active-bg;
                         color: $nav-link-active-color;
+                        background: $nav-link-active-bg;
                         @include borders($nav-link-active-borders);
                     }
 
                     [class^="icon-"], [class*=" icon-"] {
-                        display:inline-block;
-                        vertical-align: middle;
+                        display: inline-block;
                         margin-top: -4px;
+                        vertical-align: middle;
                     }
 
                     i {
                         width: 20px;
-                        text-align: center;
                         margin: 0 10px 0 0;
                         font-size: 14px;
+                        text-align: center;
                     }
 
                     .label {
@@ -139,17 +140,17 @@ body.sidebar-nav {
                     &.nav-dropdown-toggle {
 
                         &:before {
-                            transition: .3s;
-                            font-family: 'simple-line-icons';
-                            content: "\e605";
-                            line-height: 8px;
-                            font-size: 8px;
-                            width: 8px;
-                            height: 8px;
                             position: absolute;
                             top: 16px;
                             right: 15px;
                             display: block;
+                            width: 8px;
+                            height: 8px;
+                            font-family: "simple-line-icons";
+                            font-size: 8px;
+                            line-height: 8px;
+                            content: "\e605";
+                            transition: .3s;
                         }
                     }
                 }
@@ -163,7 +164,7 @@ body.sidebar-nav {
                         }
 
                         a.nav-link {
-                            border-left: 0px !important;
+                            border-left: 0 !important;
                         }
 
                         > a.nav-link.nav-dropdown-toggle:before {
@@ -172,7 +173,7 @@ body.sidebar-nav {
                         }
 
                         .nav-dropdown.open {
-                            border-left: 0px;
+                            border-left: 0;
                         }
                     }
                 }
@@ -184,18 +185,18 @@ body.sidebar-nav {
             bottom: 0;
             left: 0;
             width: $sidebar-width;
-            padding: 10px 0 0 0;
             height: 89px;
+            padding: 10px 0 0;
             overflow: visible;
             background: $nav-footer-bg;
 
             ul.menu {
-                padding: 0;
                 position: relative;
                 display: table;
-                table-layout: fixed;
                 width: 100%;
+                padding: 0;
                 margin: 0;
+                table-layout: fixed;
 
                 li {
                     display: table-cell;
@@ -203,7 +204,7 @@ body.sidebar-nav {
 
                     button {
                         background: none;
-                        border: none;
+                        border: 0;
 
                         i {
                             display: block;
@@ -217,13 +218,13 @@ body.sidebar-nav {
                 }
 
                 .dropdown-menu {
-                    width: $sidebar-width - 10;
                     position: fixed;
-                    left: 5px;
                     bottom: 85px;
-                    background: white;
-                    border: none;
+                    left: 5px;
+                    width: $sidebar-width - 10;
                     overflow: hidden;
+                    background: #fff;
+                    border: 0;
 
                     div {
 
@@ -243,31 +244,30 @@ body.sidebar-nav {
 
                     &:before {
                         position: absolute;
-                        content: '';
-                        border-right: 8px solid transparent;
-                        border-top: 8px solid white;
-                        border-left: 8px solid transparent;
                         top: -8px;
                         margin-left: -8px;
+                        content: '';
+                        border-top: 8px solid #fff;
+                        border-right: 8px solid transparent;
+                        border-left: 8px solid transparent;
                     }
-
                 }
             }
 
             ul.terms {
-                padding: 0;
-                line-height: 30px;
                 position: relative;
                 display: table;
-                table-layout: fixed;
                 width: 100%;
+                padding: 0;
+                line-height: 30px;
+                table-layout: fixed;
                 background: $nav-footer-bg;
 
                 li {
                     display: table-cell;
                     padding: 0;
-                    text-align: center;
                     font-size: 12px;
+                    text-align: center;
 
                     a {
                         color: $text-muted;
@@ -420,8 +420,8 @@ body.sidebar-nav {
 
     body.sidebar-nav.compact-nav {
         #navigation {
-            width: $sidebar-compact-width;
             z-index: $zindex-navbar-fixed - 1;
+            width: $sidebar-compact-width;
 
             #navigation-header {
                 padding: 0;
@@ -457,13 +457,13 @@ body.sidebar-nav {
                     }
 
                     a.nav-link {
-                        width: $sidebar-compact-width;
-                        line-height: $sidebar-compact-height;
-                        padding: 0 15px 0 0;
-                        white-space: nowrap;
-                        overflow: hidden;
-                        margin: 0;
                         position: relative;
+                        width: $sidebar-compact-width;
+                        padding: 0 15px 0 0;
+                        margin: 0;
+                        overflow: hidden;
+                        line-height: $sidebar-compact-height;
+                        white-space: nowrap;
                         border-left: 0 !important;
 
                         &.nav-dropdown-toggle {
@@ -474,21 +474,21 @@ body.sidebar-nav {
                         }
 
                         i {
-                            height: $sidebar-compact-height;
-                            line-height: $sidebar-compact-height;
-                            width: $sidebar-compact-height;
-                            margin: 0;
-                            padding: 0;
-                            font-size: 18px;
                             display: block;
                             float: left;
+                            width: $sidebar-compact-height;
+                            height: $sidebar-compact-height;
+                            padding: 0;
+                            margin: 0;
+                            font-size: 18px;
+                            line-height: $sidebar-compact-height;
                         }
 
                         .label {
+                            position: absolute;
                             top: 6px;
                             right: 15px;
                             display: none;
-                            position: absolute;
                         }
 
                         &:hover {
@@ -511,8 +511,8 @@ body.sidebar-nav {
                         left: $sidebar-compact-width;
 
                         li {
+                            position: relative;
                             padding: 0;
-                            position:relative;
 
                             a.nav-link {
                                 width: $sidebar-width - $sidebar-compact-width;

@@ -4,11 +4,10 @@
     > li {
 
         + li:before {
+            padding-left: .75rem;
             font-family: FontAwesome;
             font-style: normal;
             font-weight: normal;
-
-            padding-left: .75rem;
 
         }
 

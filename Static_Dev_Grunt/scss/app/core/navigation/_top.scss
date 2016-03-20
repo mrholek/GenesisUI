@@ -1,19 +1,19 @@
 body.top-nav {
 
     #navigation {
-        display: inline !important;
         position: absolute;
         top: $navbar-height;
         left: 0;
-        height: $navigation-height;
-        width: 100%;
         z-index: $zindex-navbar-fixed - 1;
+        display: inline !important;
+        width: 100%;
+        height: $navigation-height;
         background: $nav-top-bg;
         @include borders($nav-top-borders);
 
         .sidebar-close {
             display: none;
-        }    
+        }
 
         #navigation-footer {
             display: none;
@@ -26,41 +26,42 @@ body.top-nav {
             }
 
             li.nav-item {
+                position: relative;
                 display: inline-block;
                 margin: 0;
-                position:relative;
+
 
                 ul {
-                    margin: 0;
-                    padding: 0;
                     display: none;
+                    padding: 0;
+                    margin: 0;
                     background: $nav-top-bg;
                     @include borders($nav-top-ul-borders);
 
                     li {
-                        padding: 0 0 0 0px;
+                        padding: 0;
                         list-style: none;
                     }
                 }
 
                 a.nav-link {
-                    color: $nav-top-color;
-                    line-height: $navigation-height;
-                    font-size: 12px;
-                    font-weight: 400;
-                    text-transform: uppercase;
-                    text-decoration: none;
                     display: block;
                     padding: 0 15px;
+                    font-size: 12px;
+                    font-weight: 400;
+                    line-height: $navigation-height;
+                    color: $nav-top-color;
+                    text-decoration: none;
+                    text-transform: uppercase;
 
                     i {
+                        display: block;
+                        float: left;
                         width: 20px;
-                        text-align: center;
                         margin: 0 10px 0 0;
                         font-size: 14px;
                         line-height: $navigation-height - 1px;
-                        display: block;
-                        float: left;
+                        text-align: center;
                     }
 
                     .label {
@@ -70,13 +71,14 @@ body.top-nav {
                     }
 
                     &:hover {
-                        background: $nav-top-hover-bg;
                         color: $nav-top-hover-color;
+                        background: $nav-top-hover-bg;
+
                     }
 
                     &.active {
-                        background: $nav-top-active-bg;
                         color: $nav-top-active-color;
+                        background: $nav-top-active-bg;
                     }
                 }
 
@@ -86,8 +88,8 @@ body.top-nav {
                     left: 0;
 
                     li {
+                        position: relative;
                         padding: 0;
-                        position:relative;
 
                         a.nav-link {
                             min-width: 200px;
@@ -108,63 +110,5 @@ body.top-nav {
                 }
             }
         }
-        // &.nav-dark {
-        //     background: $nav-color-dark;
-        //
-        //     li.nav-item {
-        //         a.nav-link {
-        //             color: #fff;
-        //
-        //             &:hover, &.active {
-        //                 background: $brand-primary;
-        //             }
-        //         }
-        //         ul, ol {
-        //             background: $nav-color-dark;
-        //         }
-        //     }
-        // }
-        //
-        // &.nav-light {
-        //     background: $nav-color-light;
-        //     border-bottom: 1px solid $border-color;
-        //
-        //     li.nav-item {
-        //         a.nav-link {
-        //             color: $gray-dark;
-        //             height: $navigation-height;
-        //             border-left: 1px solid transparent;
-        //             border-right: 1px solid transparent;
-        //
-        //             &:hover, &.active {
-        //                 background: $brand-primary;
-        //                 color: #fff;
-        //             }
-        //         }
-        //
-        //         ul, ol {
-        //             background: $nav-color-light;
-        //             border: 1px solid $border-color;
-        //             z-index: -1;
-        //
-        //             li {
-        //                 ul, ol {
-        //                     border: 1px solid $border-color;
-        //                 }
-        //             }
-        //         }
-        //     }
-        //
-        //     ul.nav, ol.nav {
-        //         > li.nav-item.nav-dropdown:hover {
-        //             > a.nav-link {
-        //                 background: $gray-lightest;
-        //                 border: 1px solid $border-color;
-        //                 border-top: 0;
-        //                 border-bottom: 1px solid white;
-        //             }
-        //         }
-        //     }
-        // }
     }
 }

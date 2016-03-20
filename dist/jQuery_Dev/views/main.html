@@ -48,7 +48,7 @@ loadJS(requireJS, "assets/js/views/main.js");
                 </div>
                 <div class="chart-wrapper p-x-1">
                     <div>
-                        <canvas id="card-chart2" class="chart chart-line" width="auto" height="70"></canvas>
+                        <canvas id="card-chart2" class="chart chart-line" height="70"></canvas>
                     </div>
                 </div>
             </div>
@@ -75,7 +75,7 @@ loadJS(requireJS, "assets/js/views/main.js");
                 <div class="chart-wrapper">
                     <div class="chart-wrapper">
                         <div>
-                            <canvas id="card-chart3" class="chart chart-line" width="auto" height="70"></canvas>
+                            <canvas id="card-chart3" class="chart chart-line" height="70"></canvas>
                         </div>
                     </div>
                 </div>
@@ -121,13 +121,13 @@ loadJS(requireJS, "assets/js/views/main.js");
                     <div class="btn-toolbar pull-right" role="toolbar" aria-label="Toolbar with button groups">
                         <div class="btn-group" data-toggle="buttons" aria-label="First group">
                             <label class="btn btn-sm btn-secondary-outline">
-                                <input type="radio" name="options" id="option1" autocomplete="off" checked> Day
+                                <input type="radio" name="options" id="option1"> Day
                             </label>
                             <label class="btn btn-sm btn-secondary-outline active">
-                                <input type="radio" name="options" id="option2" autocomplete="off"> Month
+                                <input type="radio" name="options" id="option2" checked> Month
                             </label>
                             <label class="btn btn-sm btn-secondary-outline">
-                                <input type="radio" name="options" id="option3" autocomplete="off"> Year
+                                <input type="radio" name="options" id="option3"> Year
                             </label>
                         </div>
                         <div class="btn-group hidden-sm-down" role="group" aria-label="Second group">
@@ -176,7 +176,7 @@ loadJS(requireJS, "assets/js/views/main.js");
             <div class="social-box facebook">
                 <i class="fa fa-facebook"></i>
                 <div class="chart-wrapper">
-                    <canvas id="social-box-chart-1" width="auto" height="90"></canvas>
+                    <canvas id="social-box-chart-1" height="90"></canvas>
                 </div>
                 <ul>
                     <li>
@@ -196,7 +196,7 @@ loadJS(requireJS, "assets/js/views/main.js");
             <div class="social-box twitter">
                 <i class="fa fa-twitter"></i>
                 <div class="chart-wrapper">
-                    <canvas id="social-box-chart-2" width="auto" height="90"></canvas>
+                    <canvas id="social-box-chart-2" height="90"></canvas>
                 </div>
                 <ul>
                     <li>
@@ -216,7 +216,7 @@ loadJS(requireJS, "assets/js/views/main.js");
             <div class="social-box linkedin">
                 <i class="fa fa-linkedin"></i>
                 <div class="chart-wrapper">
-                    <canvas id="social-box-chart-3" width="auto" height="90"></canvas>
+                    <canvas id="social-box-chart-3" height="90"></canvas>
                 </div>
                 <ul>
                     <li>
@@ -236,7 +236,7 @@ loadJS(requireJS, "assets/js/views/main.js");
             <div class="social-box google-plus">
                 <i class="fa fa-google-plus"></i>
                 <div class="chart-wrapper">
-                    <canvas id="social-box-chart-4" width="auto" height="90"></canvas>
+                    <canvas id="social-box-chart-4" height="90"></canvas>
                 </div>
                 <ul>
                     <li>
@@ -258,16 +258,20 @@ loadJS(requireJS, "assets/js/views/main.js");
         <div class="col-md-12">
             <div class="card">
                 <div class="card-block">
-                    <h3 class="card-title clearfix m-b-0">
-                        Traffic &amp; Sales
-                        <button type="button" class="btn btn-sm btn-primary-outline pull-right hidden-sm-down"><i class="icon-cloud-download"></i> &nbsp; Download</button>
-                        <fieldset class="form-group pull-right hidden-sm-down col-sm-6">
-                            <div class="input-group input-group-sm pull-right" style="width:230px;">
-                                <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
-                                <input name="daterange" class="form-control date-picker" type="text" />
-                            </div>
-                        </fieldset>
-                    </h3>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h3 class="card-title clearfix m-b-0">Traffic &amp; Sales</h3>
+                        </div>
+                        <div class="col-sm-6">
+                            <button type="button" class="btn btn-sm btn-primary-outline pull-right m-l-1 hidden-sm-down"><i class="icon-cloud-download"></i> &nbsp; Download</button>
+                            <fieldset class="form-group pull-right hidden-sm-down">
+                                <div class="input-group input-group-sm pull-right" style="width:230px;">
+                                    <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                    <input name="daterange" class="form-control date-picker" type="text" />
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
                     <hr class="m-a-0">
                     <div class="row">
                         <div class="col-md-4">
@@ -456,7 +460,7 @@ loadJS(requireJS, "assets/js/views/main.js");
                                     </div>
                                 </li>
                                 <li class="divider text-xs-center">
-                                    <button class="btn btn-sm btn-link text-muted" data-toggle="tooltip" data-placement="top" title="" data-original-title="show more"><i class="icon-options"></i></button>
+                                    <button type="button" class="btn btn-sm btn-link text-muted" data-toggle="tooltip" data-placement="top" title="" data-original-title="show more"><i class="icon-options"></i></button>
                                 </li>
                             </ul>
                         </div>
@@ -588,7 +592,7 @@ loadJS(requireJS, "assets/js/views/main.js");
                                     </div>
                                 </li>
                                 <li class="divider text-xs-center">
-                                    <button class="btn btn-sm btn-link text-muted" data-toggle="tooltip" data-placement="top" title="show more"><i class="icon-options"></i></button>
+                                    <button type="button" class="btn btn-sm btn-link text-muted" data-toggle="tooltip" data-placement="top" title="show more"><i class="icon-options"></i></button>
                                 </li>
                             </ul>
                         </div>

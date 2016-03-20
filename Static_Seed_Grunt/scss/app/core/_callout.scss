@@ -2,7 +2,7 @@
     position: relative;
     padding: 0 $spacer-y;
     margin: $spacer-x 0;
-    border: 0px solid $border-color;
+    border: 0 solid $border-color;
     border-left-width: .25rem;
 
     @if $enable-rounded {
@@ -10,30 +10,30 @@
     }
 
     .chart-wrapper {
-        width: 100px;
-        float: right;
         position: absolute;
         top: 18px;
         left: 45%;
+        float: right;
+        width: 100px;
     }
 }
 
 .callout-bordered {
     border: 1px solid $border-color;
-    border-left-width:.25rem;
+    border-left-width: .25rem;
 }
 .callout code {
-    border-radius:.25rem
+    border-radius: .25rem;
 }
 .callout h4 {
-    margin-top:0;
-    margin-bottom:.25rem
+    margin-top: 0;
+    margin-bottom: .25rem;
 }
 .callout p:last-child {
-    margin-bottom:0
+    margin-bottom: 0;
 }
 .callout + .callout {
-    margin-top:-.25rem
+    margin-top: - .25rem;
 }
 
 .callout-default {

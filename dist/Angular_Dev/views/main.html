@@ -19,7 +19,7 @@
                     <p>Members online</p>
                 </div>
                 <div class="chart-wrapper p-x-1">
-                    <canvas class="chart chart-line" chart-data="data" chart-labels="labels" chart-legend="false" chart-series="series" chart-options="options" chart-colours="colours" width="auto" height="70"></canvas>
+                    <canvas class="chart chart-line" chart-data="data" chart-labels="labels" chart-legend="false" chart-series="series" chart-options="options" chart-colours="colours" height="70"></canvas>
                 </div>
             </div>
         </div>
@@ -58,7 +58,7 @@
                     <p>Members online</p>
                 </div>
                 <div class="chart-wrapper">
-                    <canvas class="chart chart-line" chart-data="data" chart-labels="labels" chart-legend="false" chart-series="series" chart-options="options" chart-colours="colours" width="auto" height="63"></canvas>
+                    <canvas class="chart chart-line" chart-data="data" chart-labels="labels" chart-legend="false" chart-series="series" chart-options="options" chart-colours="colours" height="63"></canvas>
                 </div>
             </div>
         </div>
@@ -100,13 +100,13 @@
                     <div class="btn-toolbar pull-right" role="toolbar" aria-label="Toolbar with button groups">
                         <div class="btn-group" data-toggle="buttons" aria-label="First group">
                             <label class="btn btn-sm btn-secondary-outline">
-                                <input type="radio" name="options" id="option1" autocomplete="off" checked> Day
+                                <input type="radio" name="options" id="option1"> Day
                             </label>
                             <label class="btn btn-sm btn-secondary-outline active">
-                                <input type="radio" name="options" id="option2" autocomplete="off"> Month
+                                <input type="radio" name="options" id="option2" checked> Month
                             </label>
                             <label class="btn btn-sm btn-secondary-outline">
-                                <input type="radio" name="options" id="option3" autocomplete="off"> Year
+                                <input type="radio" name="options" id="option3"> Year
                             </label>
                         </div>
                         <div class="btn-group" role="group" aria-label="Second group">
@@ -155,7 +155,7 @@
             <div class="social-box facebook">
                 <i class="fa fa-facebook"></i>
                 <div class="chart-wrapper">
-                    <canvas class="chart chart-line" chart-data="data1" chart-labels="labels" chart-legend="false" chart-series="series" chart-options="options" chart-colours="colours" width="auto" height="90"></canvas>
+                    <canvas class="chart chart-line" chart-data="data1" chart-labels="labels" chart-legend="false" chart-series="series" chart-options="options" chart-colours="colours" height="90"></canvas>
                 </div>
                 <ul>
                     <li>
@@ -175,7 +175,7 @@
             <div class="social-box twitter">
                 <i class="fa fa-twitter"></i>
                 <div class="chart-wrapper">
-                    <canvas class="chart chart-line" chart-data="data2" chart-labels="labels" chart-legend="false" chart-series="series" chart-options="options" chart-colours="colours" width="auto" height="90"></canvas>
+                    <canvas class="chart chart-line" chart-data="data2" chart-labels="labels" chart-legend="false" chart-series="series" chart-options="options" chart-colours="colours" height="90"></canvas>
                 </div>
                 <ul>
                     <li>
@@ -195,7 +195,7 @@
             <div class="social-box linkedin">
                 <i class="fa fa-linkedin"></i>
                 <div class="chart-wrapper">
-                    <canvas class="chart chart-line" chart-data="data3" chart-labels="labels" chart-legend="false" chart-series="series" chart-options="options" chart-colours="colours" width="auto" height="90"></canvas>
+                    <canvas class="chart chart-line" chart-data="data3" chart-labels="labels" chart-legend="false" chart-series="series" chart-options="options" chart-colours="colours" height="90"></canvas>
                 </div>
                 <ul>
                     <li>
@@ -215,7 +215,7 @@
             <div class="social-box google-plus">
                 <i class="fa fa-google-plus"></i>
                 <div class="chart-wrapper">
-                    <canvas class="chart chart-line" chart-data="data4" chart-labels="labels" chart-legend="false" chart-series="series" chart-options="options" chart-colours="colours" width="auto" height="90"></canvas>
+                    <canvas class="chart chart-line" chart-data="data4" chart-labels="labels" chart-legend="false" chart-series="series" chart-options="options" chart-colours="colours" height="90"></canvas>
                 </div>
                 <ul>
                     <li>
@@ -237,16 +237,20 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-block">
-                    <h3 class="card-title clearfix m-b-0">
-                        Traffic &amp; Sales
-                        <button type="button" class="btn btn-sm btn-primary-outline pull-right"><i class="icon-cloud-download"></i> &nbsp; Download</button>
-                        <fieldset class="form-group pull-right col-sm-6" ng-controller="dateRangeCtrl">
-                            <div class="input-group input-group-sm pull-right" style="width:230px;">
-                                <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
-                                <input date-range-picker class="form-control date-picker" type="text" ng-model="date" options="opts" />
-                            </div>
-                        </fieldset>
-                    </h3>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h3 class="card-title clearfix m-b-0">Traffic &amp; Sales</h3>
+                        </div>
+                        <div class="col-sm-6">
+                            <button type="button" class="btn btn-sm btn-primary-outline pull-right m-l-1"><i class="icon-cloud-download"></i> &nbsp; Download</button>
+                            <fieldset class="form-group pull-right" ng-controller="dateRangeCtrl">
+                                <div class="input-group input-group-sm pull-right" style="width:230px;">
+                                    <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                    <input date-range-picker class="form-control date-picker" type="text" ng-model="date" options="opts" />
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
                     <hr class="m-a-0">
                     <div class="row">
                         <div class="col-md-4">
@@ -343,7 +347,7 @@
                                     </div>
                                 </li>
                                 <li class="divider text-xs-center">
-                                    <button class="btn btn-sm btn-link text-muted" data-toggle="tooltip" data-placement="top" title="show more"><i class="icon-options"></i></button>
+                                    <button type="button" class="btn btn-sm btn-link text-muted" data-toggle="tooltip" data-placement="top" title="show more"><i class="icon-options"></i></button>
                                 </li>
                             </ul>
                         </div>
@@ -475,7 +479,7 @@
                                     </div>
                                 </li>
                                 <li class="divider text-xs-center">
-                                    <button class="btn btn-sm btn-link text-muted" data-toggle="tooltip" data-placement="top" title="show more"><i class="icon-options"></i></button>
+                                    <button type="button" class="btn btn-sm btn-link text-muted" data-toggle="tooltip" data-placement="top" title="show more"><i class="icon-options"></i></button>
                                 </li>
                             </ul>
                         </div>

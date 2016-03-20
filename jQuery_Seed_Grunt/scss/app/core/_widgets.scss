@@ -1,250 +1,252 @@
 // .social-box
 .social-box {
-	min-height: 160px;
-	background: white;
-	margin-bottom: $card-spacer-y;
-	text-align: center;
+    min-height: 160px;
+    margin-bottom: $card-spacer-y;
+    text-align: center;
+    background: #fff;
     border: $card-border-width solid $card-border-color;
-	@include border-radius($card-border-radius);
+    @include border-radius($card-border-radius);
 
-	i {
-		display: block;
-		font-size: 40px;
-		line-height: 90px;
-		background: $gray-lighter;
-        margin: -1px -1px 0 -1px;
-		@include border-radius($card-border-radius-inner $card-border-radius-inner 0 0);
-	}
+    i {
+        display: block;
+        margin: -1px -1px 0;
+        font-size: 40px;
+        line-height: 90px;
+        background: $gray-lighter;
 
-	.chart-wrapper {
-		position: absolute;
-		left: 2px;
-		right: 2px;
-		margin: -85px 0 0 0;
-		height: 90px;
+        @include border-radius($card-border-radius-inner $card-border-radius-inner 0 0);
+    }
 
-		canvas {
-			width: 100% !important;
-			height: 90px !important;
-		}
-	}
+    .chart-wrapper {
+        position: absolute;
+        right: 2px;
+        left: 2px;
+        height: 90px;
+        margin: -85px 0 0;
 
-	ul {
-		list-style: none;
-		padding: 10px 0;
+        canvas {
+            width: 100% !important;
+            height: 90px !important;
+        }
+    }
 
-		li {
-			display: block;
-			width: 50%;
-			float: left;
+    ul {
+        padding: 10px 0;
+        list-style: none;
 
-			&:first-child {
-				border-right: 1px solid $border-color;
-			}
 
-			strong {
-				display: block;
-				font-size: 20px;
-			}
+        li {
+            display: block;
+            float: left;
+            width: 50%;
 
-			span {
-				color: $border-color;
-				font-weight: 500;
-				text-transform: uppercase;
-				font-size: 10px;
-			}
-		}
-	}
+            &:first-child {
+                border-right: 1px solid $border-color;
+            }
 
-	&.facebook {
-		i {
-			background: $facebook;
-			color: white;
-		}
-	}
+            strong {
+                display: block;
+                font-size: 20px;
+            }
 
-	&.twitter {
-		i {
-			background: $twitter;
-			color: white;
-		}
-	}
+            span {
+                font-size: 10px;
+                font-weight: 500;
+                color: $border-color;
+                text-transform: uppercase;
+            }
+        }
+    }
 
-	&.linkedin {
-		i {
-			background: $linkedin;
-			color: white;
-		}
-	}
+    &.facebook {
+        i {
+            color: #fff;
+            background: $facebook;
+        }
+    }
 
-	&.google-plus {
-		i {
-			background: $google-plus;
-			color: white;
-		}
-	}
+    &.twitter {
+        i {
+            color: #fff;
+            background: $twitter;
+        }
+    }
+
+    &.linkedin {
+        i {
+            color: #fff;
+            background: $linkedin;
+        }
+    }
+
+    &.google-plus {
+        i {
+            color: #fff;
+            background: $google-plus;
+        }
+    }
 }
 
 .horizontal-bars {
-	list-style: none;
-	margin: 0;
-	padding: 0;
+    padding: 0;
+    margin: 0;
+    list-style: none;
 
-	li {
-		position: relative;
-		height: 40px;
-		line-height: 40px;
-		vertical-align: middle;
+    li {
+        position: relative;
+        height: 40px;
+        line-height: 40px;
+        vertical-align: middle;
 
-		.title	{
-			width: 100px;
-			font-weight: 600;
-			color: $text-muted;
-			font-size: 12px;
-			vertical-align: middle;
-		}
+        .title {
+            width: 100px;
+            font-size: 12px;
+            font-weight: 600;
+            color: $text-muted;
+            vertical-align: middle;
+        }
 
-		.bars {
-			padding-left: 100px;
-			position: absolute;
-			top: 15px;
-			width: 100%;
-		}
+        .bars {
+            position: absolute;
+            top: 15px;
+            width: 100%;
+            padding-left: 100px;
+        }
 
-		&.legend {
-			text-align: center;
+        &.legend {
+            text-align: center;
 
-			.label {
-				width: 8px;
-				height: 8px;
-				display: inline-block;
-				padding: 0;
-			}
-		}
+            .label {
+                display: inline-block;
+                width: 8px;
+                height: 8px;
+                padding: 0;
+            }
+        }
 
-		&.divider {
-			height: 40px;
+        &.divider {
+            height: 40px;
 
-			i {
-				margin: 0 !important
-			}
-		}
-	}
+            i {
+                margin: 0 !important;
+            }
+        }
+    }
 
-	&.type-2 {
+    &.type-2 {
 
-		li {
-			overflow: hidden;
+        li {
+            overflow: hidden;
 
-			i {
-				display: inline-block;
-				line-height: 40px;
-				font-size: 18px;
-				margin-left: 5px;
-				margin-right: $spacer-x;
-			}
+            i {
+                display: inline-block;
+                margin-right: $spacer-x;
+                margin-left: 5px;
+                font-size: 18px;
+                line-height: 40px;
+            }
 
-			.title {
-				display: inline-block;
-				line-height: 40px;
-				margin-top: -9px;
-				width: auto;
-				font-weight: normal;
-				font-size: $font-size-base;
-				color: $body-color;
-			}
+            .title {
+                display: inline-block;
+                width: auto;
+                margin-top: -9px;
+                font-size: $font-size-base;
+                font-weight: normal;
+                line-height: 40px;
+                color: $body-color;
+            }
 
-			.value {
-				font-weight: 600;
-				float: right;
-			}
+            .value {
+                float: right;
+                font-weight: 600;
+            }
 
-			.bars {
-				padding: 0;
-				position: absolute;
-				top: auto;
-				bottom: 0;
-			}
-		}
-	}
+            .bars {
+                position: absolute;
+                top: auto;
+                bottom: 0;
+                padding: 0;
+            }
+        }
+    }
 }
 
 ul.icons-list {
-	list-style: none;
-	margin: 0;
-	padding: 0;
+    padding: 0;
+    margin: 0;
+    list-style: none;
 
-	li {
-		position: relative;
-		height: 40px;
-		vertical-align: middle;
+    li {
+        position: relative;
+        height: 40px;
+        vertical-align: middle;
 
-		i {
-			display: block;
-			width: 35px !important;
-			height: 35px !important;
-			line-height: 35px !important;
-			text-align: center;
-			margin: 2px;
-			float: left;
-		}
+        i {
+            display: block;
+            float: left;
+            width: 35px !important;
+            height: 35px !important;
+            margin: 2px;
+            line-height: 35px !important;
+            text-align: center;
+        }
 
-		.desc {
-			height: 40px;
-			margin-left: 50px;
-			border-bottom: 1px solid $border-color;
+        .desc {
+            height: 40px;
+            margin-left: 50px;
+            border-bottom: 1px solid $border-color;
 
-			.title {
-				margin: 0;
-				padding: 2px 0 0 0;
-			}
-			small {
-				display: block;
-				margin-top: -4px;
-				color: $text-muted;
-			}
-		}
+            .title {
+                padding: 2px 0 0;
+                margin: 0;
+            }
+            small {
+                display: block;
+                margin-top: -4px;
+                color: $text-muted;
+            }
+        }
 
-		.value {
-			position: absolute;
-			top: 2px;
-			right: 45px;
-			text-align: right;
+        .value {
+            position: absolute;
+            top: 2px;
+            right: 45px;
+            text-align: right;
 
-			strong {
-				display: block;
-				margin-top: -3px;
-			}
-		}
+            strong {
+                display: block;
+                margin-top: -3px;
+            }
+        }
 
-		.actions {
-			position: absolute;
-			top: -4px;
-			right: 10px;
-			width: 40px;
-			height: 40px;
-			line-height: 40px;
-			text-align: center;
+        .actions {
+            position: absolute;
+            top: -4px;
+            right: 10px;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
 
-			i {
-				padding: 0;
-				margin: 0;
-				float: none;
-				width: auto;
-				height: auto;
-				line-height: normal;
-			}
-		}
+            i {
+                float: none;
+                width: auto;
+                height: auto;
+                padding: 0;
+                margin: 0;
+                line-height: normal;
+            }
+        }
 
-		&.divider {
-			height: 40px;
+        &.divider {
+            height: 40px;
 
-			i {
-				margin: 2px 0 0 0;
-				width: auto;
-				height: auto;
-				font-size: 18px;
-			}
-		}
-	}
+            i {
+                margin: 2px 0 0;
+                width: auto;
+                height: auto;
+                font-size: 18px;
+            }
+        }
+    }
 }

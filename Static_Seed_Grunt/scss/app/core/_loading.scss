@@ -1,12 +1,12 @@
-//Angular Version
-/* Make clicks pass-through */
+// Angular Version
+// Make clicks pass-through
 #loading-bar,
 #loading-bar-spinner {
-    pointer-events: none;
     -webkit-pointer-events: none;
-    -webkit-transition: 350ms linear all;
+    pointer-events: none;
     -moz-transition: 350ms linear all;
     -o-transition: 350ms linear all;
+    -webkit-transition: 350ms linear all;
     transition: 350ms linear all;
 }
 
@@ -25,45 +25,44 @@
 }
 
 #loading-bar .bar {
-    -webkit-transition: width 350ms;
-    -moz-transition: width 350ms;
-    -o-transition: width 350ms;
-    transition: width 350ms;
-
-    background: $brand-primary;
     position: fixed;
-    z-index: 20002;
     top: 0;
     left: 0;
+    z-index: 20002;
     width: 100%;
     height: 2px;
-    border-bottom-right-radius: 1px;
+    background: $brand-primary;
     border-top-right-radius: 1px;
+    border-bottom-right-radius: 1px;
+    -moz-transition: width 350ms;
+    -o-transition: width 350ms;
+    -webkit-transition: width 350ms;
+    transition: width 350ms;
 }
 
-/* Fancy blur effect */
+// Fancy blur effect
 #loading-bar .peg {
     position: absolute;
-    width: 70px;
-    right: 0;
     top: 0;
+    right: 0;
+    width: 70px;
     height: 2px;
-    opacity: .45;
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+    border-radius: 100%;
     -moz-box-shadow: #29d 1px 0 6px 1px;
     -ms-box-shadow: #29d 1px 0 6px 1px;
     -webkit-box-shadow: #29d 1px 0 6px 1px;
     box-shadow: #29d 1px 0 6px 1px;
-    -moz-border-radius: 100%;
-    -webkit-border-radius: 100%;
-    border-radius: 100%;
+    opacity: .45;
 }
 
 #loading-bar-spinner {
-    display: block;
     position: fixed;
-    z-index: 10002;
     top: 10px;
     left: 10px;
+    z-index: 10002;
+    display: block;
 }
 
 #loading-bar-spinner .spinner-icon {
@@ -75,10 +74,10 @@
     border-left-color: #29d;
     border-radius: 50%;
 
-    -webkit-animation: loading-bar-spinner 400ms linear infinite;
     -moz-animation:    loading-bar-spinner 400ms linear infinite;
     -ms-animation:     loading-bar-spinner 400ms linear infinite;
     -o-animation:      loading-bar-spinner 400ms linear infinite;
+    -webkit-animation: loading-bar-spinner 400ms linear infinite;
     animation:         loading-bar-spinner 400ms linear infinite;
 }
 
@@ -105,24 +104,24 @@
 
 //Ajax & Static Version
 .pace {
-  -webkit-pointer-events: none;
-  pointer-events: none;
+    -webkit-pointer-events: none;
+    pointer-events: none;
 
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 .pace-inactive {
-  display: none;
+    display: none;
 }
 
 .pace .pace-progress {
-  background: $brand-primary;
-  position: fixed;
-  z-index: 2000;
-  top: 0;
-  right: 100%;
-  width: 100%;
-  height: 2px;
+    position: fixed;
+    top: 0;
+    right: 100%;
+    z-index: 2000;
+    width: 100%;
+    height: 2px;
+    background: $brand-primary;
 }

@@ -1,15 +1,14 @@
 
 .dropdown-divider {
-  @include nav-divider($dropdown-divider-bg);
+    @include nav-divider($dropdown-divider-bg);
 }
 
 .dropdown-item {
+    position: relative;
 
     padding: 10px 20px;
 
     border-bottom: 1px solid $dropdown-border-color;
-
-    position: relative;
 
     &:last-child {
         border-bottom: 0;
@@ -18,9 +17,9 @@
     i {
         display: inline-block;
         width: 20px;
-        color: $dropdown-border-color;
-        margin-left: -10px;
         margin-right: 10px;
+        margin-left: -10px;
+        color: $dropdown-border-color;
         text-align: center;
     }
 
@@ -39,7 +38,7 @@
     background: $dropdown-divider-bg;
     border-bottom: 1px solid $dropdown-border-color;
 
-     &:first-child {
+    &:first-child {
         margin-top: -5px;
     }
 
