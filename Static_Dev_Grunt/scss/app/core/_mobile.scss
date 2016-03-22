@@ -14,19 +14,21 @@
         right: 0 !important;
         left: 0 !important;
         padding: $navbar-padding-vertical 0;
+        background: $navbar-brand-bg;
 
         .navbar-toggler {
             position: absolute;
-            top: 0;
+            top: 5px;
             left: 0;
             width: 70px;
             height: inherit;
+            color: #fff;
         }
 
         .navbar-brand {
-            //background-color: transparent !important;
             width: 100% !important;
-            margin: 0 !important;
+            margin: 0 auto !important;
+            background-color: transparent !important;
         }
     }
 

@@ -1,63 +1,58 @@
-<!--
-* ROOT Admin - UI Admin Kit Powered by Bootstrap 4.0.0 & AngularJS 1.4.8
-* Version 1.2.0
-* http://GenesisUI.com
-* Copyright 2016 creativeLabs Łukasz Holeczek
-* License : http://GenesisUI.com/license.html
--->
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="ROOT Admin - UI Admin Kit Powered by Bootstrap 4.0.0 &amp; AngularJS 1.4.8">
-        <meta name="author" content="Łukasz Holeczek">
-        <meta name="keyword" content="ROOT Admin - UI Admin Kit Powered by Bootstrap 4.0.0 &amp; AngularJS 1.4.8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="ROOT Admin - UI Admin Kit Powered by Bootstrap 4">
+        <meta name="author" content="Lukasz Holeczek">
+        <meta name="keyword" content="ROOT Admin - UI Admin Kit Powered by Bootstrap 4">
         <!-- <link rel="shortcut icon" href="assets/ico/favicon.png"> -->
         <title>ROOT Admin - UI Admin Kit</title>
         <!-- Main styles for this application -->
         <link href="../../css/style.css" rel="stylesheet">
     </head>
-    <!-- BODY options, add following classes to body to change options or change layout options in app.js
-		1. 'compact-nav'     	  - Switch sidebar to minified version (width 50px)
-		2. 'sidebar-nav'		  - Navigation on the left
-		3. 'fixed-nav'			  - Fixed navigation
-		4. 'navbar-fixed'		  - Fixed navbar
-	-->
     <body>
-        <div class="container-fluid">
-            <div id="ui-view">
-                <div class="row">
-                    <div class="col-md-6 col-md-offset-3">
-                        <div class="row">
-                            <div class="col-md-10 col-md-offset-1">
-                                <div class="clearfix">
-                                    <h1 class="pull-left display-2" style="border:1px solid red">404&nbsp;</h1>
-                                    <h4 style="margin-top:15px;">Oops! You're lost.</h4>
-                                    <p class="text-muted">The page you are looking for was not found.</p>
-                                </div>
-                                <div class="input-prepend input-group">
-                                    <span class="input-group-addon"><i class="fa fa-search"></i></span>
-                                    <input id="prependedInput" class="form-control" size="16" type="text" placeholder="What are you looking for?">
-                                    <span class="input-group-btn">
-                                        <button class="btn btn-info" type="button">Search</button>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5 center-block pull-xs-none vamiddle">
+                    <div class="clearfix">
+                        <h1 class="pull-left display-3 m-r-2">404</h1>
+                        <h4 class="p-t-1">Oops! You're lost.</h4>
+                        <p class="text-muted">The page you are looking for was not found.</p>
                     </div>
-                    <!--/col-->
+                    <div class="input-prepend input-group">
+                        <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                        <input id="prependedInput" class="form-control" size="16" type="text" placeholder="What are you looking for?">
+                        <span class="input-group-btn">
+                            <button class="btn btn-info" type="button">Search</button>
+                        </span>
+                    </div>
                 </div>
-                <!--/row-->
             </div>
         </div>
-        <!-- /.conainer-fluid -->
         <!-- Bootstrap and necessary plugins -->
         <script src="../../js/libs/jquery.min.js"></script>
         <script src="../../js/libs/tether.min.js"></script>
         <script src="../../js/libs/bootstrap.min.js"></script>
-        <script src="../../js/libs/pace.min.js"></script>
-        <!-- GenesisUI main scripts -->
-        <script src="../js/app.js"></script>
+        <script>
+        function verticalAlignMiddle()
+        {
+            var bodyHeight = $(window).height();
+            var formHeight = $('.vamiddle').height();
+            var marginTop = (bodyHeight / 2) - (formHeight / 2);
+            if (marginTop > 0)
+            {
+                $('.vamiddle').css('margin-top', marginTop);
+            }
+        }
+        $(document).ready(function()
+        {
+            verticalAlignMiddle();
+        });
+        $(window).bind('resize', verticalAlignMiddle);
+        </script>
+        <!-- Grunt watch plugin -->
+        <script src="//localhost:35729/livereload.js"></script>
     </body>
 </html>

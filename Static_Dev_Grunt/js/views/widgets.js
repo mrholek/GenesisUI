@@ -321,6 +321,7 @@ $(function(){
         scaleShowGridLines: false,
         pointDot: false,
         datasetStrokeWidth : 2,
+        responsive: true,
     };
     var data = {
         labels: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec','Jan','Feb','Mar','Apr','May'],
@@ -351,6 +352,7 @@ $(function(){
         barShowStroke : false,
         scaleGridLineWidth : 0,
         barValueSpacing : 5,
+        responsive: true,
     };
     var data = {
         labels: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec','Jan','Feb','Mar','Apr','May'],

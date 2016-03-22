@@ -7,7 +7,7 @@
 	    //required when $.ajaxLoad = true
 		$.defaultPage = 'main.html';
 		$.subPagesDirectory = 'views/';
-		$.page404 = 'views/404.html';
+		$.page404 = 'pages/404.html';
 		$.mainContent = $('#ui-view');
 
     //Main navigation
@@ -122,21 +122,20 @@ if ($.ajaxLoad) {
 		setUpUrl($.defaultPage);
 	}
 
-	$(document).on('click', '.nav a[href!="#"]', function(event) {
-
+	$(document).on('click', '.nav a[href!="#"]', function(e) {
 		if ( $(this).parent().parent().hasClass('nav-tabs') || $(this).parent().parent().hasClass('nav-pills') ) {
-			event.preventDefault();
+			e.preventDefault();
 		} else if ( $(this).attr('target') == '_top' ) {
-			event.preventDefault();
-		    $this = $(event.currentTarget);
+			e.preventDefault();
+		    $this = $(e.currentTarget);
 		    window.location = ($this.attr('href'));
 		} else if ( $(this).attr('target') == '_blank' ) {
-			event.preventDefault();
-			$this = $(event.currentTarget);
+			e.preventDefault();
+			$this = $(e.currentTarget);
 			window.open($this.attr('href'));
 		} else {
-			event.preventDefault();
-			var target = $(event.currentTarget);
+			e.preventDefault();
+			var target = $(e.currentTarget);
 			setUpUrl(target.attr('href'));
 		}
 	});
@@ -152,25 +151,6 @@ function setUpUrl(url) {
 	$('.nav li.nav-dropdown').removeClass('open');
 	$('.nav li:has(a[href="' + url + '"])').addClass('open');
 	$('.nav a[href="' + url + '"]').addClass('active');
-
-	//.find('.nav-link').addClass('active');
-
-	//$('.nav li:has(a[href="' + url + '"])').addClass('active').parent().show();
-
-	// if ( $('.nav li:has(a[href="' + url + '"])').find("ul").size() != 0 ) {
-	//
-	// 	$('.opened').removeClass('opened');
-	//
-	// 	$('.nav a[href="' + url + '"]').parents('li').add(this).each(function(){
-	// 		$(this).addClass('opened');
-	// 	});
-	//
-	// 	$('.nav li').each(function(){
-	// 		if ( !$(this).hasClass('opened') ) {
-	// 			$(this).find('ul').slideUp();
-	// 		}
-	// 	});
-	// }
 
 	loadPage(url);
 }

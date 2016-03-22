@@ -14,8 +14,7 @@ angular
     .directive('tab', bootstrapTabsDirective)
     .directive('button', cardCollapseDirective)
     .directive('ionslider', ionSliderDirective)
-    .directive('lrform', loginPageDirective)
-    .directive('error', errorPageDirective)
+    .directive('vamiddle', verticalAlignMiddleDirective)
     .directive('emailapp', emailAppDirective)
     .directive('gaugejs', gaugeJsDirective)
 
@@ -356,41 +355,9 @@ function ionSliderDirective($timeout) {
     }
 }
 
-loginPageDirective.$inject = ['$window'];
+verticalAlignMiddleDirective.$inject = ['$window'];
 
-function loginPageDirective($window) {
-    var directive = {
-        restrict: 'A',
-        link: link
-    }
-    return directive;
-
-    function link(scope, element, attrs) {
-        var bodyHeight = angular.element(window).height();
-        var formHeight = element.height();
-        var marginTop = (bodyHeight / 2) - (formHeight / 2);
-
-        if (marginTop > 0) {
-            element.css('margin-top', marginTop);
-        }
-
-        angular.element($window).bind('resize', function(){
-            var bodyHeight = angular.element(window).height();
-            var formHeight = element.height();
-            var marginTop = (bodyHeight / 2) - (formHeight / 2);
-
-            if (marginTop > 0) {
-                element.css('margin-top', marginTop);
-            }
-
-            scope.$digest();
-        });
-    }
-}
-
-errorPageDirective.$inject = ['$window'];
-
-function errorPageDirective($window) {
+function verticalAlignMiddleDirective($window) {
     var directive = {
         restrict: 'A',
         link: link

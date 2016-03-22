@@ -1,6 +1,6 @@
 <!--
 * GenesisUI Bootstrap 4 Admin Template built as framework!
-* Version 1.3.4
+* Version 1.3.5
 * https://GenesisUI.com
 * Copyright 2016 creativeLabs Łukasz Holeczek
 * License : https://GenesisUI.com/license.html
@@ -19,80 +19,71 @@
         <!-- Main styles for this application -->
         <link href="css/style.css" rel="stylesheet">
     </head>
-    <!-- BODY options, add following classes to body to change options
-		1. 'compact-nav'     	  - Switch sidebar to minified version (width 50px)
-		2. 'sidebar-nav'		  - Navigation on the left
-			2.1. 'sidebar-off-canvas'	- Off-Canvas
-				2.1.1 'sidebar-off-canvas-push'	- Off-Canvas which move content
-				2.1.2 'sidebar-off-canvas-with-shadow'	- Add shadow to body elements
-		3. 'fixed-nav'			  - Fixed navigation
-		4. 'navbar-fixed'		  - Fixed navbar
-	-->
     <body class="">
-        <!-- Main content -->
-        <main id="content">
-            <!-- Page Header -->
-            <!-- Breadcrumb -->
-            <div class="container-fluid">
-                <div lrform="" class="card lrForm">
-                    <div class="card-block">
-                        <div class="text-center">
-                            <i class="icon-login"></i>
-                            <p>
-                                Create your account
-                            </p>
-                        </div>
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="icon-user"></i></span>
-                            <input type="text" class="form-control" placeholder="Username">
-                        </div>
-                        <br>
-                        <div class="input-group">
-                            <span class="input-group-addon">@</span>
-                            <input type="text" class="form-control" placeholder="Email">
-                        </div>
-                        <br>
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="icon-lock"></i></span>
-                            <input type="password" class="form-control" placeholder="Password">
-                        </div>
-                        <br>
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="icon-lock"></i></span>
-                            <input type="password" class="form-control" placeholder="Repeat password">
-                        </div>
-                        <br>
-                        <button type="button" class="btn btn-block btn-success">Create Account</button>
-                        <br>
-                        <div class="text-center">or use</div>
-                        <br>
-                        <div class="row">
-                            <div class="col-xs-6">
-                                <button type="button" class="btn btn-block btn-facebook">
-                                    <span>facebook</span>
-                                </button>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5 center-block pull-xs-none">
+                    <div class="card vamiddle">
+                        <div class="card-block p-a-2">
+                            <h1>Register</h1>
+                            <p class="text-muted">Create your account</p>
+                            <div class="input-group m-b-1">
+                                <span class="input-group-addon"><i class="icon-user"></i></span>
+                                <input type="text" class="form-control" placeholder="Username">
                             </div>
-                            <div class="col-xs-6">
-                                <button type="button" class="btn btn-block btn-twitter">
-                                    <span>twitter</span>
-                                </button>
+                            <div class="input-group m-b-1">
+                                <span class="input-group-addon">@</span>
+                                <input type="text" class="form-control" placeholder="Email">
+                            </div>
+                            <div class="input-group m-b-1">
+                                <span class="input-group-addon"><i class="icon-lock"></i></span>
+                                <input type="password" class="form-control" placeholder="Password">
+                            </div>
+                            <div class="input-group m-b-2">
+                                <span class="input-group-addon"><i class="icon-lock"></i></span>
+                                <input type="password" class="form-control" placeholder="Repeat password">
+                            </div>
+                            <button type="button" class="btn btn-block btn-success">Create Account</button>
+                        </div>
+                        <div class="card-footer p-a-2">
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <button class="btn btn-block btn-facebook" type="button">
+                                        <span>facebook</span>
+                                    </button>
+                                </div>
+                                <div class="col-xs-6">
+                                    <button class="btn btn-block btn-twitter" type="button">
+                                        <span>twitter</span>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- /.conainer-fluid -->
-        </main>
+        </div>
         <!-- Bootstrap and necessary plugins -->
         <script src="js/libs/jquery.min.js"></script>
         <script src="js/libs/tether.min.js"></script>
         <script src="js/libs/bootstrap.min.js"></script>
-        <script src="js/libs/pace.min.js"></script>
-        <!-- Plugins and scripts required by all views -->
-        <script src="js/libs/Chart.min.js"></script>
-        <script src="js/views/shared.js"></script>
-        <!-- GenesisUI main scripts -->
-        <script src="js/app.js"></script>
+        <script>
+        function verticalAlignMiddle()
+        {
+            var bodyHeight = $(window).height();
+            var formHeight = $('.vamiddle').height();
+            var marginTop = (bodyHeight / 2) - (formHeight / 2);
+            if (marginTop > 0)
+            {
+                $('.vamiddle').css('margin-top', marginTop);
+            }
+        }
+        $(document).ready(function()
+        {
+            verticalAlignMiddle();
+        });
+        $(window).bind('resize', verticalAlignMiddle);
+        </script>
         <!-- Grunt watch plugin -->
         <script src="//localhost:35729/livereload.js"></script>
     </body>

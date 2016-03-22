@@ -1,6 +1,6 @@
 <!--
 * GenesisUI Bootstrap 4 Admin Template built as framework!
-* Version 1.3.4
+* Version 1.3.5
 * https://GenesisUI.com
 * Copyright 2016 creativeLabs Łukasz Holeczek
 * License : https://GenesisUI.com/license.html
@@ -19,52 +19,46 @@
         <!-- Main styles for this application -->
         <link href="assets/css/style.css" rel="stylesheet">
     </head>
-    <!-- BODY options, add following classes to body to change options
-		1. 'compact-nav'     	  - Switch sidebar to minified version (width 50px)
-		2. 'sidebar-nav'		  - Navigation on the left
-			2.1. 'sidebar-off-canvas'	- Off-Canvas
-				2.1.1 'sidebar-off-canvas-push'	- Off-Canvas which move content
-				2.1.2 'sidebar-off-canvas-with-shadow'	- Add shadow to body elements
-		3. 'fixed-nav'			  - Fixed navigation
-		4. 'navbar-fixed'		  - Fixed navbar
-	-->
     <body class="">
-        <!-- Main content -->
-        <main id="content">
-            <!-- Page Header -->
-            <!-- Breadcrumb -->
-            <div class="container-fluid">
-                <div class="row">
-                    <div error="" class="col-md-6 col-md-offset-3">
-                        <div class="clearfix">
-                            <h1 class="pull-left display-2">500&nbsp</h1>
-                            <h4 style="margin-top:15px;">Huston, we have a problem!</h4>
-                            <p class="text-muted">The page you are looking for is temporarily unavailable.</p>
-                        </div>
-                        <div class="input-prepend input-group">
-                            <span class="input-group-addon"><i class="fa fa-search"></i></span>
-                            <input id="prependedInput" class="form-control" size="16" type="text" placeholder="What are you looking for?">
-                            <span class="input-group-btn">
-                                <button class="btn btn-info" type="button">Search</button>
-                            </span>
-                        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 center-block pull-xs-none vamiddle">
+                    <div class="clearfix">
+                        <h1 class="pull-left display-3 m-r-2">500</h1>
+                        <h4 class="p-t-1">Huston, we have a problem!</h4>
+                        <p class="text-muted">The page you are looking for is temporarily unavailable.</p>
                     </div>
-                    <!--/col-->
+                    <div class="input-prepend input-group">
+                        <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                        <input id="prependedInput" class="form-control" size="16" type="text" placeholder="What are you looking for?">
+                        <span class="input-group-btn">
+                            <button class="btn btn-info" type="button">Search</button>
+                        </span>
+                    </div>
                 </div>
-                <!--/row-->
             </div>
-            <!-- /.conainer-fluid -->
-        </main>
+        </div>
         <!-- Bootstrap and necessary plugins -->
         <script src="assets/js/libs/jquery.min.js"></script>
         <script src="assets/js/libs/tether.min.js"></script>
         <script src="assets/js/libs/bootstrap.min.js"></script>
-        <script src="assets/js/libs/pace.min.js"></script>
-        <!-- Plugins and scripts required by all views -->
-        <script src="assets/js/libs/Chart.min.js"></script>
-        <script src="assets/js/views/shared.js"></script>
-        <!-- GenesisUI main scripts -->
-        <script src="assets/js/app.js"></script>
+        <script>
+        function verticalAlignMiddle()
+        {
+            var bodyHeight = $(window).height();
+            var formHeight = $('.vamiddle').height();
+            var marginTop = (bodyHeight / 2) - (formHeight / 2);
+            if (marginTop > 0)
+            {
+                $('.vamiddle').css('margin-top', marginTop);
+            }
+        }
+        $(document).ready(function()
+        {
+            verticalAlignMiddle();
+        });
+        $(window).bind('resize', verticalAlignMiddle);
+        </script>
         
         
     </body>
