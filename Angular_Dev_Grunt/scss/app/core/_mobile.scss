@@ -1,6 +1,5 @@
 @include media-breakpoint-down(md) {
 
-    $animation-speed: .25s;
     $mobile-nav-width: 200px;
 
     body {
@@ -14,11 +13,10 @@
         right: 0 !important;
         left: 0 !important;
         padding: $navbar-padding-vertical 0;
-        background: $navbar-brand-bg;
 
         .navbar-toggler {
             position: absolute;
-            top: 5px;
+            top: 0px;
             left: 0;
             width: 70px;
             height: inherit;
@@ -28,18 +26,15 @@
         .navbar-brand {
             width: 100% !important;
             margin: 0 auto !important;
-            background-color: transparent !important;
         }
     }
 
-    #navigation {
+    .sidebar {
         width: $mobile-nav-width;
         margin-left: -$mobile-nav-width;
-        transition: $animation-speed !important;
 
-        #navigation-footer {
+        .sidebar-footer {
             margin-left: -$mobile-nav-width;
-            transition: $animation-speed;
         }
     }
 
@@ -47,16 +42,15 @@
         display: none;
     }
 
-    #content {
+    .main {
         width: 100% !important;
         padding: 0 !important;
         padding-top: $navbar-height !important;
         margin: 0 !important;
         overflow: hidden;
-        transition: $animation-speed;
     }
 
-    #footer {
+    .footer {
         display: none;
     }
 
@@ -68,18 +62,16 @@
     body.mobile-open {
         max-width: 100%;
         overflow-x: hidden;
-        #navigation {
+        .sidebar {
             margin-left: 0;
-            transition: $animation-speed;
 
-            #navigation-footer {
+            .sidebar-footer {
                 margin-left: 0;
             }
         }
 
-        #content {
+        .main {
             margin-left: $mobile-nav-width !important;
-            transition: $animation-speed;
         }
     }
 }

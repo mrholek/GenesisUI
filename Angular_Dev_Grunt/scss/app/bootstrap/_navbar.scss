@@ -7,6 +7,10 @@ header.navbar {
     background-color: $navbar-bg;
     @include borders($navbar-border);
 
+    .container-fluid {
+        padding: 0;
+    }
+
     .nav-item {
         position: relative;
         min-width: 50px;
@@ -46,10 +50,9 @@ header.navbar {
 
     a.navbar-brand {
         display: inline-block;
-        width: $sidebar-width + 1px;
+        width: $navbar-brand-width;
         height: $navbar-height;
         padding: $navbar-padding-vertical $navbar-padding-horizontal;
-        margin-left: - $navbar-padding-horizontal;
         background-color: $navbar-brand-bg;
         background-image: $navbar-brand-logo;
         background-repeat: no-repeat;
@@ -57,23 +60,19 @@ header.navbar {
         background-size: 70px auto;
     }
 
-    button.navbar-toggler.layout-toggler {
-        position: absolute;
-        top: 0;
-        left: $sidebar-width;
-        display: block;
-        height: $navbar-height;
-        padding: 0 $navbar-padding-horizontal;
-        line-height: $navbar-height;
-        border: 0;
-    }
-
 }
 
 header.navbar {
     .navbar-brand {
-
+        margin-right: 0;
     }
+}
+
+.navbar-toggler {
+
+    padding: 0 .75em;
+    line-height: $navbar-height - 4px;
+
 }
 
 header.navbar {

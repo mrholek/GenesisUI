@@ -28,7 +28,6 @@
     position: relative;
     display: inline-block;
     width: $width;
-    margin: 0 10px;
 
     .img-avatar {
         width: $width;
@@ -43,7 +42,7 @@
         width: $status-width;
         height: $status-width;
         border: 1px solid #fff;
-        border-radius: 50em;    
+        border-radius: 50em;
     }
 }
 

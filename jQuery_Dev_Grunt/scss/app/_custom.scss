@@ -26,17 +26,17 @@
 //
 // Grayscale and brand colors for use across Bootstrap.
 
-$gray-dark:                 #2a2c36 !default;
-$gray:                      #55595c !default;
-$gray-light:                #818a91 !default;
-$gray-lighter:              #d1d4d7 !default;
-$gray-lightest:             #f8f9fa !default;
+    $gray-dark:                 #2a2c36;
+    $gray:                      #55595c;
+    $gray-light:                #818a91;
+    $gray-lighter:              #d1d4d7;
+    $gray-lightest:             #f8f9fa;
 
-$brand-primary:             #20a8d8 !default;
-$brand-success:             #4dbd74 !default;
-$brand-info:                #63c2de !default;
-$brand-warning:             #f8cb00 !default;
-$brand-danger:              #f86c6b !default;
+    $brand-primary:             #20a8d8;
+    $brand-success:             #4dbd74;
+    $brand-info:                #63c2de;
+    $brand-warning:             #f8cb00;
+    $brand-danger:              #f86c6b;
 
 
 // Options
@@ -45,9 +45,10 @@ $brand-danger:              #f86c6b !default;
 
 $enable-flex:               false !default;
 $enable-rounded:            false !default;
+    $enable-sidebar-nav-rounded: false;
 $enable-shadows:            false !default;
 $enable-gradients:          false !default;
-$enable-transitions:        false !default;
+    $enable-transitions:        true;
 $enable-hover-media-query:  false !default;
 $enable-grid-classes:       true !default;
 
@@ -62,6 +63,10 @@ $spacer:                     1rem !default;
 $spacer-x:                   $spacer !default;
 $spacer-y:                   $spacer !default;
 $spacers: (
+  q: (
+    x:   ($spacer-x * 0.25),
+    y:   ($spacer-y * 0.25)
+  ),
   h: (
     x:   ($spacer-x * 0.5),
     y:   ($spacer-y * 0.5)
@@ -90,7 +95,7 @@ $border-width:               1px !default;
 //
 // Settings for the `<body>` element.
 
-$body-bg:                    #e4e5e6 !default;
+    $body-bg:                    #e4e5e6;
 $body-color:                 $gray-dark !default;
 
 
@@ -155,7 +160,7 @@ $font-family-base:           $font-family-sans-serif !default;
 // Pixel value used to responsively scale all typography. Applied to the `<html>` element.
 $font-size-root:             16px !default;
 
-$font-size-base:             0.875rem !default;
+    $font-size-base:             0.875rem;
 $font-size-lg:               1.25rem !default;
 $font-size-sm:               .85rem !default;
 $font-size-xs:               .75rem !default;
@@ -677,6 +682,8 @@ $pre-scrollable-max-height:   340px !default;
 // GenesisUI Variables
 
 $border-color: $gray-lighter;
+$layout-transition-speed: .25s;
+
 
 // Social Colors
 
@@ -708,8 +715,10 @@ $foursquare: #1073af;
 $vimeo: #aad450;
 
 // Navbar
+
 $navbar-height:                     55px;
 $navbar-bg:                         #fff;
+$navbar-brand-width:                200px;
 $navbar-brand-bg:                   darken($gray-dark,10%);
 $navbar-brand-logo:                 url('../img/logo-light.png');
 $navbar-border: (
@@ -725,52 +734,48 @@ $navbar-hover-color:                rgba(0,0,0,.6);
 $navbar-active-color:               rgba(0,0,0,.8);
 $navbar-disabled-color:             rgba(0,0,0,.15);
 
-// Navigation
+// Sidebar
+
 $sidebar-width:                     200px;
+$sidebar-padding:                   0;
 $sidebar-compact-width:             50px;
 $sidebar-compact-height:            $sidebar-compact-width;
+$sidebar-color:                     #fff;
+$sidebar-bg:                        $gray-dark;
+$sidebar-header-bg:                 rgba(0,0,0,.2);
+$sidebar-footer-bg:                 rgba(0,0,0,.2);
 $sidebar-borders:                   none;
 
-$nav-bg:                            $gray-dark;
-$nav-color:                         #fff;
-$nav-header-bg:                     rgba(0,0,0,.2);
-$nav-footer-bg:                     rgba(0,0,0,.2);
+// Sidebar Navigation
 
-$nav-title-color:                   $gray-lighter;
+$sidebar-nav-color:                 #fff;
+$sidebar-nav-title-padding:         .75rem $spacer-x;
+$sidebar-nav-title-color:           $gray-lighter;
+$sidebar-nav-link-padding:          .55rem $spacer-x;
+$sidebar-nav-link-color:            #fff;
+$sidebar-nav-link-bg:               transparent;
 
-$nav-link-color:                    #fff;
-$nav-link-bg:                       $brand-primary;
-
-$nav-link-borders: (
+$sidebar-nav-link-borders: (
   left: (
     size:                           3px,
     style:                          solid,
     color:                          transparent
   )
 );
-$nav-link-hover-color:              #fff;
-$nav-link-hover-bg:                 $brand-primary;
+$sidebar-nav-link-hover-color:      #fff;
+$sidebar-nav-link-hover-bg:         $brand-primary;
 
-$nav-link-hover-borders: (
+$sidebar-nav-link-hover-borders: (
   left: (
     size:                           3px,
     style:                          solid,
     color:                          $brand-primary
   )
 );
-$nav-link-active-color:             #fff;
-$nav-link-active-bg:                lighten($nav-bg, 5%);
+$sidebar-nav-link-active-color:     #fff;
+$sidebar-nav-link-active-bg:        lighten($sidebar-bg, 5%);
 
-$nav-link-active-borders: (
-  left: (
-    size:                           3px,
-    style:                          solid,
-    color:                          $brand-primary
-  )
-);
-
-$nav-dropdown-bg:                   rgba(0,0,0,.2);
-$nav-dropdown-borders: (
+$sidebar-nav-link-active-borders: (
   left: (
     size:                           3px,
     style:                          solid,
@@ -778,16 +783,28 @@ $nav-dropdown-borders: (
   )
 );
 
-$nav-top-bg:                        #fff;
-$nav-top-color:                     $body-color;
-$nav-top-borders: (
+$sidebar-nav-dropdown-color:        #fff;
+$sidebar-nav-dropdown-bg:           rgba(0,0,0,.2);
+$sidebar-nav-dropdown-borders: (
+  left: (
+    size:                           3px,
+    style:                          solid,
+    color:                          $brand-primary
+  )
+);
+
+// Top Navigation
+
+$top-nav-bg:                        #fff;
+$top-nav-color:                     $body-color;
+$top-nav-borders: (
   bottom: (
     size:                           1px,
     style:                          solid,
     color:                          $border-color
   )
 );
-$nav-top-ul-borders: (
+$top-nav-ul-borders: (
   all: (
     size:                           1px,
     style:                          solid,
@@ -795,14 +812,37 @@ $nav-top-ul-borders: (
   )
 );
 
-$nav-top-hover-color:               #fff;
-$nav-top-hover-bg:                  $brand-primary;
-$nav-top-active-color:              #fff;
-$nav-top-active-bg:                 $brand-primary;
+$top-nav-hover-color:               #fff;
+$top-nav-hover-bg:                  $brand-primary;
+$top-nav-active-color:              #fff;
+$top-nav-active-bg:                 $brand-primary;
+$top-nav-height:                    $navbar-height - 15px;
 
-$navigation-height: $navbar-height - 15px;
+// Breadcrumb
+
+$breadcrumb-borders: (
+  bottom: (
+    size:                           1px,
+    style:                          solid,
+    color:                          $border-color
+  )
+);
+
+// Aside
+
+$aside-menu-width:                  250px;
+$aside-menu-color:                  $gray-dark;
+$aside-menu-bg:                     #fff;
+$aside-menu-borders: (
+  left: (
+    size:                           1px,
+    style:                          solid,
+    color:                          $border-color
+  )
+);
 
 // Footer
+
 $footer-height: 50px;
 $footer-bg:     $gray-lightest;
 $footer-color:  $body-color;
@@ -815,5 +855,6 @@ $footer-borders: (
 );
 
 // Cards
+
 $card-icon-bg:                      transparent;
 $card-icon-color:                   $body-color;

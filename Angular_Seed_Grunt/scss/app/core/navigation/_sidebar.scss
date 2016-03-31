@@ -1,15 +1,16 @@
-body.sidebar-nav {
+body:not(.top-nav) {
 
-    #navigation {
+    .sidebar {
         position: absolute;
         top: 0;
-        left: 0;
+        //left: 0;
         z-index: 1;
         display: inline !important;
         width: $sidebar-width;
         height: 100%;
-        color: $nav-color;
-        background: $nav-bg;
+        padding: $sidebar-padding;
+        color: $sidebar-color;
+        background: $sidebar-bg;
         @include borders($sidebar-borders);
 
         .sidebar-close {
@@ -20,7 +21,7 @@ body.sidebar-nav {
             font-size: 24px;
             font-weight: 800;
             line-height: $navbar-height;
-            color: $nav-color;
+            color: $sidebar-color;
             background: 0;
             border: 0;
             opacity: .8;
@@ -30,10 +31,10 @@ body.sidebar-nav {
             }
         }
 
-        #navigation-header {
+        .sidebar-header {
             padding-bottom: 10px;
             text-align: center;
-            background: $nav-header-bg;
+            background: $sidebar-header-bg;
 
             .img-avatar {
                 width: 80px;
@@ -53,14 +54,14 @@ body.sidebar-nav {
                 color: $text-muted;
 
                 &:hover {
-                    color: $nav-color;
+                    color: $sidebar-color;
                     text-decoration: none;
                 }
             }
 
         }
 
-        #navigation-items {
+        .sidebar-nav {
             position: relative;
             overflow: auto;
         }
@@ -68,11 +69,11 @@ body.sidebar-nav {
         ul.nav {
 
             li.nav-title {
-                padding: 0 15px;
+                padding: $sidebar-nav-title-padding;
                 font-size: 11px;
                 font-weight: 600;
-                line-height: 40px;
-                color: $nav-title-color;
+                line-height: $font-size-base * $line-height;
+                color: $sidebar-nav-title-color;
                 text-transform: uppercase;
             }
 
@@ -97,25 +98,29 @@ body.sidebar-nav {
 
                 a.nav-link {
                     display: block;
-                    padding: 0 15px;
+                    padding: $sidebar-nav-link-padding;
                     font-size: 12px;
                     font-weight: 400;
-                    line-height: 40px;
-                    color: $nav-link-color;
+                    line-height: $font-size-base * $line-height;
+                    color: $sidebar-nav-link-color;
                     text-decoration: none;
                     text-transform: uppercase;
-                    @include borders($nav-link-borders);
+                    background: $sidebar-nav-link-bg;
+                    @include borders($sidebar-nav-link-borders);
+                    @if $enable-sidebar-nav-rounded {
+                      border-radius: $border-radius;
+                    }
 
                     &:hover {
-                        color: $nav-link-hover-color !important;
-                        background: $nav-link-hover-bg !important;
-                        @include borders($nav-link-hover-borders);
+                        color: $sidebar-nav-link-hover-color !important;
+                        background: $sidebar-nav-link-hover-bg !important;
+                        @include borders($sidebar-nav-link-hover-borders);
                     }
 
                     &.active {
-                        color: $nav-link-active-color;
-                        background: $nav-link-active-bg;
-                        @include borders($nav-link-active-borders);
+                        color: $sidebar-nav-link-active-color;
+                        background: $sidebar-nav-link-active-bg;
+                        @include borders($sidebar-nav-link-active-borders);
                     }
 
                     [class^="icon-"], [class*=" icon-"] {
@@ -133,7 +138,7 @@ body.sidebar-nav {
 
                     .label {
                         float: right;
-                        margin-top: 13px;
+                        margin-top: 2px;
                         margin-left: 10px;
                     }
 
@@ -157,13 +162,17 @@ body.sidebar-nav {
 
                 &.nav-dropdown {
                     &.open {
-                        background: $nav-dropdown-bg;
-                        @include borders($nav-dropdown-borders);
+                        background: $sidebar-nav-dropdown-bg;
+                        @include borders($sidebar-nav-dropdown-borders);
+                        @if $enable-sidebar-nav-rounded {
+                            border-radius: $border-radius;
+                        }
                         > ul, > ol {
                             display: inline;
                         }
 
                         a.nav-link {
+                            color: $sidebar-nav-dropdown-color;
                             border-left: 0 !important;
                         }
 
@@ -180,7 +189,7 @@ body.sidebar-nav {
             }
         }
 
-        #navigation-footer {
+        .sidebar-footer {
             position: absolute;
             bottom: 0;
             left: 0;
@@ -188,9 +197,9 @@ body.sidebar-nav {
             height: 89px;
             padding: 10px 0 0;
             overflow: visible;
-            background: $nav-footer-bg;
+            background: $sidebar-footer-bg;
 
-            ul.menu {
+            ul.sidebar-footer-menu {
                 position: relative;
                 display: table;
                 width: 100%;
@@ -261,7 +270,7 @@ body.sidebar-nav {
                 padding: 0;
                 line-height: 30px;
                 table-layout: fixed;
-                background: $nav-footer-bg;
+                background: $sidebar-footer-bg;
 
                 li {
                     display: table-cell;
@@ -286,11 +295,11 @@ body.sidebar-nav {
 @include media-breakpoint-up(sm) {
 
     body.sidebar-nav.compact-nav {
-        #navigation {
+        .sidebar {
             z-index: $zindex-navbar-fixed - 1;
             width: $sidebar-compact-width;
 
-            #navigation-header {
+            .sidebar-header {
                 padding: 0;
 
                 .img-avatar {
@@ -302,11 +311,11 @@ body.sidebar-nav {
                 }
             }
 
-            #navigation-items {
+            .sidebar-items {
                 overflow: visible;
             }
 
-            #navigation-footer {
+            .sidebar-footer {
                 display: none;
             }
 
@@ -320,7 +329,7 @@ body.sidebar-nav {
                     border-left: 0 !important;
 
                     ul {
-                        background: $nav-bg;
+                        background: $sidebar-bg;
                     }
 
                     a.nav-link {

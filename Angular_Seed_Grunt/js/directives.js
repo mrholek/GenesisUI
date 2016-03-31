@@ -1,13 +1,14 @@
 angular
     .module('app')
     .directive('title', titleDirective)
-    .directive('poweredby', poweredByDirective)
     .directive('breadcrumb', breadcrumbPrefixDirective)
     .directive('a', preventClickDirective)
     .directive('a', bootstrapCollapseDirective)
     .directive('a', navigationDirective)
-    .directive('nav', navigationDynamicResizeDirective)
-    .directive('button', layoutTogglerDirective)
+    .directive('nav', sidebarNavDynamicResizeDirective)
+    .directive('nav', topNavSmartResizeDirective)
+    .directive('button', layoutToggleDirective)
+    .directive('a', layoutToggleDirective)
     .directive('button', collapseMenuTogglerDirective)
     .directive('div', bootstrapCarouselDirective)
     .directive('toggle', bootstrapTooltipsPopoversDirective)
@@ -28,18 +29,6 @@ function titleDirective() {
     var directive = {
         restrict: 'E',
         template: headTitle
-    }
-    return directive;
-}
-
-/**
-* @desc this directive add information regarding Bootstra & AngularJS versions
-* @example <poweredby></poweredby>
-*/
-function poweredByDirective() {
-    var directive = {
-        restrict: 'E',
-        template: appName + ' | Powered by: Bootstrap ' + bootstrapVersion + ' & AngularJS ' + angularVersion
     }
     return directive;
 }
@@ -90,7 +79,10 @@ function bootstrapCollapseDirective() {
     }
 }
 
-//Genesis main navigation - Siedebar menu
+/**
+* @desc Genesis main navigation - Siedebar menu
+* @example <li class="nav-item nav-dropdown"></li>
+*/
 function navigationDirective() {
     var directive = {
         restrict: 'E',
@@ -113,9 +105,9 @@ function navigationDirective() {
     }
 }
 
-//Dynamic resize #navigation-items
-navigationDynamicResizeDirective.$inject = ['$window', '$timeout'];
-function navigationDynamicResizeDirective($window, $timeout) {
+//Dynamic resize .sidebar-nav
+sidebarNavDynamicResizeDirective.$inject = ['$window', '$timeout'];
+function sidebarNavDynamicResizeDirective($window, $timeout) {
     var directive = {
         restrict: 'E',
         link: link
@@ -123,47 +115,150 @@ function navigationDynamicResizeDirective($window, $timeout) {
     return directive;
 
     function link(scope, element, attrs) {
-        if (element.attr('id') == 'navigation' && angular.element('body').hasClass('sidebar-nav') && angular.element('body').hasClass('fixed-nav') && !angular.element('body').hasClass('sidebar-off-canvas')) {
 
+        if (element.hasClass('sidebar-nav') && angular.element('body').hasClass('fixed-nav')) {
             var bodyHeight = angular.element(window).height();
-
             scope.$watch(function(){
                 var headerHeight = angular.element('header').outerHeight();
-                var navHeaderHeight = angular.element('#navigation-header').outerHeight();
-                var navFooterHeight = angular.element('#navigation-footer').outerHeight();
-                angular.element('#navigation-items').css('height', bodyHeight - headerHeight - navHeaderHeight - navFooterHeight);
+                var sidebarHeaderHeight = angular.element('.sidebar-header').outerHeight();
+                var sidebarFooterHeight = angular.element('.sidebar-footer').outerHeight();
+
+                if (angular.element('body').hasClass('sidebar-off-canvas')) {
+                    element.css('height', bodyHeight - sidebarHeaderHeight - sidebarFooterHeight);
+                } else {
+                    element.css('height', bodyHeight - headerHeight - sidebarHeaderHeight - sidebarFooterHeight);
+                }
             })
 
             angular.element($window).bind('resize', function(){
                 var bodyHeight = angular.element(window).height();
                 var headerHeight = angular.element('header').outerHeight();
-                var navHeaderHeight = angular.element('#navigation-header').outerHeight();
-                var navFooterHeight = angular.element('#navigation-footer').outerHeight();
-                angular.element('#navigation-items').css('height', bodyHeight - headerHeight - navHeaderHeight - navFooterHeight);
-                //scope.$digest();
-            });
-        } else if (element.attr('id') == 'navigation' && angular.element('body').hasClass('sidebar-nav') && angular.element('body').hasClass('fixed-nav') && angular.element('body').hasClass('sidebar-off-canvas')) {
-            var bodyHeight = angular.element(window).height();
+                var sidebarHeaderHeight = angular.element('.sidebar-header').outerHeight();
+                var sidebarFooterHeight = angular.element('.sidebar-footer').outerHeight();
 
-            scope.$watch(function(){
-                var navHeaderHeight = angular.element('#navigation-header').outerHeight();
-                var navFooterHeight = angular.element('#navigation-footer').outerHeight();
-                angular.element('#navigation-items').css('height', bodyHeight - navHeaderHeight - navFooterHeight);
-            })
-
-            angular.element($window).bind('resize', function(){
-                var bodyHeight = angular.element(window).height();
-                var navHeaderHeight = angular.element('#navigation-header').outerHeight();
-                var navFooterHeight = angular.element('#navigation-footer').outerHeight();
-                angular.element('#navigation-items').css('height', bodyHeight - navHeaderHeight - navFooterHeight);
-                //scope.$digest();
+                if (angular.element('body').hasClass('sidebar-off-canvas')) {
+                    element.css('height', bodyHeight - sidebarHeaderHeight - sidebarFooterHeight);
+                } else {
+                    element.css('height', bodyHeight - headerHeight - sidebarHeaderHeight - sidebarFooterHeight);
+                }
             });
         }
     }
 }
 
-//Layout Toggler
-function layoutTogglerDirective() {
+topNavSmartResizeDirective.$inject = ['$window', '$timeout'];
+function topNavSmartResizeDirective($window, $timeout) {
+    var directive = {
+        restrict: 'E',
+        link: link
+    }
+    return directive;
+
+    function link(scope, element, attrs) {
+
+        if (element.hasClass('top-nav')) {
+
+            var oldNav = element.find('ul.nav').clone();
+            var more = '<li class="nav-item nav-more nav-dropdown"><a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-options-vertical"></i> More</a><ul class="nav-dropdown-items items-more"></ul></li>'
+            var offcanvas = false;
+            var offCanvasLi = [];
+
+            $timeout(function(){
+                angular.forEach(element.find('ul.nav li'), function(value, key){
+                    var li = angular.element(value);
+                    if (li.parent().hasClass('nav')) {
+
+                        if (offcanvas == true) {
+                            offCanvasLi.push(li[0].outerHTML);
+                            li.remove();
+                        } else {
+                            var rect = li[0].getBoundingClientRect();
+                            if (rect.right < (window.innerWidth || document.documentElement.clientWidth)) {
+
+                                var nextLi = li.next();
+                                if (nextLi[0]) {
+                                    var nextLiRect = nextLi[0].getBoundingClientRect();
+
+                                    if (nextLiRect.right >= (window.innerWidth || document.documentElement.clientWidth)) {
+                                        offcanvas = true;
+                                        offCanvasLi.push(li[0].outerHTML);
+                                    }
+                                }
+
+                            } else {
+                                offcanvas = true;
+                                offCanvasLi.push(li[0].outerHTML);
+                            }
+
+                            if (offcanvas == true) {
+                                li.remove()
+                            }
+                        }
+                    }
+                }, offCanvasLi);
+
+                if (offCanvasLi.length > 0) {
+                    element.find('ul.nav').append(more).find('.items-more').append(offCanvasLi.join(''));
+                }
+
+            },0);
+
+            angular.element($window).bind('resize', function(){
+
+                var offcanvas = false;
+                var offCanvasLi = [];
+
+                var cloneMore = element.find('.items-more').html();
+
+                element.find('.nav-more').remove();
+                element.find('ul.nav').append(cloneMore);
+
+                angular.forEach(element.find('ul.nav li'), function(value, key){
+                    var li = angular.element(value);
+                    if (li.parent().hasClass('nav')) {
+
+                        if (offcanvas == true) {
+                            offCanvasLi.push(li[0].outerHTML);
+                            li.remove();
+                        } else {
+                            var rect = li[0].getBoundingClientRect();
+                            if (rect.right < (window.innerWidth || document.documentElement.clientWidth)) {
+
+                                var nextLi = li.next();
+                                if (nextLi[0]) {
+                                    var nextLiRect = nextLi[0].getBoundingClientRect();
+
+                                    if (nextLiRect.right >= (window.innerWidth || document.documentElement.clientWidth)) {
+                                        offcanvas = true;
+                                        offCanvasLi.push(li[0].outerHTML);
+                                    }
+                                }
+                            } else {
+                                offcanvas = true;
+                                offCanvasLi.push(li[0].outerHTML);
+                            }
+
+                            if (offcanvas == true) {
+                                li.remove()
+                            }
+                        }
+                    }
+                }, offCanvasLi);
+
+                if (offCanvasLi.length > 0) {
+                    element.find('ul.nav').append(more).find('.items-more').append(offCanvasLi.join(''));
+                }
+
+                scope.$digest();
+
+            });
+        }
+    }
+}
+
+//LayoutToggle
+layoutToggleDirective.$inject = ['$interval'];
+function layoutToggleDirective($interval) {
     var directive = {
         restrict: 'E',
         link: link
@@ -177,12 +272,29 @@ function layoutTogglerDirective() {
 
             if ((element.hasClass('layout-toggler') || element.hasClass('sidebar-close')) && angular.element('body').hasClass('sidebar-off-canvas')) {
                 angular.element('body').toggleClass('sidebar-opened').parent().toggleClass('sidebar-opened');
+
+                $interval(function () {
+                    window.dispatchEvent(new Event('resize'));
+                }, 100, 5)
+
             } else if (element.hasClass('layout-toggler') && (angular.element('body').hasClass('sidebar-nav') || bodyClass == 'sidebar-nav')) {
                 angular.element('body').toggleClass('sidebar-nav');
                 localStorage.setItem('body-class', 'sidebar-nav');
                 if (bodyClass == 'sidebar-nav') {
                     localStorage.clear();
                 }
+
+                $interval(function () {
+                    window.dispatchEvent(new Event('resize'));
+                }, 100, 5)
+            }
+
+            if (element.hasClass('aside-toggle')) {
+                angular.element('body').toggleClass('aside-menu-open');
+
+                $interval(function () {
+                    window.dispatchEvent(new Event('resize'));
+                }, 100, 5)
             }
         });
     }
@@ -283,7 +395,6 @@ function cardCollapseDirective() {
 }
 
 ionSliderDirective.$inject = ['$timeout'];
-
 function ionSliderDirective($timeout) {
     var directive = {
         require: 'ngModel',
@@ -356,7 +467,6 @@ function ionSliderDirective($timeout) {
 }
 
 verticalAlignMiddleDirective.$inject = ['$window'];
-
 function verticalAlignMiddleDirective($window) {
     var directive = {
         restrict: 'A',
@@ -388,7 +498,6 @@ function verticalAlignMiddleDirective($window) {
 }
 
 emailAppDirective.$inject = ['$window'];
-
 function emailAppDirective($window) {
     var directive = {
         restrict: 'A',

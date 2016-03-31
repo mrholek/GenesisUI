@@ -9,13 +9,33 @@ body {
     padding: 0;
     margin: 0;
 
-    .bd-title#content {
+
+    .bd-title.main {
         padding: 0 !important;
     }
 }
 
-#content {
+.sidebar {
+    left: - $sidebar-width;
+    transition-duration: $layout-transition-speed, $layout-transition-speed, $layout-transition-speed, $layout-transition-speed, $layout-transition-speed, $layout-transition-speed;
+    transition-property: left, right, padding-left, padding-right, margin-left, margin-right;
+
+}
+
+.main {
     padding-bottom: $footer-height;
+    transition-duration: $layout-transition-speed, $layout-transition-speed, $layout-transition-speed, $layout-transition-speed;
+    transition-property: padding-left, padding-right, margin-left, margin-right;
+}
+
+.aside-menu {
+    transition-duration: $layout-transition-speed, $layout-transition-speed;
+    transition-property: left, right;
+}
+
+.footer {
+    transition-duration: $layout-transition-speed, $layout-transition-speed, $layout-transition-speed, $layout-transition-speed, $layout-transition-speed, $layout-transition-speed;
+    transition-property: padding-left, padding-right, margin-left, margin-right, left, right;
 }
 
 body.std {
@@ -25,11 +45,11 @@ body.std {
         z-index: $zindex-navbar-fixed;
     }
 
-    #navigation {
+    .sidebar {
         padding-top: $navbar-height;
     }
 
-    #content {
+    .main {
         padding-left: $sidebar-width;
     }
 }
@@ -40,63 +60,53 @@ body.navbar-fixed {
         @extend .navbar-fixed-top;
     }
 
-    #content {
+    .main {
         padding-top: $navbar-height;
     }
 
     &.top-nav {
         &.fixed-nav {
 
-            #navigation {
+            nav.top-nav {
                 position: fixed;
             }
 
-            #content {
-                padding-top: $navbar-height + $navigation-height;
+            .main {
+                padding-top: $navbar-height + $top-nav-height;
             }
         }
     }
 }
 
-body.sidebar-nav {
-
+body:not(.top-nav) {
     header.navbar {
         z-index: $zindex-navbar-fixed;
     }
 
-    #navigation {
-        left: 0;
+    .sidebar {
+        //left: 0;
         display: inline;
-        padding-top: $navbar-height;
-        transition: .5s;
-    }
-
-    #content {
-        padding-left: $sidebar-width;
-    }
-
-    footer#footer {
-        left: $sidebar-width;
+        padding-top: $navbar-height !important;
     }
 
     &.compact-nav {
 
-        #content {
+        .main {
             padding-left: $sidebar-compact-width;
         }
 
-        footer#footer {
+        .footer {
             left: $sidebar-compact-width;
         }
     }
 
     &.fixed-nav {
 
-        #navigation {
+        .sidebar {
             position: fixed;
         }
 
-        #navigation-footer {
+        .sidebar-footer {
             position: fixed;
             bottom: 0;
             left: 0;
@@ -105,41 +115,39 @@ body.sidebar-nav {
 
     &.sidebar-off-canvas {
 
-        #navigation {
+        .sidebar {
             left: -$sidebar-width;
             z-index: $zindex-navbar-fixed + 1;
             padding-top: 0;
-            transition: .5s !important;
 
             .sidebar-close {
                 display: inline;
             }
         }
 
-        #content {
+        .main {
             padding-left: 0;
-            transition: .5s;
         }
 
-        #footer {
+        .footer {
             left: 0;
         }
     }
 
     &.sidebar-opened {
 
-        #navigation {
+        .sidebar {
             left: 0;
         }
 
         &.sidebar-off-canvas-push {
 
-            #content {
+            .main {
                 margin-right: -$sidebar-width;
                 margin-left: $sidebar-width;
             }
 
-            #footer {
+            .footer {
                 margin-right: -$sidebar-width;
                 margin-left: $sidebar-width;
             }
@@ -165,17 +173,47 @@ body.sidebar-nav {
     }
 }
 
+body.sidebar-nav {
+    .sidebar {
+        left: 0;
+    }
+    .main {
+        padding-left: $sidebar-width;
+    }
+
+    .footer {
+        left: $sidebar-width;
+    }
+}
+
 body.top-nav {
 
     .layout-toggler {
         display: none !important;
     }
 
-    #content {
-        padding-top: $navbar-height + $navigation-height;
+    .main {
+        padding-top: $navbar-height + $top-nav-height;
+    }
+}
+
+body.aside-menu-open {
+    .main {
+        padding-right: $aside-menu-width;
     }
 
-    #navigation-header {
-        display: none;
+    .aside-menu {
+        right: 0;
+    }
+
+    .footer {
+        right: $aside-menu-width;
+    }
+
+    &.aside-menu-off-canvas {
+        .main {
+            right: 0;
+            padding-right: 0;
+        }
     }
 }

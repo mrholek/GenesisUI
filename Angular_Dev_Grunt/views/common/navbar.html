@@ -2,7 +2,20 @@
     <div class="container-fluid">
         <button class="navbar-toggler hidden-lg-up" type="button">&#9776;</button>
         <a class="navbar-brand" ui-sref="app.main"></a>
-        <button class="navbar-toggler layout-toggler hidden-md-down" type="button" data-before="sidebar-nav" data-after="sidebar-nav compact-nav">&#9776;</button>
+        <ul class="nav navbar-nav hidden-md-down">
+            <li class="nav-item">
+                <a class="nav-link navbar-toggler layout-toggler" href="#">&#9776;</a>
+            </li>
+            <li class="nav-item p-x-1">
+                <a class="nav-link" href="#">Dashboard</a>
+            </li>
+            <li class="nav-item p-x-1">
+                <a class="nav-link" href="#">Users</a>
+            </li>
+            <li class="nav-item p-x-1">
+                <a class="nav-link" href="#">Settings</a>
+            </li>
+        </ul>
         <ul class="nav navbar-nav pull-right hidden-md-down">
             <li class="nav-item dropdown" ng-controller="languageCtrl">
                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
@@ -50,6 +63,9 @@
                     <a class="dropdown-item" href="#"><i class="fa fa-shield"></i> {{ 'LOCK_ACCOUNT' | translate }}</a>
                     <a class="dropdown-item" href="#"><i class="fa fa-lock"></i> {{ 'LOGOUT' | translate }}</a>
                 </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link navbar-toggler aside-toggle" href="#">&#9776;</a>
             </li>
         </ul>
     </div>
